@@ -1,0 +1,38 @@
+---
+# Let's add a comment to make this file sass-y.
+# Change this file for any custom CSS.
+---
+
+/* We need to add display:inline in order to align the '>>' of the 'read more' link */
+.post-excerpt p {
+	display:inline;
+}
+
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import
+	"syntax"
+;
+
+// Redefine styles for acuriousanimal
+.main-header {
+    height: 50%;
+}
+.post-head.main-header {
+    height: 25%;
+}
+
+.sidebar {
+	float: left;
+	width: 20%;
+	max-width: 400px;
+	margin: 10px 20px;
+	padding: 0 10px;
+	border-right: 1px solid #ccc;
+	p {
+		font-size: 0.7em;
+		line-height: 1.2em;
+	}
+	img {
+		width: 200px;
+	}
+}
