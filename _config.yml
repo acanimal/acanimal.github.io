@@ -9,7 +9,8 @@ logo: true
 paginate: 10
 baseurl: /
 domain_name: 'http://blog.acuriousanimal.com'
-google_analytics: 'UA-XXXXXXXX-X'
+google_analytics: 'UA-8297669-3'
+disqus_shortname: 'acuriousanimal'
 
 # Details for the RSS feed generator
 url:            'http://blog.acuriousanimal.com'
