@@ -8,10 +8,10 @@ highlighter: pygments
 logo: true
 paginate: 10
 baseurl: /
-domain_name: 'http://acuriousanimal.com'
+domain_name: 'http://blog.acuriousanimal.com'
 google_analytics: 'UA-XXXXXXXX-X'
 
 # Details for the RSS feed generator
-url:            'http://acuriousanimal.com/blog'
+url:            'http://blog.acuriousanimal.com'
 author:         'acanimal'
 author_description: "Computer Science, passionate programmer and an ethernal rookie guitar player."
