@@ -1,6 +1,9 @@
 name: A Curious Animal
 description: Born to be curious, born to be animal !!!
 meta_description: "technology, gis, javascript, web, mapping, openlayers, jquery, acuriousanimal, acanimal"
+url:            'http://blog.acuriousanimal.com'
+author:         'acanimal'
+author_description: "Computer Science, passionate programmer and an ethernal rookie guitar player."
 
 markdown: redcarpet
 highlighter: pygments
@@ -11,8 +14,3 @@ baseurl: /
 domain_name: 'http://blog.acuriousanimal.com'
 google_analytics: 'UA-8297669-3'
 disqus_shortname: 'acuriousanimal'
-
-# Details for the RSS feed generator
-url:            'http://blog.acuriousanimal.com'
-author:         'acanimal'
-author_description: "Computer Science, passionate programmer and an ethernal rookie guitar player."
