@@ -14,7 +14,11 @@ Feel free to explore this section to know a bit more about my work.
 
 ## The Book of OpenLayers3 Examples
 
-bla, bla, bla
+[The Book of OpenLayers3](https://leanpub.com/thebookofopenlayers3) contains an extensive set of samples that helps better understand of the concepts explained. 
+
+The examples source code are freely available at [https://github.com/acanimal/thebookofopenlayers3](https://github.com/acanimal/thebookofopenlayers3) github repository. You can find a hosted version too at [http://acanimal.github.io/thebookofopenlayers3](http://acanimal.github.io/thebookofopenlayers3).
+
+[![demo]({{ site.baseurl }}assets/uploads/thebookofopenlayers3_demo.png)](http://blog.acuriousanimal.com/thebookofopenlayers3/)
 
 ## The Nobel Prize
 
@@ -25,26 +29,26 @@ After discovering [Nobel Prize](http://www.nobelprize.org/nobel_organizations/n
 ## AnimatedCluster Strategy
 
 Working with vector data, many times we need to render a big number of points. In this situations the Cluster strategy is really helpful allowing to group point and avoiding collisions or overlapping.
- The AnimatedCluster strategy is an improvement of the original Cluster, allowing to animate the clusters when the user changes the zoom level. [Read more](http://acuriousanimal.com/blog/2012/08/19/animated-marker-cluster-strategy-for-openlayers/ "Animated marker cluster strategy for OpenLayers")...
+ The AnimatedCluster strategy is an improvement of the original Cluster, allowing to animate the clusters when the user changes the zoom level. [Read more](http://blog.acuriousanimal.com/2012/08/19/animated-marker-cluster-strategy-for-openlayers/ "Animated marker cluster strategy for OpenLayers")...
 
 ![animatedcluest]({{ site.baseurl }}assets/uploads/animatedcluest.png)
 
 ## OpenLayers Cookbook Examples
 
 For the OpenLayers Cookbook I wrote a set of examples so the readers can also see in action and play with the code results.
- The initial work was placed at the PacktPublishing web site freely available. But, because nothing is forever, I made some improvements and changes in the original code. [Read more](http://acuriousanimal.com/blog/2012/12/04/openlayers-presentation-and-openlayers-cookbook-sample-code-update/)...
+ The initial work was placed at the PacktPublishing web site freely available. But, because nothing is forever, I made some improvements and changes in the original code. [Read more](http://blog.acuriousanimal.com/2012/12/04/openlayers-presentation-and-openlayers-cookbook-sample-code-update/)...
 
 ![ol_source_code_examples]({{ site.baseurl }}assets/uploads/ol_source_code_examples.png)
 
 ## SimplyWrite
 
-[SimplyWrite](http://acuriousanimal.com/code/SimplyWrite2/) is a free web distraction writing tool that recognizes the lightweight markup language [Markdown](http://en.wikipedia.org/wiki/Markdown), an easy-to-read, easy-to-write plain format which allow to enrich the text.. [Read more](http://acuriousanimal.com/blog/2013/04/29/simplywrite-a-free-web-distraction-writing-tool/)...
+[SimplyWrite](http://acuriousanimal.com/code/SimplyWrite2/) is a free web distraction writing tool that recognizes the lightweight markup language [Markdown](http://en.wikipedia.org/wiki/Markdown), an easy-to-read, easy-to-write plain format which allow to enrich the text.. [Read more](http://blog.acuriousanimal.com/2013/04/29/simplywrite-a-free-web-distraction-writing-tool/)...
 
 ![]({{ site.baseurl }}assets/uploads/simplywrtie2.png)
 
 ## Stickies
 
-Storing sticky notes on your machine with HTML5 and IndexedDBStickies was developed to have my custom sticky board where to place my notes. Similarly to SimplyWrite it makes use of IndexedDB capabilities so all the notes are stored in your local machine instead on a server. [Read more](http://acuriousanimal.com/blog/2011/08/12/local-storage-storing-sticky-notes-on-your-machine-with-html5/)...
+Storing sticky notes on your machine with HTML5 and IndexedDBStickies was developed to have my custom sticky board where to place my notes. Similarly to SimplyWrite it makes use of IndexedDB capabilities so all the notes are stored in your local machine instead on a server. [Read more](http://blog.acuriousanimal.com/2011/08/12/local-storage-storing-sticky-notes-on-your-machine-with-html5/)...
 
 ![stickies]({{ site.baseurl }}assets/uploads/stickies.png)
 
@@ -54,13 +58,15 @@ Storing sticky notes on your machine with HTML5 and IndexedDBStickies was develo
 
 ## OpenLayers Presentation
 
-A free and online presentation about the main concepts and design of the OpenLayers mapping library. [Read more](http://acuriousanimal.com/blog/2012/12/04/openlayers-presentation-and-openlayers-cookbook-sample-code-update/)...
+A free and online presentation about the main concepts and design of the OpenLayers mapping library. [Read more](http://blog.acuriousanimal.com/2012/12/04/openlayers-presentation-and-openlayers-cookbook-sample-code-update/)...
+
+[![]({{ site.baseurl }}assets/uploads/ol-presentation.png)](http://acanimal.github.com/OpenLayers-Presentation)
 
 ## Brief introduction to Dojo Widgets creation
 
 Dojo Toolkit is a great JavaScript framework. It is has a powerful and homogeneous API and offers a rich set of visual components (so called widgets, like buttons, tabs, grids, trees, ...) that makes it perfect to build RIA (_Rich Internet Applications_).
 
-One of the key features of the Dojo is the possibility to create new widgets to simplify the development of complex applications. This is a introductory presentation to the custom widgets development. [Read more](http://acuriousanimal.com/blog/2012/07/08/brief-introduction-to-dojo-widgets-creation/ "Brief introduction to Dojo Widgets creation")...
+One of the key features of the Dojo is the possibility to create new widgets to simplify the development of complex applications. This is a introductory presentation to the custom widgets development. [Read more](http://blog.acuriousanimal.com/2012/07/08/brief-introduction-to-dojo-widgets-creation/ "Brief introduction to Dojo Widgets creation")...
 
 ---
 
