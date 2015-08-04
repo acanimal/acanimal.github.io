@@ -13,4 +13,4 @@ Why is it useful for? Really not much, simply helps me generate random password.
 *   Easy to use
 *   Mobile ready
 
-![]({{ site.baseurl }}assets/uploads/Screenshot-01272014-083748-PM.png)
+![]({{ site.url }}{{ site.baseurl }}assets/uploads/Screenshot-01272014-083748-PM.png)

@@ -19,28 +19,28 @@ Well, this article is about that. Continue reading.
 
 ## Working with Mapbox Studio and create your custom style
 
-Let's start from the beginning so [download](https://www.mapbox.com/mapbox-studio/) Mapbox Studio application and install on your system. Once installed execute it and you will be asked to be connected to the Mapbox platform.![]({{ site.baseurl }}assets/uploads/Screen-Shot-2015-07-25-at-23.43.15-1024x680.png)
+Let's start from the beginning so [download](https://www.mapbox.com/mapbox-studio/) Mapbox Studio application and install on your system. Once installed execute it and you will be asked to be connected to the Mapbox platform.![]({{ site.url }}{{ site.baseurl }}assets/uploads/Screen-Shot-2015-07-25-at-23.43.15-1024x680.png)
 
 There are two main reasons why Mapbox requires you to register as a user. First, the power of the platform is on the cloud and the goal is you upload all your data to the servers. That includes the styles you create.
 
 Second, MbS retrieves data in vector format from Mapbox servers. When you register as a user you get an API token that identifies your requests. Each time MbS makes a request to extract data it has your token that identifies you as user. This way Mapbox can control if any user is making a bad usage of their platform.  
-![Screen Shot 2015-07-25 at 23.43.26]({{ site.baseurl }}assets/uploads/Screen-Shot-2015-07-25-at-23.43.26-1024x680.png)
+![Screen Shot 2015-07-25 at 23.43.26]({{ site.url }}{{ site.baseurl }}assets/uploads/Screen-Shot-2015-07-25-at-23.43.26-1024x680.png)
 
 Once logged in you will be allowed to create new map styles. The easiest way is to start using one of the starter styles created by the great Mapbox designers:
 
-![Screen Shot 2015-07-25 at 23.47.38]({{ site.baseurl }}assets/uploads/Screen-Shot-2015-07-25-at-23.47.38-1024x680.png)
+![Screen Shot 2015-07-25 at 23.47.38]({{ site.url }}{{ site.baseurl }}assets/uploads/Screen-Shot-2015-07-25-at-23.47.38-1024x680.png)
 
 Here we have chose the _Mapbox Outdoors_ style. In the image you can see the style code (CartoCSS which is inspered by CSS) and the resultant tiles obtaining from painting the vector information with the given style rules:
 
 > [CartoCSS](http://wiki.openstreetmap.org/wiki/CartoCSS) is a [Mapnik](http://wiki.openstreetmap.org/wiki/Mapnik "Mapnik") [stylesheet](http://wiki.openstreetmap.org/wiki/Stylesheet "Stylesheet") pre-processor developed by [MapBox](http://wiki.openstreetmap.org/wiki/MapBox "MapBox") and inspired by [Cascadenik](http://wiki.openstreetmap.org/wiki/Cascadenik "Cascadenik"). It is like a CSS language specially developed to style maps.
 
-![Screen Shot 2015-07-25 at 23.54.20]({{ site.baseurl }}assets/uploads/Screen-Shot-2015-07-25-at-23.54.20-1024x680.png)
+![Screen Shot 2015-07-25 at 23.54.20]({{ site.url }}{{ site.baseurl }}assets/uploads/Screen-Shot-2015-07-25-at-23.54.20-1024x680.png)
 
 Store the style with a new name somewhere on your computer, for example, `customstyle`. If you look at your disk you will see a `customstyle.tm2` folder has been created containing a bunch of files that defines the style rules (take a look they are not dangerous).
 
 Finally, modify some properties, for example `@land` or `@crop` colors and save to see the result:
 
-![Screen Shot 2015-07-25 at 23.54.47]({{ site.baseurl }}assets/uploads/Screen-Shot-2015-07-25-at-23.54.47-1024x680.png)
+![Screen Shot 2015-07-25 at 23.54.47]({{ site.url }}{{ site.baseurl }}assets/uploads/Screen-Shot-2015-07-25-at-23.54.47-1024x680.png)
 
 Great !!! You just have created your first custom style.
 
@@ -162,11 +162,11 @@ Listening at http://0.0.0.0:8080/
 
 Great !!! It seems tessera is working fine. Let's go to open our browser pointing to `http://localhost:8080` and see the result:
 
-![]({{ site.baseurl }}assets/uploads/Screen-Shot-2015-07-26-at-16.01.43.png)
+![]({{ site.url }}{{ site.baseurl }}assets/uploads/Screen-Shot-2015-07-26-at-16.01.43.png)
 
 A map implemented using Leaflet web mapping library is shown, rendering raster tiles that are created in the fly. Look at the console to see the tessera output information:
 
-![]({{ site.baseurl }}assets/uploads/Screen-Shot-2015-07-26-at-16.03.20.png)
+![]({{ site.url }}{{ site.baseurl }}assets/uploads/Screen-Shot-2015-07-26-at-16.03.20.png)
 
 We can see how tiles at current zoom, the zoom level 8, has been generated.
 
@@ -213,7 +213,7 @@ Ough !!! That hurts, a segmentation fault. After looking for a while I realised 
 
 Execute the command again and see the output:
 
-![]({{ site.baseurl }}assets/uploads/Screen-Shot-2015-07-26-at-16.27.56.png)
+![]({{ site.url }}{{ site.baseurl }}assets/uploads/Screen-Shot-2015-07-26-at-16.27.56.png)
 
 The tl tool has created a local tiles directory and generated all the raster tiles for the given zoom levels and bounding box. The output shows in addition the time required to generate each tile.
 

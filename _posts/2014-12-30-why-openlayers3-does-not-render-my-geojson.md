@@ -13,7 +13,7 @@ Maybe you, like me, has spent some time trying to understand why your GeoJSON da
 
 ## What is the problem?
 
-The `ol.source.GeoJSON` class is a subclass of `ol.source.StaticVector` that uses an `ol.format.GeoJSON` instance to read content:![]({{ site.baseurl }}assets/uploads/0d1aff07.png)
+The `ol.source.GeoJSON` class is a subclass of `ol.source.StaticVector` that uses an `ol.format.GeoJSON` instance to read content:![]({{ site.url }}{{ site.baseurl }}assets/uploads/0d1aff07.png)
 
 A source class, by definition, acts as a source of features for a vector layers, that is, it is like a container of features. Because of this, the `ol.source.GeoJSON` source is limited to read GeoJSON features and not geometries. So next GeoJSON will be ignored by OpenLayers3 (really if you use de debug version you will see an assertion message):
 

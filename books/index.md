@@ -12,8 +12,8 @@ As Albert Einstein said:
 
 * [The Book of OpenLayers3](thebookofopenlayers3.html): Published on 2014, just before the first release of OpenLayers3 was release, the book covers the most important topics of this awesome web mapping library.
 
-[![thebookofopenlayers3]({{ site.baseurl }}assets/uploads/thebookofopenlayers3.jpeg)](thebookofopenlayers3.html)
+[![thebookofopenlayers3]({{ site.url }}{{ site.baseurl }}assets/uploads/thebookofopenlayers3.jpeg)](thebookofopenlayers3.html)
 
 * [OpenLayers Cookbook](openlayers-cookbook.html): Published on 2012, this cookbook covers the most common situations of the day to day work with OpenLayers 2.
 
-[![openlayers-cookbook]({{ site.baseurl }}assets/uploads/7843OS_OpenLayer%20Cookbook_cov_0.jpg)](openlayers-cookbook.html)
+[![openlayers-cookbook]({{ site.url }}{{ site.baseurl }}assets/uploads/7843OS_OpenLayer%20Cookbook_cov_0.jpg)](openlayers-cookbook.html)

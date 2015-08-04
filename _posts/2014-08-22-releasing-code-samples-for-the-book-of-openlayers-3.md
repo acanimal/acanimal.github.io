@@ -13,7 +13,7 @@ Today, I announced the links where you can find the [online samples](http://acan
 
 The work is not complete, I need to finish the theory part of a chapter related to vector information and write two more chapters I have in mind and, of course, create some samples to see the theory in practice. I will write another post introducing the book with a more in depth chapter description. This post is only about the code samples. **Your feedback is really valuable for me !!!**
 
-[![The book of OpenLayers3]({{ site.baseurl }}assets/uploads/thebookofopenlayers3-230x300.jpeg)](https://leanpub.com/thebookofopenlayers3)
+[![The book of OpenLayers3]({{ site.url }}{{ site.baseurl }}assets/uploads/thebookofopenlayers3-230x300.jpeg)](https://leanpub.com/thebookofopenlayers3)
 
 ## About the code samples
 

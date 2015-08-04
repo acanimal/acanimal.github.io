@@ -18,7 +18,7 @@ In that time I used a bunch of SublimeText plugins to help me in my day to day:
 
 To the previous list we need to attach the spellchecker, autocomplete, minimap, highlight selected text and some more great core features of SublimeText.
 
-![]({{ site.baseurl }}assets/uploads/atom-1024x756.png)
+![]({{ site.url }}{{ site.baseurl }}assets/uploads/atom-1024x756.png)
 
 A week ago I start using Atom text editor (v1.0.2) so I looked for a list of similar plugins that helps me in my day to day in the same way as previous plugins on SublimeText:
 

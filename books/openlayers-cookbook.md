@@ -12,7 +12,7 @@ The book provides 60 practical examples to understand the main topics to create 
 
 The book covers the main concepts about maps, layers, controls, protocols, events, important tile providers and WMS servers and is divided in the next set of chapters:
 
-[![openlayers-cookbook]({{ site.baseurl }}assets/uploads/7843OS_OpenLayer%20Cookbook_cov_0.jpg)](https://www.packtpub.com/application-development/openlayers-cookbook)
+[![openlayers-cookbook]({{ site.url }}{{ site.baseurl }}assets/uploads/7843OS_OpenLayer%20Cookbook_cov_0.jpg)](https://www.packtpub.com/application-development/openlayers-cookbook)
 
 _Chapter 1: Web Mapping Basics_  
  _Chapter 2: Adding Raster Layers_  

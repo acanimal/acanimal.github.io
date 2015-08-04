@@ -8,9 +8,8 @@ author_description: "Computer Science, passionate programmer and an ethernal roo
 markdown: redcarpet
 highlighter: pygments
 
+baseurl: /
 logo: true
 paginate: 10
-baseurl: /
-domain_name: 'http://blog.acuriousanimal.com'
 google_analytics: 'UA-8297669-3'
 disqus_shortname: 'acuriousanimal'

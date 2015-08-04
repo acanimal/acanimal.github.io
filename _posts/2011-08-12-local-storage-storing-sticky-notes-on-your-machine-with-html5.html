@@ -20,13 +20,13 @@ tags:
 <blockquote><p><strong>Note</strong>: A sample about local storage using IndexedDB can be found at <a href="http://acuriousanimal.com/blog/2011/04/17/simplywrite-a-free-web-distraction-writing-tool-based-on-indexeddb/" target="_blank">SimplyWrite, a free web distraction writing tool based on IndexedDB</a>.</p></blockquote>
 <h2>The user interface</h2>
 <p>I base the code on the previously commented tutorialzine.com tutorial. I use most of CSS and pieces of HTML but code from scratch the JavaScript.</p>
-<p><a href="http://acuriousanimal.com/blog/wp-content/uploads/2011/01/stickies.png"><img class="aligncenter size-full wp-image-361" title="stickies" src="{{ site.baseurl }}assets/uploads/stickies.png" alt="" width="671" height="437" /></a></p>
+<p><a href="http://acuriousanimal.com/blog/wp-content/uploads/2011/01/stickies.png"><img class="aligncenter size-full wp-image-361" title="stickies" src="{{ site.url }}{{ site.baseurl }}assets/uploads/stickies.png" alt="" width="671" height="437" /></a></p>
 <p>This is only a personal exercise and many things need to be improves like remove notes, clean the whole board or put some nice message with the total number of notes in the "<em>Here put some info</em>" label.</p>
 <blockquote><p><strong>DEMO</strong>: Please feel free to test the demo and check code at: <a href="http://acuriousanimal.com/code/stickies/" target="_blank">stickies</a>.</p></blockquote>
 <h2>The implementation</h2>
 <p>I rewrite almost all the JavaScript code in this stickies post but I continue using the same libraries and plugins as in the original, that is, <a href="http://jquery.com/">jQuery</a>, jQuery-UI and <a href="http://fancybox.net/">Fancybox</a> with a couple of addition:</p>
 <p><a href="http://www.jstorage.info/" target="_blank">jStorage</a>: A nice wrapper plugin for Prototype, MooTools and jQuery to cache data (string, numbers, objects, even XML nodes) on browser side. It helps a lot because make transparent for you the initialization of the storage engine and is compatible with many browsers.</p>
-<p><a href="http://acuriousanimal.com/blog/wp-content/uploads/2011/01/jstorage_compat.png"><img class="aligncenter size-full wp-image-357" title="jstorage_compat" src="{{ site.baseurl }}assets/uploads/jstorage_compat.png" alt="" width="735" height="310" /></a></p>
+<p><a href="http://acuriousanimal.com/blog/wp-content/uploads/2011/01/jstorage_compat.png"><img class="aligncenter size-full wp-image-357" title="jstorage_compat" src="{{ site.url }}{{ site.baseurl }}assets/uploads/jstorage_compat.png" alt="" width="735" height="310" /></a></p>
 <p><a href="http://code.google.com/p/jquery-json/" target="_blank">jquery-json</a>: This plugin makes it simple to convert to and from JSON.</p>
 <h2>References</h2>
 <p><a href="http://tutorialzine.com/2010/01/sticky-notes-ajax-php-jquery" target="_blank">http://tutorialzine.com/2010/01/sticky-notes-ajax-php-jquery</a> - Stickies demo tutorial at tutorialzine</p>

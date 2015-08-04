@@ -18,7 +18,7 @@ tags:
 &amp;markers=color:blue%7Clabel:S%7C40.702147,-74.015794&amp;markers=color:green%7Clabel:G%7C40.711614,-74.012318
 &amp;markers=color:red%7Ccolor:red%7Clabel:C%7C40.718217,-73.998284&amp;sensor=false</pre>
 <p>produces the image:</p>
-<p><img class="aligncenter" src="{{ site.baseurl }}assets/uploads/staticmap.png" alt="" width="600" height="300" /></p>
+<p><img class="aligncenter" src="{{ site.url }}{{ site.baseurl }}assets/uploads/staticmap.png" alt="" width="600" height="300" /></p>
 <p>Unfortunately, using libraries other than Google Maps, like OpenLayers or Leaflet, there is no similar solution. Probably the best, simple and powerful one, is to install a plugin on your browser to take screenshots. But well.. I think that does not deserve to write a post :p</p>
 <h2>How to render a web page element to an image?</h2>
 <p>After writing my last post (<a title="Taking web page screenshots" href="http://acuriousanimal.com/blog/2012/09/15/taking-web-page-screenshots/" target="_blank">Taking Web Page Screenshots</a>), where I show to to take a screenshot of a whole page, I was thinking on using PhantomJS to render only a portion of a page to an image.</p>
@@ -33,7 +33,7 @@ tags:
 <p>For example, the next execution against the demo of <a title="Animated marker cluster strategy for OpenLayers" href="http://acuriousanimal.com/blog/2012/08/19/animated-marker-cluster-strategy-for-openlayers/" target="_blank">Animated Cluster Strategy for OpenLayers</a> selecting the first map:</p>
 <pre class="prettyprint">./bin/phantomjs ./examples/rasterize_element.js http://acuriousanimal.com/code/animatedCluster/ map.png '#map1'</pre>
 <p>Produces the image:</p>
-<p><a href="http://acuriousanimal.com/blog/wp-content/uploads/2012/09/map.png"><img class="aligncenter size-full wp-image-899" title="map" src="{{ site.baseurl }}assets/uploads/map.png" alt="" width="828" height="300" /></a></p>
+<p><a href="http://acuriousanimal.com/blog/wp-content/uploads/2012/09/map.png"><img class="aligncenter size-full wp-image-899" title="map" src="{{ site.url }}{{ site.baseurl }}assets/uploads/map.png" alt="" width="828" height="300" /></a></p>
 <p>Next is the whole code of the program (called <code>rasterize_element.js</code> and based on the <code>rasterize.js</code> application attached on the PhantomJS package):</p>
 <blockquote><p>Note: The code is accesible at <a href="https://gist.github.com/3732624" target="_blank">GitHub:Gist</a>.</p></blockquote>
 <pre class="lang:js decode:true prettyprint ">var page = require('webpage').create(),

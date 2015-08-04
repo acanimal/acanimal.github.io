@@ -16,7 +16,7 @@ tags:
 <li><em>Online services</em>: There are some online services that offers possibility to get a screenshots (like <a href="http://url2png.com/" target="_blank">url2png</a>), test your web site on different browsers (like <a href="http://browsershots.org/" target="_blank">browsershots</a> or <a href="https://browserling.com/" target="_blank">browserling</a>) or even an API to automatize the task to capture a web page (like <a href="http://www.thumbalizr.com/" target="_blank">thumbalizer</a> or <a href="http://url2png.com/" target="_blank">url2png</a>).</li>
 </ul>
 <h2>The solution</h2>
-<p>There are alternatives but I like to go beyond the easy solutions and try things, so, after looking a bit more I found a powerful solution: <a href="http://phantomjs.org/" target="_blank">PhantomJS</a>.<a style="color: #ff4b33; line-height: 24px;" href="http://acuriousanimal.com/blog/wp-content/uploads/2012/09/phantomjs-logo.png"><img class="size-full wp-image-877 alignnone" title="phantomjs-logo" src="{{ site.baseurl }}assets/uploads/phantomjs-logo.png" alt="" width="240" height="80" /></a></p>
+<p>There are alternatives but I like to go beyond the easy solutions and try things, so, after looking a bit more I found a powerful solution: <a href="http://phantomjs.org/" target="_blank">PhantomJS</a>.<a style="color: #ff4b33; line-height: 24px;" href="http://acuriousanimal.com/blog/wp-content/uploads/2012/09/phantomjs-logo.png"><img class="size-full wp-image-877 alignnone" title="phantomjs-logo" src="{{ site.url }}{{ site.baseurl }}assets/uploads/phantomjs-logo.png" alt="" width="240" height="80" /></a></p>
 <p>Oh, wonderful, but.. what is PhantomJS and what is it good for?</p>
 <p>As the project page says:</p>
 <blockquote><p>PhantomJS is a headless WebKit with JavaScript API. It has <strong>fast</strong> and <strong>native</strong> support for various web standards: DOM handling, CSS selector, JSON, Canvas, and SVG.<br />
@@ -79,6 +79,6 @@ if (system.args.length &lt; 3 || system.args.length &gt; 5) {
 <p>Lets to to see a sample and take a screenshot of this blog site:</p>
 <pre class="prettyprint">./bin/phantomjs ./examples/rasterize.js http://acuriousanimal.com/blog acanimal_blog.png</pre>
 <p>This makes a screenshot of the whole blog site. Here I attached a modified version of the image with lot less resolution of the original, but you can get an idea of the powerful of PhantomJS.:</p>
-<p><img class="aligncenter size-full wp-image-890" title="acanimal_blog_little" src="{{ site.baseurl }}assets/uploads/acanimal_blog_little.png" alt="" width="164" height="460" /></p>
+<p><img class="aligncenter size-full wp-image-890" title="acanimal_blog_little" src="{{ site.url }}{{ site.baseurl }}assets/uploads/acanimal_blog_little.png" alt="" width="164" height="460" /></p>
 <div>
 </div>
