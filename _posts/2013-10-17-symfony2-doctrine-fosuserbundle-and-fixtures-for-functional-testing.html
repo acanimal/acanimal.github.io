@@ -10,17 +10,17 @@ tags:
 ---
 
 I have an application built with Symfony2 framework which uses the Doctrine2 ORM for persistence.
-The issue is I need to make <a href="http://symfony.com/doc/current/book/testing.html#functional-tests" target="_blank">functional tests</a>
+The issue is I need to make <a href="http://symfony.com/doc/current/book/testing.html#functional-tests">functional tests</a>
 allowing to purge and initialize the database with doctrine fixtures.</p>
 
 <h3>Before to start</h3>
-<p>In the project I have used the <a href="https://github.com/FriendsOfSymfony/FOSUserBundle" target="_blank">FosUserBundle</a>, to allow better user login, registration, etc and <a href="http://symfony.com/doc/current/bundles/DoctrineFixturesBundle/index.html" target="_blank">DoctrineFixturesBundle</a>, which allow to fill a database with fixtures based on our Doctrine entities.</p>
+<p>In the project I have used the <a href="https://github.com/FriendsOfSymfony/FOSUserBundle">FosUserBundle</a>, to allow better user login, registration, etc and <a href="http://symfony.com/doc/current/bundles/DoctrineFixturesBundle/index.html">DoctrineFixturesBundle</a>, which allow to fill a database with fixtures based on our Doctrine entities.</p>
 <p>To load doctrine fixtures into database you need to execute the command line:</p>
 <pre class="prettyprint">php app/console doctrine:fixtures:load</pre>
 <p>That means for each test you need to clean up the database and load the fixtures manually.</p>
 <blockquote><p>Our objective is the automate this process before executing each test.</p></blockquote>
 <h3>Doctrine fixtures and the creation of FOSUserBundle users</h3>
-<p>Because we are using Doctrine fixtures we need a class that implements <code>FixtureInterface</code> interface (see <a href="http://symfony.com/doc/current/bundles/DoctrineFixturesBundle/index.html#writing-simple-fixtures" target="_blank">documentation</a>). The problem is we want to create FOSUserBundle user instances and that requires we have access to the container to get a reference to the user management service, so we need to set access to the container too. Nothing we can't find in the documentation:</p>
+<p>Because we are using Doctrine fixtures we need a class that implements <code>FixtureInterface</code> interface (see <a href="http://symfony.com/doc/current/bundles/DoctrineFixturesBundle/index.html#writing-simple-fixtures">documentation</a>). The problem is we want to create FOSUserBundle user instances and that requires we have access to the container to get a reference to the user management service, so we need to set access to the container too. Nothing we can't find in the documentation:</p>
 <pre class="prettyprint">use Doctrine\Common\DataFixtures\FixtureInterface;
 use Doctrine\Common\Persistence\ObjectManager;
 use Symfony\Component\DependencyInjection\ContainerAwareInterface;

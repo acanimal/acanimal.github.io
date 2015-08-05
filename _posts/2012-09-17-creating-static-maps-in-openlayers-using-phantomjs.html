@@ -11,7 +11,7 @@ tags:
 ---
 <p>Many times in a web mapping application it is desired to save a picture with the current map information.</p>
 <p>Those who works with Google Maps API has also the <a href="https://developers.google.com/maps/documentation/staticmaps/"
-  target="_blank">Static Maps API</a>, which works similarly than Google Maps but produces static images.</p>
+ >Static Maps API</a>, which works similarly than Google Maps but produces static images.</p>
 
 <p>For example, next call:</p>
 <pre class="lang:default decode:true">http://maps.googleapis.com/maps/api/staticmap?center=Brooklyn+Bridge,New+York,NY&amp;zoom=13&amp;size=600x300&amp;maptype=roadmap
@@ -21,7 +21,7 @@ tags:
 <p><img class="aligncenter" src="{{ site.url }}{{ site.baseurl }}assets/uploads/staticmap.png" alt="" width="600" height="300" /></p>
 <p>Unfortunately, using libraries other than Google Maps, like OpenLayers or Leaflet, there is no similar solution. Probably the best, simple and powerful one, is to install a plugin on your browser to take screenshots. But well.. I think that does not deserve to write a post :p</p>
 <h2>How to render a web page element to an image?</h2>
-<p>After writing my last post (<a title="Taking web page screenshots" href="http://acuriousanimal.com/blog/2012/09/15/taking-web-page-screenshots/" target="_blank">Taking Web Page Screenshots</a>), where I show to to take a screenshot of a whole page, I was thinking on using PhantomJS to render only a portion of a page to an image.</p>
+<p>After writing my last post (<a title="Taking web page screenshots" href="{{ site.url }}{{ site.baseurl }}2012/09/15/taking-web-page-screenshots/">Taking Web Page Screenshots</a>), where I show to to take a screenshot of a whole page, I was thinking on using PhantomJS to render only a portion of a page to an image.</p>
 <p>The PhantomJS's <code>WebPage</code> object has a <code>clipRect</code> property which determines the portion of the web page that must be rendered. With this in mind we can see a solution could be:</p>
 <ul>
 <li>Get the bounding rectangle of the desired DOM element to be rasterized.</li>
@@ -30,12 +30,12 @@ tags:
 </ul>
 <p>For that purpose I have prepared a little JavaScript application to run with PhantomJS. Its usage is as follows:</p>
 <pre class="prettyprint">./bin/phantomjs ./examples/rasterize_element.js URL output_file selector</pre>
-<p>For example, the next execution against the demo of <a title="Animated marker cluster strategy for OpenLayers" href="http://acuriousanimal.com/blog/2012/08/19/animated-marker-cluster-strategy-for-openlayers/" target="_blank">Animated Cluster Strategy for OpenLayers</a> selecting the first map:</p>
-<pre class="prettyprint">./bin/phantomjs ./examples/rasterize_element.js http://acuriousanimal.com/code/animatedCluster/ map.png '#map1'</pre>
+<p>For example, the next execution against the demo of <a title="Animated marker cluster strategy for OpenLayers" href="{{ site.url }}{{ site.baseurl }}2012/08/19/animated-marker-cluster-strategy-for-openlayers/">Animated Cluster Strategy for OpenLayers</a> selecting the first map:</p>
+<pre class="prettyprint">./bin/phantomjs ./examples/rasterize_element.js http://acanimal.github.io/AnimatedCluster map.png '#map1'</pre>
 <p>Produces the image:</p>
-<p><a href="http://acuriousanimal.com/blog/wp-content/uploads/2012/09/map.png"><img class="aligncenter size-full wp-image-899" title="map" src="{{ site.url }}{{ site.baseurl }}assets/uploads/map.png" alt="" width="828" height="300" /></a></p>
+<p><a href="{{ site.url }}{{ site.baseurl }}wp-content/uploads/2012/09/map.png"><img class="aligncenter size-full wp-image-899" title="map" src="{{ site.url }}{{ site.baseurl }}assets/uploads/map.png" alt="" width="828" height="300" /></a></p>
 <p>Next is the whole code of the program (called <code>rasterize_element.js</code> and based on the <code>rasterize.js</code> application attached on the PhantomJS package):</p>
-<blockquote><p>Note: The code is accesible at <a href="https://gist.github.com/3732624" target="_blank">GitHub:Gist</a>.</p></blockquote>
+<blockquote><p>Note: The code is accesible at <a href="https://gist.github.com/3732624">GitHub:Gist</a>.</p></blockquote>
 <pre class="lang:js decode:true prettyprint ">var page = require('webpage').create(),
     system = require('system'),
     address, output, size;
@@ -83,8 +83,8 @@ if (system.args.length &lt; 4 || system.args.length &gt; 6) {
     });
 }</pre>
 <h2>Alternatives and references</h2>
-<p>Of course I'm not the first one that has explore this issue. A nice <a href="https://gist.github.com/1501173" target="_blank">snippet</a> from <a href="https://github.com/n1k0" target="_blank">n1k0</a> can be found at <a href="https://gist.github.com/" target="_blank">GitHub:Gist</a>. It does more or less the same as the code shown in this post.</p>
-<p>Another alternative is the use of <a href="http://casperjs.org/" target="_blank">CasperJS</a>. As its home page says:</p>
+<p>Of course I'm not the first one that has explore this issue. A nice <a href="https://gist.github.com/1501173">snippet</a> from <a href="https://github.com/n1k0">n1k0</a> can be found at <a href="https://gist.github.com/">GitHub:Gist</a>. It does more or less the same as the code shown in this post.</p>
+<p>Another alternative is the use of <a href="http://casperjs.org/">CasperJS</a>. As its home page says:</p>
 <blockquote><p>CasperJS is an open source <strong>navigation scripting &amp; testing utility</strong> written in Javascript and based on <a href="http://www.phantomjs.org/">PhantomJS</a> — the scriptable headless <a href="http://www.webkit.org/">WebKit</a> engine. It eases the process of <strong>defining a full navigation scenario</strong> and provides useful <strong>high-level functions, methods &amp; syntactic sugar</strong> for doing common tasks such as:</p>
 <ul>
 <li>defining &amp; ordering browsing <a href="http://casperjs.org/quickstart.html">navigation steps</a></li>

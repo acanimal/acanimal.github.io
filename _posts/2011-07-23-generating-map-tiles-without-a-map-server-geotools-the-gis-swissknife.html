@@ -7,7 +7,7 @@ tags:
 - gis
 - java
 ---
-<p>Recently I was playing with latest version of <a href="http://geoserver.org/" target="_blank">GeoServer</a>. It includes the <a href="http://geowebcache.org/" target="_blank">GeoWebCache</a>, something which can improve your server performance greatly. GeoServer solves and helps lots of problems to work and visualize geospatial data but as you know map servers lakes from scalability.</p>
+<p>Recently I was playing with latest version of <a href="http://geoserver.org/">GeoServer</a>. It includes the <a href="http://geowebcache.org/">GeoWebCache</a>, something which can improve your server performance greatly. GeoServer solves and helps lots of problems to work and visualize geospatial data but as you know map servers lakes from scalability.</p>
 <p>Because this GeoWebCache is a great tool. Basically, each map request is processed and the result image is stored to be directly returned on subsequent requests. The processed images are stored as a pyramid of tiles depending on the bounding box or zoom level of the request.</p>
 
 <p>Another way to solve scalability problems is directly pre-generate the pyramid of tiles, something that makes Google, Bing, Yahoo, OpenStreetMaps, etc.</p>
@@ -18,11 +18,11 @@ tags:
 <p>So why don't use GeoServer+GeoWebCache for this? I can configure a layer pointing to my lightning database, make requests and rest assured subsequent call will get the previously created map.</p>
 <p>The problem is at this moment -while I write this post- GeoServer lakes from TIME support in requests. That means if I define a layer from my lightnings table on DB, every GeoServer request will work against all data while I only need a subset of my data -determined by an interval- to be rendered in the requested maps.</p>
 <h3>Adopted solution</h3>
-<p>Ok, be quiet. GeoServer is build on top of <a href="http://geotools.org/" target="_blank">GeoTools</a>, an op<img class="alignright" src="{{ site.url }}{{ site.baseurl }}assets/uploads/geotools-logo.png" alt="" width="229" height="60" />en source Java library which provides standards compliant methods for the manipulation of geospatial data and, more important, GeoTools library implements <a href="http://www.opengeospatial.org" target="_blank">Open Geospatial Consortium</a> (OGC) specifications as they are developed.</p>
+<p>Ok, be quiet. GeoServer is build on top of <a href="http://geotools.org/">GeoTools</a>, an op<img class="alignright" src="{{ site.url }}{{ site.baseurl }}assets/uploads/geotools-logo.png" alt="" width="229" height="60" />en source Java library which provides standards compliant methods for the manipulation of geospatial data and, more important, GeoTools library implements <a href="http://www.opengeospatial.org">Open Geospatial Consortium</a> (OGC) specifications as they are developed.</p>
 <p>With all this the solution seems easy: code a program to query the desired period of lightning data and generate a pyramid of tiles (for the desired levels).</p>
 <h2> A brief description of the implementation</h2>
 <p>Next is a brief summary of things to do, or take into account, to generate your own pyramid of tiles programmatically with Geotools.</p>
-<p>All the lightnings information is stored on a PostgreSQL/PostGIS table called 'lightnings'. Data related with a lightning are: date (the UTC instant in which the lightning occurs, represented as a long number in <a href="http://en.wikipedia.org/wiki/Unix_time" target="_blank">Unix time</a>), position (latitude/longitude/altitude), value and sign (the electric charge).</p>
+<p>All the lightnings information is stored on a PostgreSQL/PostGIS table called 'lightnings'. Data related with a lightning are: date (the UTC instant in which the lightning occurs, represented as a long number in <a href="http://en.wikipedia.org/wiki/Unix_time">Unix time</a>), position (latitude/longitude/altitude), value and sign (the electric charge).</p>
 <h3>Set the DataSource connection</h3>
 <p>GeoTools tries to simplify thing and because this it tries to abstracts as much as possible. Features can be provided from many source: files (shapefiles, GML, ...) or a database (PostgreSQL/PostGIS, Oracle, ...).</p>
 <p>The first step then is to set a DataSource instance pointing to our database:</p>
@@ -99,7 +99,7 @@ style.featureTypeStyles().add(ftsN);</pre>
 <pre class="brush:java">MapContext map = new DefaultMapContext();
 CoordinateReferenceSystem crs = CRS.decode("EPSG:3785");
 map.setCoordinateReferenceSystem(crs);</pre>
-<p>and then render it to a file. I will paste here the code on the <a href="http://docs.geotools.org/latest/userguide/library/render/gtrenderer.html" target="_blank">GTRenderer tutorial</a>. You can play a bit with the code and change some values: area of interest, size of the output image, etc.</p>
+<p>and then render it to a file. I will paste here the code on the <a href="http://docs.geotools.org/latest/userguide/library/render/gtrenderer.html">GTRenderer tutorial</a>. You can play a bit with the code and change some values: area of interest, size of the output image, etc.</p>
 <pre class="brush:java">public void saveImage(final MapContent map, final String file, final int imageWidth) {
 
     GTRenderer renderer = new StreamingRenderer();
@@ -137,7 +137,7 @@ map.setCoordinateReferenceSystem(crs);</pre>
 <p>Every tool is designed and built with a goal in mind, because this normally the use of a map server is always the proper selection. But sometimes you have specific needs that general tools doesn't solve and here is when open source project like GeoTools can help you.</p>
 <p>I would to note that programing this way the image generation is much more faster than use of GeoServer because we are avoiding lots of intermediate steps a map server does: get request, parse, check and validate parameters and once query is executed, image composed it must be returned to the client via HTTP protocol.</p>
 <h1>References</h1>
-<p><a href="http://docs.geotools.org" target="_blank">http://docs.geotools.org</a></p>
-<p><a href="http://docs.geotools.org/latest/userguide/library/render/gtrenderer.html" target="_blank">http://docs.geotools.org/latest/userguide/library/render/gtrenderer.html</a></p>
-<p><a href="http://docs.geotools.org/stable/tutorials/filter/query.html" target="_blank">http://docs.geotools.org/stable/tutorials/filter/query.html</a></p>
+<p><a href="http://docs.geotools.org">http://docs.geotools.org</a></p>
+<p><a href="http://docs.geotools.org/latest/userguide/library/render/gtrenderer.html">http://docs.geotools.org/latest/userguide/library/render/gtrenderer.html</a></p>
+<p><a href="http://docs.geotools.org/stable/tutorials/filter/query.html">http://docs.geotools.org/stable/tutorials/filter/query.html</a></p>
 <p>&nbsp;</p>

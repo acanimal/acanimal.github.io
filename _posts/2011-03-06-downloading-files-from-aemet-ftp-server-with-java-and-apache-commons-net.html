@@ -9,7 +9,7 @@ tags:
 - java
 - net
 ---
-<p>Some time ago the <a href="http://www.aemet.es" target="_blank">AEMET</a>, the Spanish government meteorological agency, release many of its data publicly: weather radar, weather stations, lightnings, ...  The way they do is simple and effective: public the contents on a FTP server and update on regular intervals of time.  Talking with a colleague we decide to create (on our very few free time) a simple web page that allows people to see the current values of the weather stations. A map of Spain with some dots representing weather stations and a graph with showing data from the selected station.</p>
+<p>Some time ago the <a href="http://www.aemet.es">AEMET</a>, the Spanish government meteorological agency, release many of its data publicly: weather radar, weather stations, lightnings, ...  The way they do is simple and effective: public the contents on a FTP server and update on regular intervals of time.  Talking with a colleague we decide to create (on our very few free time) a simple web page that allows people to see the current values of the weather stations. A map of Spain with some dots representing weather stations and a graph with showing data from the selected station.</p>
 
 <h2>The data</h2>
 <p>The kind of data we are looking for is stored in the '<em>/datos_observacion/observaciones_diezminutales</em>' folder of the FTP sever. Within it we can found two types of folders, ended with '<em>diezminutales</em>' or '<em>estaciones</em>'. We will work with the first one.  For every day we will found a '<em>YYYYMMDD_diezminutales</em>' folder which contains the day data specify by <em>YYYYMMDD</em>. Inside it new files are created names '<em>YYYYMMDDHHmm_datos.csv.gz</em>' which contains all the weather stations data for the 10minutes interval.  We also need to take into account one more consideration. A file is not immutable, that means you can read a file with some data (or file  size) and in 1 hour it can have more new data (bigger file size) because some new data has recovery and corresponds to that interval.</p>
@@ -29,7 +29,7 @@ tags:
 </li>
 </ol>
 <h2>The implementation</h2>
-<p>Because I'm more experienced with Java I have used it to code a little program to do the previously commented synchronization. To make FTP request I have used the <a href="http://commons.apache.org/net/" target="_blank">Apache Commons Net</a> project. From its web page we can read:</p>
+<p>Because I'm more experienced with Java I have used it to code a little program to do the previously commented synchronization. To make FTP request I have used the <a href="http://commons.apache.org/net/">Apache Commons Net</a> project. From its web page we can read:</p>
 <blockquote><p>Apache Commons Net implements the client side of many basic Internet protocols.</p></blockquote>
 <h3>The Main class</h3>
 <p>This is the starter point. User must execute the program specifying a year-month-day to check YYYY-MM-DD, something like:</p>

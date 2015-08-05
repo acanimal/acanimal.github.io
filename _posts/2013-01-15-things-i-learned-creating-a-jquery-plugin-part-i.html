@@ -9,18 +9,18 @@ tags:
 - tricks
 ---
 
-<p><a href="http://jquery.com/" target="_blank">jQuery</a> is one of the most used JavaScript libraries, if not the most used one, which allows to make great things with the big set of little tools it offers to the web developers: HTML/DOM manipulation, CSS manipulation, HTML event methods, effects and animations, AJAX, utilities, ...</p>
+<p><a href="http://jquery.com/">jQuery</a> is one of the most used JavaScript libraries, if not the most used one, which allows to make great things with the big set of little tools it offers to the web developers: HTML/DOM manipulation, CSS manipulation, HTML event methods, effects and animations, AJAX, utilities, ...</p>
 <p>One of the key aspects of jQuery is the possibility to extend it with new functionalities, so called <em>plugins</em>. For those who has a basic knowledge of jQuery and want or need to create a new jQuery plugin this post tries to be a helping summary of good things to take into account.</p>
 
 <h2>Before to start</h2>
 <p>Because of the flexibility and powerful of the language, the Perl community is proud of his <em>Tim Today</em> motto,  that is:</p>
 <blockquote><p>There's more than one way to do it</p></blockquote>
-<p>You can consider the same for JavaScript, that's true. The fact JavaScript is not an object oriented language but a <a href="https://developer.mozilla.org/en-US/docs/JavaScript/Introduction_to_Object-Oriented_JavaScript#Prototype-based_programming" target="_blank">prototype based language</a> allows to follow the OOP paradigm in many different ways. Looking for a template code to create a jQuery plugin I found tons and not all following the same conventions and ideas.</p>
+<p>You can consider the same for JavaScript, that's true. The fact JavaScript is not an object oriented language but a <a href="https://developer.mozilla.org/en-US/docs/JavaScript/Introduction_to_Object-Oriented_JavaScript#Prototype-based_programming">prototype based language</a> allows to follow the OOP paradigm in many different ways. Looking for a template code to create a jQuery plugin I found tons and not all following the same conventions and ideas.</p>
 <p>Here I present a mix of the most accepted templates and its key aspects.</p>
 <h2>The code</h2>
-<p>Accompanying the article you can find the self documented version of the boilerplate code at my <a href="https://github.com/acanimal/jQuery-Plugin-Boilerplate" target="_blank">GitHub repository</a>.</p>
+<p>Accompanying the article you can find the self documented version of the boilerplate code at my <a href="https://github.com/acanimal/jQuery-Plugin-Boilerplate">GitHub repository</a>.</p>
 <h2>Where to start</h2>
-<p>If you are planning to create a jQuery plugin, the first places I suggest you to start reading is the <a href="http://docs.jquery.com/Plugins/Authoring" target="_blank">Plugins/Authoring</a> section of the project documentation. It is a great starting resource but in the real live you will find soon you need to know a bit more of that.</p>
+<p>If you are planning to create a jQuery plugin, the first places I suggest you to start reading is the <a href="http://docs.jquery.com/Plugins/Authoring">Plugins/Authoring</a> section of the project documentation. It is a great starting resource but in the real live you will find soon you need to know a bit more of that.</p>
 <hr />
 <h2>Using a jQuery plugin</h2>
 <p>Suppose we have a jQuery plugin called <code>beautyLink</code>, that transform a normal link (the <code>&lt;a&gt;</code> element) into a really nice one changing the font family, text and background color. So we need to include it in our page before start using it:</p>
@@ -111,7 +111,7 @@ tags:
 <blockquote><p>This will be more clear in the final code.</p></blockquote>
 <h2>The jQuery.data() function</h2>
 <p>We make use of the <code>$.data()</code> function in our code so a short explanation is required.<br />
-The <a href="http://api.jquery.com/jQuery.data/" target="_blank"><code>$.data()</code></a> function allows to store arbitrary data on an element (or get is value).</p>
+The <a href="http://api.jquery.com/jQuery.data/"><code>$.data()</code></a> function allows to store arbitrary data on an element (or get is value).</p>
 <p>It is important because we store a reference to the Plugin instance on each element it is applied. This allow us to check if an element has already applied a plugin or we need to instantiate it. This will be clarified in the final wrapper function code.</p>
 <h2>The backbone wrapper function code</h2>
 <p>With all the above in mind, we can write our final plugin's wrapper function. To summarize:</p>

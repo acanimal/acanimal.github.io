@@ -13,14 +13,14 @@ tags:
 <li>Some dialogs must not have a close button. There are dialogs that must be always visible floating at some part with some controls.</li>
 <li>Some dialogs must have a degree of opacity allowing view the underlaying content and becomes more opaque when the cursor enters in the dialog.</li>
 </ul>
-<p>Next are samples about how customize minimally the dialog to achieve the previous requirements. You can see them in action in <a href="http://acuriousanimal.com/code/jquery_custom_dialog/" target="_blank">the next sample page</a>.</p>
+<p>Next are samples about how customize minimally the dialog to achieve the previous requirements. You can see them in action in <a href="http://acuriousanimal.com/code/jquery_custom_dialog/">the next sample page</a>.</p>
 <h3>Creating a default dialog</h3>
 <p>Create a default jQuery UI dialog is easy, given a '<em>div</em>' element identified by <em>d1</em>:</p>
 <pre class="brush:js">$("#d1").dialog({
 	position: 'left'
 });</pre>
 <h3>Creating a dialog without close button</h3>
-<p>To creating a dialog without a close button, the key is the '<a href="http://jqueryui.com/demos/dialog/#event-open" target="_blank">open</a>' method. We need to reference the '.ui-dialog-titlebar-close' element and hide it:</p>
+<p>To creating a dialog without a close button, the key is the '<a href="http://jqueryui.com/demos/dialog/#event-open">open</a>' method. We need to reference the '.ui-dialog-titlebar-close' element and hide it:</p>
 <pre class="brush:js">$("#d2").dialog({
 	position: 'center',
 	closeOnEscape: false,

@@ -32,7 +32,7 @@ tags:
 <p><a href="http://gdata.youtube.com/feeds/api/videos?author=ironmaiden&amp;max-results=1&amp;orderby=published&amp;v=2&amp;alt=jsonc">http://gdata.youtube.com/feeds/api/videos?author=ironmaiden&amp;max-results=1&amp;orderby=published&amp;v=2&amp;alt=jsonc</a></p>
 <p><a href="https://gdata.youtube.com/feeds/api/users/ironmaiden/uploads?max-results=1&amp;orderby=published&amp;v=2&amp;alt=jsonc">https://gdata.youtube.com/feeds/api/users/ironmaiden/uploads?max-results=1&amp;orderby=published&amp;v=2&amp;alt=jsonc</a></p>
 <h2>The response</h2>
-<p>By default, the returning data is specified in XML format (<a href="http://code.google.com/apis/youtube/2.0/developers_guide_protocol_understanding_video_feeds.html" target="_blank">see here</a>) but with the help of <em>alt=jsonc</em> parameter it is returned in JSON notation (<a href="http://code.google.com/apis/youtube/2.0/developers_guide_jsonc.html" target="_blank">see here</a>). For the previous first request the response is:</p>
+<p>By default, the returning data is specified in XML format (<a href="http://code.google.com/apis/youtube/2.0/developers_guide_protocol_understanding_video_feeds.html">see here</a>) but with the help of <em>alt=jsonc</em> parameter it is returned in JSON notation (<a href="http://code.google.com/apis/youtube/2.0/developers_guide_jsonc.html">see here</a>). For the previous first request the response is:</p>
 <pre class="brush:js">{
     "apiVersion":"2.1",
     "data":{
@@ -86,7 +86,7 @@ tags:
 <pre class="brush:js">data.items[0].id</pre>
 <h2>Embeding a video</h2>
 <p>Embeding a video by hand is easy, you simply click on "share" button, then on "embed", copy and paste the code and that's all:</p>
-<p><a href="http://acuriousanimal.com/blog/wp-content/uploads/2011/10/youtube_embed.png"><img class="aligncenter size-medium wp-image-451" title="youtube_embed" src="{{ site.url }}{{ site.baseurl }}assets/uploads/youtube_embed-251x300.png" alt="" width="251" height="300" /></a><del>But hey !!! We are bad boys, worst if it is possible, we are programmers and we live to programming, so we are going to do the same than any other mortal but programming, so <em>program once run forever</em> !!! (mmm... that slogan sounds me like a island name programming language).</del></p>
+<p><a href="{{ site.url }}{{ site.baseurl }}wp-content/uploads/2011/10/youtube_embed.png"><img class="aligncenter size-medium wp-image-451" title="youtube_embed" src="{{ site.url }}{{ site.baseurl }}assets/uploads/youtube_embed-251x300.png" alt="" width="251" height="300" /></a><del>But hey !!! We are bad boys, worst if it is possible, we are programmers and we live to programming, so we are going to do the same than any other mortal but programming, so <em>program once run forever</em> !!! (mmm... that slogan sounds me like a island name programming language).</del></p>
 <p>The intention is to make the code necessary to get the latest video identifier and inject the code to embed video on page, like this:</p>
 <pre class="brush:xml">&lt;iframe width="420" height="315" src="http://www.youtube.com/embed/PieS0zG228A"
 frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;</pre>
@@ -140,8 +140,8 @@ frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;</pre>
 &lt;script type="text/javascript" src="https://gdata.youtube.com/feeds/api/users/ironmaiden/uploads?max-results=1&amp;orderby=published&amp;v=2&amp;alt=jsonc&amp;callback=showVideo"&gt;&lt;/script&gt;</pre>
 <p>The browser load the elements in the order it encounters, so it is important to put the code in the right place so browser finds first the 'showVideo' function before loading the YouTube code request.</p>
 <h3>Demo</h3>
-<p>You can see a demo working <a href="http://www.acuriousanimal.com/code/youtube_embed/index.html" target="_blank">here</a>.</p>
+<p>You can see a demo working <a href="http://www.acuriousanimal.com/code/youtube_embed/index.html">here</a>.</p>
 <h2>References</h2>
-<p><a href="http://code.google.com/apis/youtube/2.0/reference.html#Searching_for_videos" target="_blank">http://code.google.com/apis/youtube/2.0/reference.html#Searching_for_videos</a></p>
-<p><a href="http://code.google.com/apis/youtube/2.0/developers_guide_protocol.html#Retrieving_and_searching_for_videos" target="_blank">http://code.google.com/apis/youtube/2.0/developers_guide_protocol.html#Retrieving_and_searching_for_videos</a></p>
+<p><a href="http://code.google.com/apis/youtube/2.0/reference.html#Searching_for_videos">http://code.google.com/apis/youtube/2.0/reference.html#Searching_for_videos</a></p>
+<p><a href="http://code.google.com/apis/youtube/2.0/developers_guide_protocol.html#Retrieving_and_searching_for_videos">http://code.google.com/apis/youtube/2.0/developers_guide_protocol.html#Retrieving_and_searching_for_videos</a></p>
 <p><a href="http://code.google.com/apis/youtube/2.0/developers_guide_json.html">http://code.google.com/apis/youtube/2.0/developers_guide_json.html</a></p>

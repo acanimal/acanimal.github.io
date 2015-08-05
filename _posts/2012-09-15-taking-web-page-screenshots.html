@@ -13,17 +13,17 @@ tags:
 <p>Looking on the net I have found many solutions for this problems, which can be classified in to categories:</p>
 <ul>
 <li><em>Local applications</em>: I mean a screen capture program or a plugin for your browser (both Chrome and FireFox has some nice plugins for this).</li>
-<li><em>Online services</em>: There are some online services that offers possibility to get a screenshots (like <a href="http://url2png.com/" target="_blank">url2png</a>), test your web site on different browsers (like <a href="http://browsershots.org/" target="_blank">browsershots</a> or <a href="https://browserling.com/" target="_blank">browserling</a>) or even an API to automatize the task to capture a web page (like <a href="http://www.thumbalizr.com/" target="_blank">thumbalizer</a> or <a href="http://url2png.com/" target="_blank">url2png</a>).</li>
+<li><em>Online services</em>: There are some online services that offers possibility to get a screenshots (like <a href="http://url2png.com/">url2png</a>), test your web site on different browsers (like <a href="http://browsershots.org/">browsershots</a> or <a href="https://browserling.com/">browserling</a>) or even an API to automatize the task to capture a web page (like <a href="http://www.thumbalizr.com/">thumbalizer</a> or <a href="http://url2png.com/">url2png</a>).</li>
 </ul>
 <h2>The solution</h2>
-<p>There are alternatives but I like to go beyond the easy solutions and try things, so, after looking a bit more I found a powerful solution: <a href="http://phantomjs.org/" target="_blank">PhantomJS</a>.<a style="color: #ff4b33; line-height: 24px;" href="http://acuriousanimal.com/blog/wp-content/uploads/2012/09/phantomjs-logo.png"><img class="size-full wp-image-877 alignnone" title="phantomjs-logo" src="{{ site.url }}{{ site.baseurl }}assets/uploads/phantomjs-logo.png" alt="" width="240" height="80" /></a></p>
+<p>There are alternatives but I like to go beyond the easy solutions and try things, so, after looking a bit more I found a powerful solution: <a href="http://phantomjs.org/">PhantomJS</a>.<a style="color: #ff4b33; line-height: 24px;" href="{{ site.url }}{{ site.baseurl }}wp-content/uploads/2012/09/phantomjs-logo.png"><img class="size-full wp-image-877 alignnone" title="phantomjs-logo" src="{{ site.url }}{{ site.baseurl }}assets/uploads/phantomjs-logo.png" alt="" width="240" height="80" /></a></p>
 <p>Oh, wonderful, but.. what is PhantomJS and what is it good for?</p>
 <p>As the project page says:</p>
 <blockquote><p>PhantomJS is a headless WebKit with JavaScript API. It has <strong>fast</strong> and <strong>native</strong> support for various web standards: DOM handling, CSS selector, JSON, Canvas, and SVG.<br />
 PhantomJS is created by <a href="http://twitter.com/AriyaHidayat">Ariya Hidayat</a>.</p></blockquote>
 <p>This means you have all the powerful of a WebKit based browser within a program, so you can use it for: headless website testing, site scraping, page rendering, network monitoring, ...</p>
 <h2>How to use PhantomJS to take a web page screenshot?</h2>
-<p>Go to the <a href="http://phantomjs.org/download.html" target="_blank">project page</a> and download the binary package . In my case I download the Linux 64-bit system.</p>
+<p>Go to the <a href="http://phantomjs.org/download.html">project page</a> and download the binary package . In my case I download the Linux 64-bit system.</p>
 <p>PhantomJS is a command line tool and, once and uncompressed the previous package, you will find it in the <code>bin/phantomjs</code>. As a command tool the usage looks like:</p>
 <pre class="prettyprint">./phantomjs [options] script.[js|coffee] [script argument [script argument ...]]</pre>
 <p>You can get more usage information with: <code>./phantomjs --help</code></p>

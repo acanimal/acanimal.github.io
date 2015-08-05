@@ -7,7 +7,7 @@ tags:
 - javascript
 - xmlhttprequest
 ---
-<p>In the last years JavaScript has become one of the most important programming languages. Probably one of the most famous words related to JavaScript is <a href="http://en.wikipedia.org/wiki/Ajax_(programming)" target="_blank">AJAX</a> (Asynchronous JavaScript and XML).  Request from JavaScript are made through the XmlHttpRequest JavaScript object which lets you open connections, send the request and handle data returned by the server.  This post is about XMLHttpRequest object, how to use it and how to handle data in a synchronous or asynchronous way.</p>
+<p>In the last years JavaScript has become one of the most important programming languages. Probably one of the most famous words related to JavaScript is <a href="http://en.wikipedia.org/wiki/Ajax_(programming)">AJAX</a> (Asynchronous JavaScript and XML).  Request from JavaScript are made through the XmlHttpRequest JavaScript object which lets you open connections, send the request and handle data returned by the server.  This post is about XMLHttpRequest object, how to use it and how to handle data in a synchronous or asynchronous way.</p>
 
 <h3>Creating a XMLHttpRequest instance</h3>
 <p>Usually the way to create a XMLHttpRequest instance is simply using:</p>
@@ -88,7 +88,7 @@ req.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
 req.send('param1=value1&amp;m2=value2');</pre>
 <p>The code has some important differences. First, in the '<em>open</em>' method the flag is set to <em>true</em> to make it an asynchronous request. Second, in a POST request the data must be set in the '<em>send</em>' method and you must explicitly specify the <em>Content-Type</em> of the data the request is sent. Finally, and the most important, the '<em>send</em>' method doesn't block the execution. The request is sent and code continues executing so we need to attach an event handler to the '<em>onreadystatechange</em>', this way once the request is done our handler function is executed. Again we need to check the response <em>readyState </em>and <em>status </em>attributes before to getting the results.</p>
 <h3>Cross Domain Request</h3>
-<p>Maybe you are thinking XMLHttpRequest object is the solution to create a really rich internet application requesting data from any place and merging it all together in your own web page but... there are restrictions and cross site request(XSR) are one of them. These restrictions are based in the <a href="http://en.wikipedia.org/wiki/Same_origin_policy" target="_blank">same origin policy</a>.</p>
+<p>Maybe you are thinking XMLHttpRequest object is the solution to create a really rich internet application requesting data from any place and merging it all together in your own web page but... there are restrictions and cross site request(XSR) are one of them. These restrictions are based in the <a href="http://en.wikipedia.org/wiki/Same_origin_policy">same origin policy</a>.</p>
 <p>Basically, when you load a web page from a domain A and supposing that web page contains your JavaScript code, that code is restricted to make requests on the domain A:</p>
 <p><img class="aligncenter" src="{{ site.url }}{{ site.baseurl }}assets/uploads/proxy1.gif" alt="" width="336" height="189" /></p>
 <p>You can't make request from a page loaded on domain A to a domain B (your browser avoids it for security reasons):</p>
@@ -101,7 +101,7 @@ Uncaught Error: NETWORK_ERR: XMLHttpRequest Exception 101</pre>
 <h3>Cross Origin Resource Sharing and Access-Control-Allow-* headers</h3>
 <p>To allow cross domain request the so called <a href="http://en.wikipedia.org/wiki/Cross-Origin_Resource_Sharing">Cross Origin Resource Sharing</a> (CORS) specification was developed. To use it you need a compatible browser (at least IE8, Chrome 3, FireFox 3.5, Safari 4), otherwise any request to a different domain will simply throw an exception.</p>
 <p>How does CORS work? CORS needs client/server cooperations. Before a request is sent the client (browser) adds the '<em>origin</em>' HTTP header to the request with the url of the client. The server response must contain some <em>Access-Control-Allow-*</em> HTTP headers indicating which urls, methods or headers the client is allowed to user.</p>
-<p>In the previous section sample error we have make a request to a server but our url isn't listed in the <em>Access-Control-Allow-Origin</em> header. Take a look to the <a href="https://developer.mozilla.org/En/HTTP_Access_Control#The_HTTP_response_headers" target="_blank">different headers</a> you can use at server side to control which clients are allowed to use your services. Here I would like to point the two most used by me:</p>
+<p>In the previous section sample error we have make a request to a server but our url isn't listed in the <em>Access-Control-Allow-Origin</em> header. Take a look to the <a href="https://developer.mozilla.org/En/HTTP_Access_Control#The_HTTP_response_headers">different headers</a> you can use at server side to control which clients are allowed to use your services. Here I would like to point the two most used by me:</p>
 <ul>
 <li><em>Access-Control-Allow-Origin</em>: can contain a list of client domains allows to make requests on your server.</li>
 <li><em>Access-Control-Allow-Methods</em>: here you can specify which HTTP methods can be used (for example only allow GET).</li>
@@ -111,7 +111,7 @@ Uncaught Error: NETWORK_ERR: XMLHttpRequest Exception 101</pre>
 <li><a href="https://developer.mozilla.org/en/AJAX/Getting_Started" target="_self">https://developer.mozilla.org/en/AJAX/Getting_Started</a> - Mozilla's "<em>Getting started</em>" tutorial.</li>
 <li><a href="http://www.w3.org/TR/XMLHttpRequest" target="_self">http://www.w3.org/TR/XMLHttpRequest</a> - W3C XMLHttpRequest specification.</li>
 <li><a href="http://msdn.microsoft.com/en-us/library/cc288060(VS.85).aspx" target="_self">http://msdn.microsoft.com/en-us/library/cc288060(VS.85).aspx</a> - XDomainRequest object available on IE8.</li>
-<li><a href="http://msdn.microsoft.com/en-us/library/ms537505(v=vs.85).aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms537505(v=vs.85).aspx</a> - About native XMLHttp implementation on IE.</li>
-<li><a href="https://developer.mozilla.org/En/HTTP_Access_Control" target="_blank">https://developer.mozilla.org/En/HTTP_Access_Control</a> - HTTP access control. Very important for cross-site HTTP request.</li>
+<li><a href="http://msdn.microsoft.com/en-us/library/ms537505(v=vs.85).aspx">http://msdn.microsoft.com/en-us/library/ms537505(v=vs.85).aspx</a> - About native XMLHttp implementation on IE.</li>
+<li><a href="https://developer.mozilla.org/En/HTTP_Access_Control">https://developer.mozilla.org/En/HTTP_Access_Control</a> - HTTP access control. Very important for cross-site HTTP request.</li>
 <li><a href="http://developer.yahoo.com/javascript/howto-proxy.html">http://developer.yahoo.com/javascript/howto-proxy.html</a> - Cross Domain Request using a proxy.</li>
 </ul>
