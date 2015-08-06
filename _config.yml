@@ -1,15 +1,15 @@
-name: "A Curious Animal"
-description: "Born to be curious, born to be animal !!!"
-meta_description: "technology, gis, javascript, web, mapping, openlayers, leaflet, jquery, acuriousanimal, acanimal"
-author:         "acanimal"
+name:               "A Curious Animal"
+description:        "Born to be curious, born to be animal !!!"
+meta_description:   "technology, gis, javascript, web, mapping, openlayers, leaflet, jquery, acuriousanimal, acanimal"
+author:             "acanimal"
 author_description: "Computer Science, passionate programmer and an eternal rookie guitar player."
-url:            "http://blog.acuriousanimal.com"
-baseurl: /
+url:                "http://acanimal.github.io"
+baseurl:            /
 
-markdown: redcarpet
-highlighter: pygments
+markdown:           redcarpet
+highlighter:        pygments
 
-logo: true
-paginate: 10
-google_analytics: 'UA-8297669-3'
-disqus_shortname: 'acuriousanimal'
+logo:               true
+paginate:           10
+google_analytics:   'UA-8297669-3'
+disqus_shortname:   'acuriousanimal'
