@@ -11,5 +11,5 @@ highlighter:        pygments
 
 logo:               true
 paginate:           10
-google_analytics:   'UA-8297669-3'
+google_analytics:   'UA-8297669-2'
 disqus_shortname:   'acuriousanimal'
