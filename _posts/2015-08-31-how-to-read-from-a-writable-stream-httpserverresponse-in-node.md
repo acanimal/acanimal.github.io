@@ -1,14 +1,14 @@
 ---
 layout: post
 title: "How to read from a writable stream (http.ServerResponse) in Node"
-date: "2015-08-08 21:05"
+date: "2015-08-31 21:05"
 tags:
 - node
 - streams
 - howto
 ---
 
-When time allows me I'm working on a personal side project, where a bunch of middlewares are chained to do something awesome. Remember a middleware is nothing more than a function that receives three parameters: the `request`, the `response` and the `next` function:
+I'm working on a personal side project (when I have free time to spend on) where a bunch of middlewares are chained to do something awesome (*Take a look at [ClydeIO](https://github.com/clydeio/clydeio). Note it is currently a proof of concept*). Remember a middleware is nothing more than a function that receives three parameters: the `request`, the `response` and the `next` function:
 
 ```javascript
 function(req, res, next) {
