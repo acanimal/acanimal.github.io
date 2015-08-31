@@ -1,26 +1,3 @@
-(function (window, $) {
-  $(document).ready(function() {
-    var url = $('.main-header').css('background-image');
-    url = url.replace('url(','').replace(')','');
-
-    console.log("URL ", url);
-
-    var img = document.createElement("img");
-    img.setAttribute('src', url);
-    img.crossOrigin = "Anonymous";
-    img.width = 1;
-    img.height = 1;
-    img.onload = function() {
-      var colorThief = new ColorThief();
-      var color = colorThief.getColor(img);
-      console.log("Corlor ", color);
-    }
-    // document.body.appendChild(img);
-
-
-  });
-})(window, jQuery);
-
 /**
  * Main JS file for Casper behaviours
  */
