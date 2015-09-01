@@ -36,7 +36,7 @@ function(req, res, next) {
 ```
 
 > Note, I'm working with [Connect](https://github.com/senchalabs/connect) and not [Express](http://expressjs.com/), but the concepts are the same.
-> Express uses the `send()` mehtod to write content, which is based in the `write()` and `end()` core node methods. Also Express extends with request and response object with its own methods.
+> Express uses the `send()` method to write content, which is based in the `write()` and `end()` core node methods. Also Express extends with request and response object with its own methods.
 
 Now, suppose in a middleware you need to get the current content (the response body) other middlewares has been written. The response is an output stream and it is designed to have write oriented operations: write content, write headers, etc but not read operations. ***[So how we can read the content written on a writable stream?](http://stackoverflow.com/questions/31851894/nodejs-middleware-how-to-read-from-a-writable-stream-http-serverresponse)***
 
@@ -52,10 +52,10 @@ function(req, res, next) {
   var data = "";
 
   res._originalWrite = res.write; // Store reference to the original write method
-  res.write = function(chunck, encoding, callback) {
-    data += chunck;
+  res.write = function(chunk, encoding, callback) {
+    data += chunk;
 
-    res._originalWrite.call(res, chunck, encoding, callback);
+    res._originalWrite.call(res, chunk, encoding, callback);
   }
 }
 ```
