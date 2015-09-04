@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Using webpack with an ExpressJS application
-date: 2015-07-27 22:08
+date: 2015-09-07 07:24
 tags:
 - webpack
 - howto
@@ -17,3 +17,9 @@ Well, I'm sorry but there is a new kid on the block and it is (IMO) a really str
 ## What is webpack ?
 
 Webpack is a module bundler. It is not a build system or a tasks runner. It understands about modules, dependencies and generate assets. That means in many cases can substitute the need of grunt or gulp in your projects.
+
+
+
+## The scene
+
+We are working on a web site using node+express for the backend. We have the need  
