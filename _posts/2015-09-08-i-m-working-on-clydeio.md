@@ -52,11 +52,20 @@ There exists other API gateways implemented using NGINX server, lua, go or pytho
 
 [ClydeIO][clydeio] is currently a proof of concept and I have implemented a bunch of filters to test its capabilities. Currently all configuration is provided via a JSON file. That's nice and simply but not much secure when working with authentication filters that needs specify users and passwords or with a real scenario that requires manage hundred of users.
 
-Because of this I'm currently working hard trying to create the configuration module responsible to manage the whole configuration and easy to implement for different backend: memory, redis, mongodb, postgresql, ...
+Because of this I'm currently working hard trying to create the configuration module, responsible to manage the whole configuration, and designing to be easy to implement for different backends: memory, redis, mongodb, postgresql, ...
 
 I have great feeling about [ClydeIO][clydeio]'s possibilities but to be honest it is currently a personal side project I write on my few free time. I have no contributors neither sponsors. So, if you arrive to this page and are interested in the project feel free to contact with me and start helping with your money or time :)
 
-> The current project documentation can be found at the project's wiki: [https://github.com/clydeio/clydeio/wiki](https://github.com/clydeio/clydeio/wiki).
+## Documentation
 
+I have create the [ClydeIO](https://github.com/clydeio) github *organization* to host all the related projects related with ClydeIO.
+
+We can differentiate among the core project, so called [clydeio](https://github.com/clydeio/clydeio) too and the rest of projects that are clyde's filters.
+
+The current core project documentation can be found at the project's wiki: [https://github.com/clydeio/clydeio/wiki](https://github.com/clydeio/clydeio/wiki). It will probably change soon, once finished the configuration module, but the concepts remains the same.
+
+## Contributions
+
+As a said, for the moment this is a personal project I develop on my free time. So don't hesitate to contact with me for any kind of support and help.
 
 [clydeio]: https://github.com/clydeio
