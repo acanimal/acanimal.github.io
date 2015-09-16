@@ -8,9 +8,13 @@ Like any other restless minds I do a lot of things but, unfortunately,  I am i
 
 Feel free to explore this section to know a bit more about my work.
 
+* [Projects](#projects)
+* [Presentations](#presentations)
+* [Contributions](#contributions)
+
 ---
 
-# Projects
+# Projects <a name="projects"></a>
 
 ## The Book of OpenLayers3 Examples
 
@@ -54,7 +58,15 @@ Storing sticky notes on your machine with HTML5 and IndexedDBStickies was develo
 
 ---
 
-# Presentations
+# Presentations <a name="presentations"></a>
+
+## Git, a short introduction with some pictures
+
+This is a short introduction about Git version control system describing the main topics:
+
+<iframe src="//slides.com/acanimal/git/embed" width="576" height="420" scrolling="no" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+*You can also view at [slid.es](http://slides.com/acanimal/git#/)*
 
 ## OpenLayers Presentation
 
@@ -70,7 +82,7 @@ One of the key features of the Dojo is the possibility to create new widgets to 
 
 ---
 
-# Contributions
+# Contributions <a name="contributions"></a>
 
 ## Heatmap
 
