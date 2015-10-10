@@ -9,3 +9,9 @@ This blog is made using:
 - showing images courtesy of [unsplash](https://unsplash.com/) project, loaded via [unsplash.it](https://unsplash.it/) service.
 
 **Knowledge is not a property**. Feel free to clone and/or contribute.
+
+## Jekyll plugins
+
+I try to make site as independent as possible but there are some tasks we don't need to reinvent the wheel:
+
+- [jekyll-sitemap](https://help.github.com/articles/sitemaps-for-github-pages/): Plugin to generate the `sitemap.xml` file.
