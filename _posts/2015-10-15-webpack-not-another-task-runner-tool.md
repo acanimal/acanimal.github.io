@@ -27,4 +27,6 @@ Here I present a short slideshow I prepared to introduce webpack to my team. Any
 
 <iframe src="//slides.com/acanimal/webpack/embed" width="576" height="420" scrolling="no" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
+*You can also view at [slid.es](http://slides.com/acanimal/webpack#/)*
+
 The two samples present in the slideshow are available at github at the [webpack-presentation](https://github.com/acanimal/webpack-presentation) repository.
