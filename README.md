@@ -15,3 +15,10 @@ This blog is made using:
 I try to make site as independent as possible but there are some tasks we don't need to reinvent the wheel:
 
 - [jekyll-sitemap](https://help.github.com/articles/sitemaps-for-github-pages/): Plugin to generate the `sitemap.xml` file.
+
+
+## Run locally
+
+To run locally and see final result execute:
+
+`$ jekyll serve --config _config.yml,_config-dev.yml`
