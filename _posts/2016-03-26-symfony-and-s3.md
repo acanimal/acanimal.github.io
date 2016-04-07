@@ -13,28 +13,24 @@ tags:
 
 Paraphrasing the movie title *Sex, lies and videotape*, this post is related on how I configured my symfony project to work with images (including thumbnail generation) and store all them on Amazon S3 service. There are are libraries and bundles to work with images and also others to work with S3, but the combination of all them can be a tricky experience with not much documentation out there. In addition, there is also one more challenge to achieve and, that is, while developing I want to store images locally (in a directory) but when deployed I want to use S3 storage.
 
-Currently I'm working on a project where users can upload photos. The application allows users to create collections, drag and drop images, order them and finally upload to the server. In addition, the user can explore his/her collections, browse images and download collections in a single ZIP file. Note:
+Currently I'm working on a project where users can upload photos. The application allows users to create collections, drag and drop images, order them and finally upload to the server. In addition, the user can explore his/her collections, browse images and download collections in a single ZIP file. All this having in mind:
 
-- While developing locally we want to store images in the local server folder. In staging or production environment we want to user S3. *Note, original images must be private while the thumbnails must be public to be included in the application web pages.*
-- We need to generate thumbnails with different sizes. When a user access to a collection a list of small thumbnails are shown. When user clicks an image a medium thumbnail is presented. When user downloads a collection the ZIP file includes the original images.
+- While developing locally we want to store images in the local server folder. In staging or production environment we want to use S3. Original images must remain private, while the thumbnails must be public to be included in the application web pages.
+- We need to generate thumbnails with different sizes. When a user access to a collection a list of small thumbnails are shown. When user clicks an image a medium thumbnail is presented. When user downloads a collection the ZIP file must include the original images.
 
 So, in summary, we need to deal with image upload, thumbnail generation and S3 service.
 
 ## Uploading images
 
-The first tool I have used is [VichUploaderBundle](vichuploader). Uploading images isn't a secret but can involve some extra tasks. The [VichUploaderBundle](vichuploader) helps working with file uploads that are attached to ORM entities.
+For image uploading we have used the [VichUploaderBundle](vichuploader). Uploading images isn't a secret but can involve some extra tasks. The [VichUploaderBundle](vichuploader) helps working with file uploads that are attached to ORM entities, that is, it is responsible to move the images to some configured place and attach it to your entity.
 
-We want to store images in folders classified by user and collection, something like `user_X/collection_Y/some_image`, where `X` and `Y` are identifiers.
+In addition, we want to store images in folders classified by user and collection, something like `user_X/collection_Y/some_image`, where `X` and `Y` are identifiers. A nice feature [VichUploaderBundle](vichuploader) offers is the possibility to attach the so called *directory namer* or *file namer* that determines the final name for the upload file. This way when a file is uploaded, given the current user and the selected collection, we determine dynamically the target folder where the bundle must store the image.
 
-A nice feature [VichUploaderBundle](vichuploader) offers is the possibility to attach the so called *directory namer* or *file namer* that determines the final name for the upload file. This way when a file is uploaded, given the current user and selected collection, the appropriate hierarchy of folders is created.
-
-Note the ORM entity only stores the file name. The path to the file is computed through used directory namers.
-
-**TODO: Show how to retrieve file path**
+Note the ORM entity only has the image file name. The path to the file is computed through the specified directory and/or file namers. For this reason, the bundle also includes the methods require to get the absolute path to a file given the file name stored within the entity.
 
 ## Generating thumbnails
 
-To generate thumbnails we have the [LiipImagineBundle](liipimagine).
+For this tasks we have used the [LiipImagineBundle](liipimagine).
 
 
 
