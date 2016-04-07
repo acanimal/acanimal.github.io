@@ -30,15 +30,23 @@ Note the ORM entity only has the image file name. The path to the file is comput
 
 ## Generating thumbnails
 
-For this tasks we have used the [LiipImagineBundle](liipimagine).
+To generate thumbnails we have used the [LiipImagineBundle](liipimagine) bundle. With it, when you reference an image within your templates you don't get the original image but a new one obtained applying some filters. Next line shows how to include an image in your twig template obtained after applying a `my_thumbnail` configuration:
 
+```html
+<img src="{{ '/relative/path/to/image.jpg' | imagine_filter('my_thumbnail') }}" />
+```
 
+The good thing is [LiipImagineBundle](liipimagine) generates the thumbnails when images are first time accessed and stores it in a *cache* folder.
 
 ## [Abstracting the file system]{#abstracting-file-system}
 
-We want to upload to a local folder when developing and to S3 when deploy to production. To make this transparent we use the [Gaufrette](gaufrette), and abstract filesystem. This means we can read (or write) files without worry about if we are working with the local filesystem, and FTP server or Amazon S3 service.
+We want to upload to a local folder when developing and to S3 when deploy to production. To make this transparent we use the [Gaufrette](gaufrette), and abstract filesystem. This means we can read (or write) files without worry about if we are working with the local filesystem, an FTP server, Amazon S3 service, etc.
 
-Arrived here, the main question is how to configure the three bundles to work together, so we can upload images, generate thumbnails and work locally or with S3 depending on the environment.
+bla, bla, bla, ...
+
+## Putting it all together
+
+Arrived here, the main question is how to configure the three bundles to work together, so we can upload images and generate thumbnails and store in a cache directory, all this, without worring about if we are working locally or through S3 service.
 
 bla, bla, bla, ...
 
