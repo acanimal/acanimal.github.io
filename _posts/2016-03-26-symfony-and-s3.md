@@ -36,19 +36,133 @@ To generate thumbnails we have used the [LiipImagineBundle](liipimagine) bundle.
 <img src="{{ '/relative/path/to/image.jpg' | imagine_filter('my_thumbnail') }}" />
 ```
 
-The good thing is [LiipImagineBundle](liipimagine) generates the thumbnails when images are first time accessed and stores it in a *cache* folder.
+The good thing is [LiipImagineBundle](liipimagine) generates the thumbnails when images are first time accessed and stores them in a *cache* folder for next calls.
 
-## [Abstracting the file system]{#abstracting-file-system}
+## Abstracting the file system
 
-We want to upload to a local folder when developing and to S3 when deploy to production. To make this transparent we use the [Gaufrette](gaufrette), and abstract filesystem. This means we can read (or write) files without worry about if we are working with the local filesystem, an FTP server, Amazon S3 service, etc.
+The issue is we want to upload images and generate thumbnails into a local folder at development time and to S3 when running in staging or production.
 
-bla, bla, bla, ...
+Hopefully for us there is the [Gaufrette](gaufrette) bundle, which is an abstract filesystem. It offers a common interface to read/write to different filesystem and a bunch of implementations to work against the local filesystem, an FTP server, Amazon S3 service, ... and many more.
 
 ## Putting it all together
 
-Arrived here, the main question is how to configure the three bundles to work together, so we can upload images and generate thumbnails and store in a cache directory, all this, without worring about if we are working locally or through S3 service.
+Arrived here, the main question is how to configure the three bundles to work together, in summary:
 
-bla, bla, bla, ...
+- We want to abstract the filesystem to work locally while developing and with S3 in production.
+- We need to upload images.
+- We need to generate thumbnails for uploaded images and store them in a cache folder to be later server.
+
+We have divided the configuration between the `config.yml` file and the `config_prod.yml`. The first contains the configuration for the previous three bundles ready to work locally. The second overrides some propertires to work in production, using S3.
+
+The first point is to configure the [Gaufrette](gaufrette) bundle to abstract our filesystem. Next is the configuration in the `config.yml`:
+
+{% highlight yaml %}
+# config.yml
+knp_gaufrette:
+    stream_wrapper: ~
+
+    adapters:
+        # Local adapter
+        local:
+            local:
+                directory: %kernel.root_dir%/../web/uploads
+
+    filesystems:
+        custom_uploads_fs:
+            adapter:    local
+{% endhighlight %}
+
+Compare with parameters we override in the `config_prod.yml`. *Note for production you need to define an AWS-S3 service which I do not include here.*
+
+{% highlight yaml %}
+# config_prod.yml
+knp_gaufrette:
+    adapters:
+        # S3 adapter
+        s3:
+            aws_s3:
+                service_id: 'komik.aws_s3.client'
+                bucket_name: 'komik-staging'
+
+    filesystems:
+        custom_uploads_fs:
+            adapter:    s3
+{% endhighlight %}
+
+We define a `custom_uploads_fs` filesystem which by default uses a `local` adapter and in production uses an `aws_s3` one.
+
+Next step is to configure the [VichUploaderBundle](vichuploader) bundle. Hopefully it is designed to integrate with Gaufrette. Next is the configuration:
+
+{% highlight yaml %}
+# config.yml
+vich_uploader:
+    db_driver: orm
+    storage:   gaufrette
+
+    mappings:
+        my_images:
+            uri_prefix:         ~
+            upload_destination: custom_uploads_fs
+            directory_namer:    app.vich_uploader.custom.directory.namer
+            namer:              vich_uploader.namer_uniqid
+            inject_on_load:     false
+            delete_on_update:   true
+            delete_on_remove:   true
+{% endhighlight %}
+
+As you can see we are specifying we are using `storage: gaufrette` and the upload destination is the previous defined gaufrette filesystem `custom_uploads_fs`. This means all images will be uploaded through the Gaufrette filesystem to that destination. Note, within the target filesystem, the final folder and file name are determined by a custom directory names we have implemented ( `app.vich_uploader.custom.directory.namer` which adds the user ID to the path) and the file namer `vich_uploader.namer_uniqid` offered by Gaufrette, which assigns a unique name to each file.
+
+Finally, we need to configure the [LiipImagineBundle](liipimagine) bundle.
+
+{% highlight yaml %}
+# Thumbnails
+liip_imagine:
+    resolvers:
+        # Cache generated files locally
+        local_fs:
+            web_path:
+                web_root: %kernel.root_dir%/../web
+                cache_prefix: uploads/_cache
+
+    loaders:
+        stream_uploads:
+            stream:
+                wrapper: gaufrette://custom_uploads_fs/
+
+    cache: local_fs
+
+    data_loader: stream_uploads
+
+    filter_sets:
+        my_thumb:
+            quality: 50
+            filters:
+                thumbnail: { size: [350, 450], mode: inset }
+                strip: ~
+{% endhighlight %}
+
+
+
+PRODUCTION
+{% highlight yaml %}
+# Thumbnails
+liip_imagine:
+    resolvers:
+        # Cache generated files on S3
+        s3_fs:
+            aws_s3:
+                client_config:
+                    # TODO - Do not put credentials here, use heroku environment vars
+                    key: 'AKIAJUUTLTFVDUWLNJ5Q' #%amazon_s3.key%
+                    secret: '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' #%amazon_s3.secret%
+                    region: 'us-west-2' #%amazon_s3.region%
+                bucket:     'komik-staging/_cache'
+
+    cache: s3_fs
+
+{% endhighlight %}
+
+
 
 
 [gaufrette]: https://github.com/KnpLabs/Gaufrette
