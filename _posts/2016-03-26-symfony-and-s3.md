@@ -91,7 +91,7 @@ knp_gaufrette:
 
 We define a `custom_uploads_fs` filesystem which by default uses a `local` adapter and in production uses an `aws_s3` one.
 
-Next step is to configure the [VichUploaderBundle](vichuploader) bundle. Hopefully it is designed to integrate with Gaufrette. Next is the configuration:
+Next step is to configure the [VichUploaderBundle](vichuploader) bundle. Hopefully it is designed to integrate with Gaufrette so it is easy to specify how to upload files through gaufrette. Next is the configuration:
 
 {% highlight yaml %}
 # config.yml
@@ -110,12 +110,12 @@ vich_uploader:
             delete_on_remove:   true
 {% endhighlight %}
 
-As you can see we are specifying we are using `storage: gaufrette` and the upload destination is the previous defined gaufrette filesystem `custom_uploads_fs`. This means all images will be uploaded through the Gaufrette filesystem to that destination. Note, within the target filesystem, the final folder and file name are determined by a custom directory names we have implemented ( `app.vich_uploader.custom.directory.namer` which adds the user ID to the path) and the file namer `vich_uploader.namer_uniqid` offered by Gaufrette, which assigns a unique name to each file.
+As you can see we are specifying we want to use gaufrette with `storage: gaufrette` and the upload destination is the previous defined gaufrette filesystem `custom_uploads_fs`. This means all images will be uploaded through the Gaufrette filesystem to that destination. Note, within the target filesystem, the final folder and file name are determined by a custom directory namer we have implemented (`app.vich_uploader.custom.directory.namer` which adds the user ID to the path) and the file namer `vich_uploader.namer_uniqid` offered by Gaufrette, which assigns a unique name to each file.
 
-Finally, we need to configure the [LiipImagineBundle](liipimagine) bundle.
+Finally, we need to configure the [LiipImagineBundle](liipimagine) bundle. Next is the configuration used for local development. We need to specify the cache folder where to generate the thumbnails in adition to our filter, that will generate with size `350x450` and half quality:
 
 {% highlight yaml %}
-# Thumbnails
+# config.yml
 liip_imagine:
     resolvers:
         # Cache generated files locally
@@ -141,28 +141,32 @@ liip_imagine:
                 strip: ~
 {% endhighlight %}
 
+Main properties to configure are the `data_loader`and the `cache`. The first one uses the stream `stream_uploads` that uses gaufrette filesystem. The second uses the resolver `local_fs` that we have configured to use the local folder `uploads/_cache`.
 
+For production, configuration changes slightly. Here we override the resolver to generate cache files through the resolver `s3_fs` which points to S3 bucket:
 
-PRODUCTION
 {% highlight yaml %}
-# Thumbnails
+# config_prod.yml
 liip_imagine:
     resolvers:
         # Cache generated files on S3
         s3_fs:
             aws_s3:
                 client_config:
-                    # TODO - Do not put credentials here, use heroku environment vars
-                    key: 'AKIAJUUTLTFVDUWLNJ5Q' #%amazon_s3.key%
-                    secret: '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' #%amazon_s3.secret%
-                    region: 'us-west-2' #%amazon_s3.region%
-                bucket:     'komik-staging/_cache'
+                    key: %your_amazon_s3.key%
+                    secret: %your_amazon_s3.secret%
+                    region: %your_amazon_s3.region%
+                bucket: %your_bucket_name%
 
     cache: s3_fs
 
 {% endhighlight %}
 
+# Conclusions
 
+[VichUploaderBundle](vichuploader), [LiipImagineBundle](liipimagine) and [Gaufrette](gaufrette) are three great Symfony2 bundles. The configuration to make work all them can by tricky so hope this post can help others.
+
+While [VichUploaderBundle](vichuploader) is designed to work with [Gaufrette](gaufrette), and its configuration is almost trivial, [LiipImagineBundle](liipimagine) is not and requires some extra tasks. For [LiipImagineBundle](liipimagine) we need to configure its main components, which are the *cache* and the `data_loader`.
 
 
 [gaufrette]: https://github.com/KnpLabs/Gaufrette
