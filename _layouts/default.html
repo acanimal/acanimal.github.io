@@ -17,7 +17,7 @@
     <link rel="stylesheet" type="text/css" href="/assets/css/main.css" />
 
 </head>
-<body class="{% if page.post_class %}{{page.post_class}}{% else %}home-template{% endif %}">
+<body class="{% if layout.post_class %}{{layout.post_class}}{% else %}home-template{% endif %}">
     {{ content }}
     <footer class="site-footer clearfix">
       <section class="copyright">
