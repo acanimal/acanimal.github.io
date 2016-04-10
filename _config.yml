@@ -6,8 +6,13 @@ author_description: "Computer Science, passionate programmer and an eternal rook
 url:                "http://acanimal.github.io"
 baseurl:            /
 
-markdown:           redcarpet
-highlighter:        pygments
+markdown:           kramdown
+
+kramdown:
+  input: GFM
+  hard_wrap: false
+
+highlighter:        rouge
 
 logo:               true
 paginate:           10
@@ -15,4 +20,5 @@ google_analytics:   'UA-8297669-2'
 disqus_shortname:   'acuriousanimal'
 
 gems:
+  - jekyll-paginate
   - jekyll-sitemap

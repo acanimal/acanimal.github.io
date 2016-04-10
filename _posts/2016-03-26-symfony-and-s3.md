@@ -20,7 +20,8 @@ Currently I'm working on a project where users can upload photos. The applicatio
 
 So, in summary, we need to deal with image upload, thumbnail generation and S3 service.
 
-## Uploading images
+
+## Uploading images
 
 For image uploading we have used the [VichUploaderBundle](vichuploader). Uploading images isn't a secret but can involve some extra tasks. The [VichUploaderBundle](vichuploader) helps working with file uploads that are attached to ORM entities, that is, it is responsible to move the images to some configured place and attach it to your entity.
 
@@ -56,7 +57,7 @@ We have divided the configuration between the `config.yml` file and the `config_
 
 The first point is to configure the [Gaufrette](gaufrette) bundle to abstract our filesystem. Next is the configuration in the `config.yml`:
 
-{% highlight yaml %}
+```yaml
 # config.yml
 knp_gaufrette:
     stream_wrapper: ~
@@ -70,11 +71,11 @@ knp_gaufrette:
     filesystems:
         custom_uploads_fs:
             adapter:    local
-{% endhighlight %}
+```
 
 Compare with parameters we override in the `config_prod.yml`. *Note for production you need to define an AWS-S3 service which I do not include here.*
 
-{% highlight yaml %}
+```yaml
 # config_prod.yml
 knp_gaufrette:
     adapters:
@@ -87,13 +88,13 @@ knp_gaufrette:
     filesystems:
         custom_uploads_fs:
             adapter:    s3
-{% endhighlight %}
+```
 
 We define a `custom_uploads_fs` filesystem which by default uses a `local` adapter and in production uses an `aws_s3` one.
 
 Next step is to configure the [VichUploaderBundle](vichuploader) bundle. Hopefully it is designed to integrate with Gaufrette so it is easy to specify how to upload files through gaufrette. Next is the configuration:
 
-{% highlight yaml %}
+```yaml
 # config.yml
 vich_uploader:
     db_driver: orm
@@ -108,13 +109,13 @@ vich_uploader:
             inject_on_load:     false
             delete_on_update:   true
             delete_on_remove:   true
-{% endhighlight %}
+```
 
 As you can see we are specifying we want to use gaufrette with `storage: gaufrette` and the upload destination is the previous defined gaufrette filesystem `custom_uploads_fs`. This means all images will be uploaded through the Gaufrette filesystem to that destination. Note, within the target filesystem, the final folder and file name are determined by a custom directory namer we have implemented (`app.vich_uploader.custom.directory.namer` which adds the user ID to the path) and the file namer `vich_uploader.namer_uniqid` offered by Gaufrette, which assigns a unique name to each file.
 
 Finally, we need to configure the [LiipImagineBundle](liipimagine) bundle. Next is the configuration used for local development. We need to specify the cache folder where to generate the thumbnails in adition to our filter, that will generate with size `350x450` and half quality:
 
-{% highlight yaml %}
+```yaml
 # config.yml
 liip_imagine:
     resolvers:
@@ -139,13 +140,13 @@ liip_imagine:
             filters:
                 thumbnail: { size: [350, 450], mode: inset }
                 strip: ~
-{% endhighlight %}
+```
 
 Main properties to configure are the `data_loader`and the `cache`. The first one uses the stream `stream_uploads` that uses gaufrette filesystem. The second uses the resolver `local_fs` that we have configured to use the local folder `uploads/_cache`.
 
 For production, configuration changes slightly. Here we override the resolver to generate cache files through the resolver `s3_fs` which points to S3 bucket:
 
-{% highlight yaml %}
+```yaml
 # config_prod.yml
 liip_imagine:
     resolvers:
@@ -159,8 +160,7 @@ liip_imagine:
                 bucket: %your_bucket_name%
 
     cache: s3_fs
-
-{% endhighlight %}
+```
 
 # Conclusions
 
