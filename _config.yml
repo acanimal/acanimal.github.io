@@ -5,7 +5,6 @@ author:             "acanimal"
 author_description: "Computer Science, passionate programmer and an eternal rookie guitar player."
 url:                "http://acanimal.github.io"
 baseurl:            /
-excerpt_separator:  <!--more-->
 
 markdown:           kramdown
 

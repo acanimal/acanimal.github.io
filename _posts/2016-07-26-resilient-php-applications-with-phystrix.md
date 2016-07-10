@@ -14,8 +14,6 @@ tags:
 
 No matter how well designed be your system, no matter the number, kind or quality of your tests. There is only once thing for sure: *your system will fail*. Although we can well design, implement and test our systems we have dependencies with third party services: databases, queues, call REST API on another systems, ...
 
-<!--more-->
-
 In the decade of [microservices](http://martinfowler.com/articles/microservices.html) where dependency/communication among systems becomes a main pilar we need mechanisms to make our systems resistant among third party failures. We need to [resilience](http://www.dictionary.com/browse/resilience), that is, recover quickly from disasters.
 
 ## The problem with dependencies
