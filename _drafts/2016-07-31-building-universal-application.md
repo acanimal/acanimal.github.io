@@ -10,6 +10,8 @@ tags:
 - redux
 - universal
 - isomorphic
+- web
+- application
 ---
 
 In this article series I'm going to describe: What is an universal (previously called isomorphic) web application? Why are them important? What benefits offers a universal web apps? and How to create a boilerplate to start a universal app project. Note, JavaScript ecosystem is incredible bast and, because we can create an universal web app with almost any combination of framework and libraries, we will use in this series [React][react], [Redux][redux] and [Webpack][webpack].
@@ -22,32 +24,63 @@ In this article series I'm going to describe: What is an universal (previously c
 
 ---
 
-The web is evolving faster than ever, mainly by the evolution and improvements of the JavaScript language. Besides, NodeJS project has made possible to use JavaScript on the server side demonstrating JS is a *first class language* as good -or bad- like Java, PHP or Python. But, in contrast to them, the fact that we can use JS both for server and client side, converts JS in a really special language, which brings us possibility to create what was called *universal applications*.
+The web is evolving faster than ever, mainly by the evolution and improvements of the JavaScript language. Besides, NodeJS project has made possible to use JavaScript on the server side demonstrating JS is a *first class language* as good -or bad- like Java, PHP or Python. But, in contrast to them, the fact that we can use JS both for server and client side, converts JS in a really special language, which brings us possibility to create what are called *universal applications* (previously known as *isomorphic applications*).
 
 
 ## JavaScript on the client side
 
-The use of JS on client side has evolve from a couple of lines to validate some input text to really complex applications. Nowadays everybody uses some [RIA](https://en.wikipedia.org/wiki/Rich_Internet_application) application: email, social networks, photo sharing, etc.
+The use of JavaScript in the browser was the initial reason to exists for the language. Its use has evolve from having a couple of lines to validate some input text to really complex applications. Nowadays everybody uses some [RIA](https://en.wikipedia.org/wiki/Rich_Internet_application) application for email, social networks, photo sharing, etc.
 
-Trivializing a bit, we can summarize a RIA works as follows: an HTML file is loaded by the browser, which usually are organized like:
+As a summary, RIA works as follows:
 
-- In the `<head>` section all CSS needed to style our application is loaded.
-- Main DOM elements are placed in the `<body>`.
-- At the end a `<script>` tag includes all the JavaScript code required by our app. This is responsible to add or remove new DOM elements (like modal windows, menus, ...), load data asynchronously, etc.
+- The browser loads a HTML file. This file is usually organized in like:
 
-TODO - Talks about characteristics of this apps. We spent time loading and time to load initial data.
+  - The `<head>` section of the HTML contains all needed CSS code required to style the DOM elements of our application.
+  - The `<body>` tag contains almost no DOM elements (*these elements are dynamically generated be JS code*).
+  - At the end a `<script>` tag includes all the JavaScript code required by our app.
+
+- At this point the client, the browser, contains all the required code to work. The JavaScript loaded in the `<script>` tag is responsible to add or remove new DOM elements (like modal windows, menus, list items, ...), load data asynchronously from the server, authenticate, etc.
+
+### Pros and cons of RIA applications
+
+RIA have meant a significant step in the context of web based applications. I remember when GMail appears and how its UX was better that other competitors where each change or click in a buttons implies to reload the whole page again.
+
+**TODO - Talks about characteristics of this apps. We spent time loading and time to load initial data.**
 
 
-These kind of applications can be summarized as follows:
-
-- The `index.html` (or whatever) file is loaded.
--
 
 ## JavaScript on the server side
 
+There are some alternatives to run JavaScript on the server side, but the one that has beat all them has been the NodeJS project.
+
+Based on Google [V8 JavaScript Engine](https://en.wikipedia.org/wiki/V8_(JavaScript_engine)) NodeJS allows to run JavaScript code on the server side. Because of the nature of JavaScript it is extremely easy to create asynchronous event-driven applications, which are easier to develop than the traditional concurrent applications.
+
+Working with JavaScript at serve side is similar to any other language and technologies:
+
+- clients makes request to the server,
+- the server process incoming data, computes or queries any needed values, constructs an HTML page as response and returns to the client.
+- the client interprets the returned HTML page, loading any included image, CSS or JavaScript script.
+
+This is, for example, the way to work of ancient email clients where each action (click in a link or button) implied a call to a different URL on the server and the user must to wait until server resolves the new HTML code and returns it to the browser.
+
+### Pros and cons of server side applications
+
+Time has pass and everybody can think on server side applications has a bad option, because of the need of waiting for a server response on each client action.
+
+That's right, but the truth is server side applications was great in one aspect: **the always return pages with content**, that is, when you request some URL you always get the page with the content you expect.
+
+This fact is what makes necessary server side processing when building universal apps. We need to speed up the app and improve the UX returning as much content as possible when user access some URL.
 
 
 
+
+## The big picture: universal app execution flow
+
+Next picture summarizes how universal apps works:
+
+![Universal/Isomorphic flow]({{ site.url }}{{ site.baseurl }}assets/uploads/2016-08_universal_js.png)
+
+**TODO Describe...**
 
 
 [react]: https://facebook.github.io/react/
