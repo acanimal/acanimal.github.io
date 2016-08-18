@@ -49,15 +49,15 @@ Ok, enough talk and lets start working. We need to make two things: first, confi
 
 The first thing we need to do is configure ESLint in our project. Remember we are going to use the AirBnB style guide so we need no install the required package and make our ESLint configuration extend from the AirBnB ESLint configuration.
 
-1. Install ESLint locally to your project: `> npm install eslint --save-dev`.
-2. Install the [AirBnB ESLint configuration](https://www.npmjs.com/package/eslint-config-airbnb). Following package instructions we need to execute next sentences to install the right package versions and dependencies:
+- Install ESLint locally to your project: `> npm install eslint --save-dev`.
+- Install the [AirBnB ESLint configuration](https://www.npmjs.com/package/eslint-config-airbnb). Following package instructions we need to execute next sentences to install the right package versions and dependencies:
 
-  ```
+  ```bash
   > export PKG=eslint-config-airbnb;
   > npm info "$PKG" peerDependencies --json | command sed 's/[\{\},]//g ; s/: /@/g' | xargs npm install --save-dev "$PKG"
-)
   ```
-3. Create a `.eslintrc` file in the root of our project. We must be sure to include the property `"extends": "airbnb"` as part of the configuration.
+
+- Create a `.eslintrc` file in the root of our project. We must be sure to include the property `"extends": "airbnb"` as part of the configuration.
 
 Next is a sample configuration file. Note we inherited configuration from AirBnB. In addition, we have added the eslint rules `valid-jsdoc` and `require-jsdoc` to forces us to write some JSDoc for functions, methods and classes.
 
@@ -95,5 +95,10 @@ Right now our project is configured with ESLint and the base set of rules from A
 ### Installing Atom plugins
 
 Lets go to configure Atom to automatically lint files and show us message while coding.
+
+> Be sure you have completed successfully the previous sections.
+
+- Install the Atom plugin [linter-eslint](https://github.com/AtomLinter/linter-eslint).
+
 
 **TODO continue**
