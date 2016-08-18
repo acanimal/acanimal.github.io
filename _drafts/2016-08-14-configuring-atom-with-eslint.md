@@ -18,7 +18,7 @@ tags:
 
 Usually, the way to use ESLint involves the command line, invoking it to check our project's code at some point (for example, before made a build) or automatizing its execution with a tool like Gulp or Grunt each time a file is modified. ESLint also accepts a configuration files, like `.eslintrc.js`, where we can define the set of rules we want the tool checks. The *issue* is, as you can imagine, the number of rules ESLint accepts is really huge.
 
-## Importance of a style guide
+## The importance of a style guide
 
 In projects with many developers it can be useful define a set of rules that force all of them to code with the same style, that is, use a *style guide*.
 
@@ -41,6 +41,59 @@ Creating and maintaining a style guide is not an easy tasks. Hopefully, the awes
 > - No configuration. The easiest way to enforce consistent style in your project. Just drop it in.
 > - Catch style errors before they're submitted in PRs. Saves precious code review time by eliminating back-and-forth between maintainer and contributor.
 
-## Configuring ESLint in your project
+## Integrating ESLint with Atom
+
+Ok, enough talk and lets start working. We need to make two things: first, configure ESLint in our project (for this we also need to install the AirBnB style guide), and second install necessary Atom plugins to show messages while coding.
+
+### Configuring ESLint in your project
+
+The first thing we need to do is configure ESLint in our project. Remember we are going to use the AirBnB style guide so we need no install the required package and make our ESLint configuration extend from the AirBnB ESLint configuration.
+
+1. Install ESLint locally to your project: `> npm install eslint --save-dev`.
+2. Install the [AirBnB ESLint configuration](https://www.npmjs.com/package/eslint-config-airbnb). Following package instructions we need to execute next sentences to install the right package versions and dependencies:
+
+  ```
+  > export PKG=eslint-config-airbnb;
+  > npm info "$PKG" peerDependencies --json | command sed 's/[\{\},]//g ; s/: /@/g' | xargs npm install --save-dev "$PKG"
+)
+  ```
+3. Create a `.eslintrc` file in the root of our project. We must be sure to include the property `"extends": "airbnb"` as part of the configuration.
+
+Next is a sample configuration file. Note we inherited configuration from AirBnB. In addition, we have added the eslint rules `valid-jsdoc` and `require-jsdoc` to forces us to write some JSDoc for functions, methods and classes.
+
+
+```json
+{
+  "extends": "airbnb",
+  "parser": "babel-eslint",
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true,
+    "mocha": true
+  },
+  "rules": {
+    "valid-jsdoc": ["error", {
+      "requireReturn": true,
+      "requireReturnType": true,
+      "requireParamDescription": true,
+      "requireReturnDescription": true
+    }],
+    "require-jsdoc": ["error", {
+        "require": {
+            "FunctionDeclaration": true,
+            "MethodDefinition": true,
+            "ClassDeclaration": true
+        }
+    }]
+  }
+}
+```
+
+Right now our project is configured with ESLint and the base set of rules from AirBnB, but it requires we execute ESLint manually or automatize in some way (in the build process).
+
+### Installing Atom plugins
+
+Lets go to configure Atom to automatically lint files and show us message while coding.
 
 **TODO continue**
