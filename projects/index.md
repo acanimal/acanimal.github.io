@@ -8,6 +8,13 @@ Like any other restless minds I do a lot of things but, unfortunately,  I am i
 
 Feel free to explore this section to know a bit more about my work.
 
+- [Presentations](#presentations)
+	- [Introduction to Node & Express](#introduction-to-node-and-express)
+	- [Resilient PHP applications with Phystrix](#resilient-php-applications-with-phystrix)
+	- [Webpack, the not another task runner tool](#webpack-the-not-another-task-runner-tool)
+	- [Git, a short introduction with some pictures](#git-a-short-introduction-with-some-pictures)
+	- [OpenLayers Presentation](#openlayers-presentation)
+	- [Brief introduction to Dojo Widgets creation](#brief-introduction-to-dojo-widgets-creation)
 - [Projects](#projects)
 	- [The Book of OpenLayers3 Examples](#the-book-of-openlayers3-examples)
 	- [The Nobel Prize](#the-nobel-prize)
@@ -15,14 +22,52 @@ Feel free to explore this section to know a bit more about my work.
 	- [OpenLayers Cookbook Examples](#openlayers-cookbook-examples)
 	- [SimplyWrite](#simplywrite)
 	- [Stickies](#stickies)
-- [Presentations](#presentations)
-	- [Webpack, the not another task runner tool](#webpack-the-not-another-task-runner-tool)
-	- [Git, a short introduction with some pictures](#git-a-short-introduction-with-some-pictures)
-	- [OpenLayers Presentation](#openlayers-presentation)
-	- [Brief introduction to Dojo Widgets creation](#brief-introduction-to-dojo-widgets-creation)
 - [Contributions](#contributions)
 	- [Heatmap](#heatmap)
 
+---
+
+# <a name="presentations"></a>Presentations
+
+## <a name="introduction-to-node-and-express"></a>Introduction to Node & Express
+
+Short intro to main JS concepts, like asynchronous programming and event loop, NodeJS and Express framework.
+
+<iframe src="//slides.com/acanimal/node-express/embed" width="576" height="420" scrolling="no" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+## <a name="resilient-php-applications-with-phystrix"></a>Resilient PHP applications with Phystrix
+
+Introductory talk to resilient application. Our applications must be able to adapt to third party failures and recover quickly from them. You will see why configuring timeouts is not enough to protect your system and what better tools exists. We will explain briefly Hystrix concepts and introduce an alternative for PHP called Phystrix.
+
+<iframe src="//slides.com/acanimal/resiliency-php-apps/embed" width="576" height="420" scrolling="no" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+## <a name="webpack-the-not-another-task-runner-tool"></a>Webpack, the not another task runner tool
+
+This slideshow describes what is and the main features of webpack, a module bundler tool:
+
+<iframe src="//slides.com/acanimal/webpack/embed" width="576" height="420" scrolling="no" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+*You can also view at [slid.es](http://slides.com/acanimal/webpack#/)*
+
+## <a name="git-a-short-introduction-with-some-pictures"></a>Git, a short introduction with some pictures
+
+This is a short introduction about Git version control system describing the main topics:
+
+<iframe src="//slides.com/acanimal/git/embed" width="576" height="420" scrolling="no" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+*You can also view at [slid.es](http://slides.com/acanimal/git#/)*
+
+## <a name="openlayers-presentation"></a>OpenLayers Presentation
+
+A free and online presentation about the main concepts and design of the OpenLayers mapping library. [Read more]({{ site.url }}/2012/12/04/openlayers-presentation-and-openlayers-cookbook-sample-code-update.html)...
+
+[![]({{ site.url }}{{ site.baseurl }}assets/uploads/ol-presentation.png)](http://acanimal.github.com/OpenLayers-Presentation)
+
+## <a name="brief-introduction-to-dojo-widgets-creation"></a>Brief introduction to Dojo Widgets creation
+
+Dojo Toolkit is a great JavaScript framework. It is has a powerful and homogeneous API and offers a rich set of visual components (so called widgets, like buttons, tabs, grids, trees, ...) that makes it perfect to build RIA (_Rich Internet Applications_).
+
+One of the key features of the Dojo is the possibility to create new widgets to simplify the development of complex applications. This is a introductory presentation to the custom widgets development. [Read more]({{ site.url }}/2012/07/08/brief-introduction-to-dojo-widgets-creation.html)...
 
 ---
 
@@ -67,38 +112,6 @@ For the OpenLayers Cookbook I wrote a set of examples so the readers can also se
 Storing sticky notes on your machine with HTML5 and IndexedDBStickies was developed to have my custom sticky board where to place my notes. Similarly to SimplyWrite it makes use of IndexedDB capabilities so all the notes are stored in your local machine instead on a server. [Read more]({{ site.url }}/2011/08/12/local-storage-storing-sticky-notes-on-your-machine-with-html5.html)...
 
 ![stickies]({{ site.url }}{{ site.baseurl }}assets/uploads/stickies.png)
-
----
-
-# <a name="presentations"></a>Presentations
-
-## <a name="webpack-the-not-another-task-runner-tool"></a>Webpack, the not another task runner tool
-
-This slideshow describes what is and the main features of webpack, a module bundler tool:
-
-<iframe src="//slides.com/acanimal/webpack/embed" width="576" height="420" scrolling="no" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-
-*You can also view at [slid.es](http://slides.com/acanimal/webpack#/)*
-
-## <a name="git-a-short-introduction-with-some-pictures"></a>Git, a short introduction with some pictures
-
-This is a short introduction about Git version control system describing the main topics:
-
-<iframe src="//slides.com/acanimal/git/embed" width="576" height="420" scrolling="no" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-
-*You can also view at [slid.es](http://slides.com/acanimal/git#/)*
-
-## <a name="openlayers-presentation"></a>OpenLayers Presentation
-
-A free and online presentation about the main concepts and design of the OpenLayers mapping library. [Read more]({{ site.url }}/2012/12/04/openlayers-presentation-and-openlayers-cookbook-sample-code-update.html)...
-
-[![]({{ site.url }}{{ site.baseurl }}assets/uploads/ol-presentation.png)](http://acanimal.github.com/OpenLayers-Presentation)
-
-## <a name="brief-introduction-to-dojo-widgets-creation"></a>Brief introduction to Dojo Widgets creation
-
-Dojo Toolkit is a great JavaScript framework. It is has a powerful and homogeneous API and offers a rich set of visual components (so called widgets, like buttons, tabs, grids, trees, ...) that makes it perfect to build RIA (_Rich Internet Applications_).
-
-One of the key features of the Dojo is the possibility to create new widgets to simplify the development of complex applications. This is a introductory presentation to the custom widgets development. [Read more]({{ site.url }}/2012/07/08/brief-introduction-to-dojo-widgets-creation.html)...
 
 ---
 
