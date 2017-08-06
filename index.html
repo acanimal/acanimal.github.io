@@ -32,7 +32,9 @@ cover: https://unsplash.it/1500/500?random&blur
 
 <main id="content" class="content" role="main">
 
+    {% comment %}
     {% include sidebar.html %}
+    {% endcomment %}
 
     <div class="extra-pagination inner">
         {% include pagination.html %}
@@ -61,8 +63,10 @@ cover: https://unsplash.it/1500/500?random&blur
         </footer>
     </article>
 
-    <!-- Capser below -->
-<!--     <article class="{{post_class}}">
+    {% comment %}
+    <!--
+    // Casper below
+    <article class="{{post_class}}">
     <header class="post-header">
         <h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
     </header>
@@ -75,7 +79,9 @@ cover: https://unsplash.it/1500/500?random&blur
         {{tags prefix=" on "}}
         <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time>
     </footer>
-    </article> -->
+    </article>
+    -->
+    {% endcomment %}
     <!--  -->
 
     {% endfor %}
