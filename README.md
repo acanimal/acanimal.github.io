@@ -20,6 +20,6 @@ I try to make site as independent as possible but there are some tasks we don't 
 
 ## Run locally
 
-To run locally and see final result execute:
+This website makes use of docker to avoid installing ruby and jekyll locally. Install docker engine and run:
 
-`$ jekyll serve --config _config.yml,_config-dev.yml`
+`$ docker-compose up`

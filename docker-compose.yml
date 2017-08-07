@@ -1,0 +1,10 @@
+version: '3'
+services:
+  site:
+    command: jekyll serve --drafts --config _config.yml,_config-dev.yml
+    image: jekyll/jekyll:latest
+    volumes:
+      - $PWD:/srv/jekyll
+    ports:
+      - 4000:4000
+

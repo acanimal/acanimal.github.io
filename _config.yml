@@ -3,8 +3,8 @@ description:        "Born to be curious, born to be animal !!!"
 meta_description:   "technology, gis, javascript, web, mapping, openlayers, leaflet, jquery, acuriousanimal, acanimal"
 author:             "acanimal"
 author_description: "Computer Science, passionate programmer and an eternal rookie guitar player."
-url:                "http://acanimal.github.io"
-baseurl:            /
+url:                "http://acuriousanimal.com"
+baseurl:            "/"
 
 markdown:           kramdown
 
