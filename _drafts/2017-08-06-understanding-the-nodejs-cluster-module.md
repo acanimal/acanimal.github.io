@@ -20,7 +20,7 @@ Hopefully for us NodeJS offers the [cluster](https://nodejs.org/api/cluster.html
 
 The cluster module is a NodeJS module that contains a set of functions and properties that help us forking processes to take advantage of multi-core systems. It is propably the first level of scalability you must take care in your node application, before going to a higher scalability levels (I mean scaling vertically and horizontally in different machines).
 
-With the cluster module a *parent/master* process can be forked in any number of *child/worker* processes and communicate them sending messages via [IPC](https://en.wikipedia.org/wiki/Inter-process_communication) communication. **Remember there is no shared memory among processes.**
+With the cluster module a *parent/master* process can be forked in any number of *child/worker* processes and communicate with them sending messages via [IPC](https://en.wikipedia.org/wiki/Inter-process_communication) communication. **Remember there is no shared memory among processes.**
 
 Next we show a very basic code that:
 
@@ -84,9 +84,95 @@ What the `fork()` really does is to create a new node process, like if you run i
 
 When a child process is created and executed, it does the same as the master, that is, imports the cluster module and executes the `if` statement. Once of the differences is for the child process the value of `cluster.isMaster` is `false`, so they ends running the `childProcess` function.
 
-> NOTE: We explicitly terminate the master and worker processes with `process.exit()`, which by default return value of zero. 
+Note, we explicitly terminate the master and worker processes with `process.exit()`, which by default return value of zero. 
+
+> NOTE: NodeJS also offers the [Child Processes](https://nodejs.org/api/child_process.html) module that simplifies the creation and comunication with other processes. For example we can spawn the `ls -l` terminal command and pipe with another process that handles the results.
+
+## Comunication master and worker processes
+
+Master and worker processes can communicate via IPC. Because they are different processes and not threads we can't use shared memory but we can send object messages that are serialized.
+
+We have updated slighly the previous code to allow master send and receive messages from/to the workers and also the workers receive and send messages from the master process:
+
+```javascript
+function childProcess() {
+  console.log(`Worker ${process.pid} started`);
+
+  process.on('message', function(message) {
+    console.log(`Worker ${process.pid} recevies message '${JSON.stringify(message)}'`);
+  });
+
+  console.log(`Worker ${process.pid} sends message to master...`);
+  process.send({ msg: `Message from worker ${process.pid}` });
+
+  console.log(`Worker ${process.pid} finished`);
+}
+```
+
+The worker process is simply to understand. First we listen for the `message` event registering a listener with the `process.on('message', handler)` method.
+
+Later we send a messages with `process.send({...})`. Note the message must be a JavaScript object.
+
+```javascript
+let workers = [];
+
+function masterProcess() {
+  console.log(`Master ${process.pid} is running`);
+
+  // Fork workers
+  for (let i = 0; i < numCPUs; i++) {
+    console.log(`Forking process number ${i}...`);
+
+    const worker = cluster.fork();
+    workers.push(worker);
+
+    // Listen for messages from worker
+    worker.on('message', function(message) {
+      console.log(`Master ${process.pid} recevies message '${JSON.stringify(message)}' from worker ${worker.process.pid}`);
+    });
+  }
+
+  // Send message to the workers
+  workers.forEach(function(worker) {
+    console.log(`Master ${process.pid} sends message to worker ${worker.process.pid}...`);
+    worker.send({ msg: `Message from master ${process.pid}` });    
+  }, this);
+}
+```
+
+The `masterProcess` function has been divided in two parts. In the first loop we fork as much workers as CPUs we have. The `cluster.fork()` returns a `worker` object representing the worker process, we store the reference in an array and register a listener for messages from that worker instance.
+
+Later, we loop over the array of workers and send a message from the master proces to that concrete worker.
+
+If you run the code the output will be something like:
+
+```bash
+$ node app.js
+
+Master 4045 is running
+Forking process number 0...
+Forking process number 1...
+Master 4045 sends message to worker 4046...
+Master 4045 sends message to worker 4047...
+Worker 4047 started
+Worker 4047 sends message to master...
+Worker 4047 finished
+Master 4045 recevies message '{"msg":"Message from worker 4047"}' from worker 4047
+Worker 4047 recevies message '{"msg":"Message from master 4045"}'
+Worker 4046 started
+Worker 4046 sends message to master...
+Worker 4046 finished
+Master 4045 recevies message '{"msg":"Message from worker 4046"}' from worker 4046
+Worker 4046 recevies message '{"msg":"Message from master 4045"}'
+```
+
+Here we are not terminating the process with `process.exit()` so to close the application you need to use `ctrl+c`.
+
+## HTTP server with cluster module
 
 
-> NOTE: NodeJS also offers the [Child Processes](https://nodejs.org/api/child_process.html) module which 
 
-## What happens with TCP/IP connections ?
+
+## Cluster module and network connections
+
+How does it works?
