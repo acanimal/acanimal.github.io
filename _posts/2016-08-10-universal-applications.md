@@ -86,7 +86,7 @@ This behavior is something we can achieve with almost any language and technolog
 
 Ok, I have described how universal apps works but a picture is worth a thousand words.
 
-![Universal/Isomorphic flow]({{ site.url }}{{ site.baseurl }}assets/uploads/2016-08_universal_js.png)
+![Universal/Isomorphic flow]({{ site.url }}{{ site.baseurl }}/assets/uploads/2016-08_universal_js.png)
 
 1. **Request**: The browser requests the server. This is the initial and main request because tt is responsible to return a web page that points to the bundles with the JavaScript and CSS code, besides with as much content as possible (included as DOM elements in the page) for the request made by the user.
 

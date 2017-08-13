@@ -90,11 +90,11 @@ req.send('param1=value1&amp;m2=value2');</pre>
 <h3>Cross Domain Request</h3>
 <p>Maybe you are thinking XMLHttpRequest object is the solution to create a really rich internet application requesting data from any place and merging it all together in your own web page but... there are restrictions and cross site request(XSR) are one of them. These restrictions are based in the <a href="http://en.wikipedia.org/wiki/Same_origin_policy">same origin policy</a>.</p>
 <p>Basically, when you load a web page from a domain A and supposing that web page contains your JavaScript code, that code is restricted to make requests on the domain A:</p>
-<p><img class="aligncenter" src="{{ site.url }}{{ site.baseurl }}assets/uploads/proxy1.gif" alt="" width="336" height="189" /></p>
+<p><img class="aligncenter" src="{{ site.url }}{{ site.baseurl }}/assets/uploads/proxy1.gif" alt="" width="336" height="189" /></p>
 <p>You can't make request from a page loaded on domain A to a domain B (your browser avoids it for security reasons):</p>
-<p><img class="aligncenter" src="{{ site.url }}{{ site.baseurl }}assets/uploads/proxy2.gif" alt="" width="347" height="284" /></p>
+<p><img class="aligncenter" src="{{ site.url }}{{ site.baseurl }}/assets/uploads/proxy2.gif" alt="" width="347" height="284" /></p>
 <p>One way to solve it is using your web server (from where you load the web page) as a proxy server. You make the AJAX request to some place on your server and this makes the real request out and returns the results:</p>
-<p><img class="aligncenter" src="{{ site.url }}{{ site.baseurl }}assets/uploads/proxy3.gif" alt="" width="525" height="201" /></p>
+<p><img class="aligncenter" src="{{ site.url }}{{ site.baseurl }}/assets/uploads/proxy3.gif" alt="" width="525" height="201" /></p>
 <p>Next is a possible message you can get when doing cross domain request. Here I load a test page from my local server that tries to load a resource from <em>acuriousanimal </em>domain:</p>
 <pre class="brush:plain">XMLHttpRequest cannot load http://www.acuriousanimal.com/. Origin http://localhost:8080 is not allowed by Access-Control-Allow-Origin.
 Uncaught Error: NETWORK_ERR: XMLHttpRequest Exception 101</pre>

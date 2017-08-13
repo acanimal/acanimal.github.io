@@ -9,7 +9,7 @@ tags:
 ---
 It was a long road but finally it comes true: The Book of OpenLayers 3 is finished.
 
-[![]({{ site.url }}{{ site.baseurl }}assets/uploads/thebookofopenlayers3-230x300.jpeg)](https://leanpub.com/thebookofopenlayers3)
+[![]({{ site.url }}{{ site.baseurl }}/assets/uploads/thebookofopenlayers3-230x300.jpeg)](https://leanpub.com/thebookofopenlayers3)
 
 The chapter _Controls and Interactions_ concludes the exploration of the main concepts related with OpenLayers version 3\. This chapter is focused on showing how to work with the two main tools necessary to interact with the maps and its contents.
 

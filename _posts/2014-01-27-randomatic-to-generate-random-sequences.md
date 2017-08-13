@@ -13,7 +13,7 @@ Why is it useful for? Really not much, simply helps me generate random password.
 *   Easy to use
 *   Mobile ready
 
-[![]({{ site.url }}{{ site.baseurl }}assets/uploads/Screenshot-01272014-083748-PM.png)](http://acanimal.github.io/Randomatic/)
+[![]({{ site.url }}{{ site.baseurl }}/assets/uploads/Screenshot-01272014-083748-PM.png)](http://acanimal.github.io/Randomatic/)
 
 Source code: [https://github.com/acanimal/Randomatic](https://github.com/acanimal/Randomatic)
 Demo: [http://acanimal.github.io/Randomatic/](http://acanimal.github.io/Randomatic/) 

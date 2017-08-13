@@ -19,7 +19,7 @@ The two remaining chapters I have in mind are:
  - Controls and interaction
  - Overlays
 
-[![]({{ site.url }}{{ site.baseurl }}assets/uploads/thebookofopenlayers3-230x300.jpeg)](https://leanpub.com/thebookofopenlayers3)
+[![]({{ site.url }}{{ site.baseurl }}/assets/uploads/thebookofopenlayers3-230x300.jpeg)](https://leanpub.com/thebookofopenlayers3)
 
 Hope, this book help you to introduce to the OpenLayers version 3.
 

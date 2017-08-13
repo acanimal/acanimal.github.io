@@ -102,7 +102,7 @@ Lets go to configure Atom to automatically lint files and show us message while 
 
 The plugin will detect automatically the `.eslintrc` file in your project and will start linting on the fly the source code showing all the errors and warning.
 
-![ESlint integration with Atom]({{ site.url }}{{ site.baseurl }}/assets/uploads/2016-08-14-configuring-atom-with-eslint.png)
+![ESlint integration with Atom]({{ site.url }}{{ site.baseurl }}//assets/uploads/2016-08-14-configuring-atom-with-eslint.png)
 
 ## Conclusions
 

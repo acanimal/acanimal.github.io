@@ -4,7 +4,7 @@ title: About
 date: 2010-11-23 14:48
 ---
 
-![antonio_b&w]({{ site.url }}{{ site.baseurl }}assets/uploads/antonio_bw-150x150.png)
+![antonio_b&w]({{ site.url }}{{ site.baseurl }}/assets/uploads/antonio_bw-150x150.png)
 
 A Curious Animal is a blog maintained by [Antonio Santiago](http://acuriousanimal.com/), a citizen of the world living at Barcelona (Spain).
 

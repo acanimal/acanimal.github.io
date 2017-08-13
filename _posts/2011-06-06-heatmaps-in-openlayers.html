@@ -11,9 +11,9 @@ tags:
 ---
 <p>Some month ago I found nice post on how to create <a href="http://www.patrick-wied.at/static/heatmapjs/">heatmaps </a>using HTML5 canvas element. Its author, <a href="http://www.patrick-wied.at/">Patrick Wied</a>, created a nice JavaScript code responsible to create a heatmap over an image depending on the mouse click or mouse move events.</p>
 
-<p><img class="aligncenter size-full wp-image-291" title="heatmap" src="{{ site.url }}{{ site.baseurl }}assets/uploads/heatmap.png" alt="" width="304" height="193" /></p>
+<p><img class="aligncenter size-full wp-image-291" title="heatmap" src="{{ site.url }}{{ site.baseurl }}/assets/uploads/heatmap.png" alt="" width="304" height="193" /></p>
 <p>Instantly, I though to take a look and try to create an OpenLayers heatmap layer. Unfortunately I was very busy and have no time to work on. But... fortunately the project author has enough time to continue improving it and he has created the desired heatmap OpenLayers layer (and also one more for Google Maps), which you can test <a href="http://www.patrick-wied.at/static/heatmapjs/demo/maps_heatmap_layer/openlayers.php">here</a> and looks like:</p>
-<p><img class="aligncenter size-full wp-image-292" title="heatmap-ol" src="{{ site.url }}{{ site.baseurl }}assets/uploads/heatmap-ol.png" alt="" width="237" height="155" /></p>
+<p><img class="aligncenter size-full wp-image-292" title="heatmap-ol" src="{{ site.url }}{{ site.baseurl }}/assets/uploads/heatmap-ol.png" alt="" width="237" height="155" /></p>
 <p>The big issue at this moment is the <strong>heatmap isn't a layer by itself</strong> and it needs a reference to a "real" layer (like a WMS layer) to render it. If we look at code we need three things:</p>
 <ul>
 <li>Some data for the hetmap.</li>

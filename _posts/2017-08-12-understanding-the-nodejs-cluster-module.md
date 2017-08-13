@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'Understanding the NodeJS cluster module'
-date: 2017-08-13 12:34
+date: 2017-08-12 12:34
 excerpt_separator: <!--more-->
 tags:
 - nodejs

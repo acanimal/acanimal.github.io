@@ -6,7 +6,7 @@ date: 2014-12-23 23:02
 
 I don't remember when I start writing, I think the 2014 christmas, but what I know for sure is these months were a really busy months. Combine a full time job as a software engineering with the task of writing a book about a new technology (plus the fact I have always some other little projects in hands) is hard. Literally translating an spanish sentence _Nobody said it was going to be simple_.
 
-[![thebookofopenlayers3]({{ site.url }}{{ site.baseurl }}assets/uploads/thebookofopenlayers3.jpeg)](https://leanpub.com/thebookofopenlayers3)
+[![thebookofopenlayers3]({{ site.url }}{{ site.baseurl }}/assets/uploads/thebookofopenlayers3.jpeg)](https://leanpub.com/thebookofopenlayers3)
 
 ## The book
 

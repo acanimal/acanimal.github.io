@@ -20,7 +20,7 @@ Unfortunately, that is only an small part of the job and it is not enough to ens
 
 An API gateway is a single point of entry responsible to apply actions (like security or logging) before redirecting the request to your *real-do-the-job* API. We can see the gateway as a kind (or mix) of firewall and proxy and is really useful implementing [microservices](http://microservices.io/patterns/apigateway.html).
 
-![ClydeIO]({{ site.url }}{{ site.baseurl }}assets/uploads/2015-09-clyde.png)
+![ClydeIO]({{ site.url }}{{ site.baseurl }}/assets/uploads/2015-09-clyde.png)
 
 Thanks to [ClydeIO][clydeio] you can spend your efforts implementing your business API leaving the rest of things to the gateway. The glory of [ClydeIO][clydeio] is its simplicity and its easy to extent with new filters like:
 
@@ -33,7 +33,7 @@ Thanks to [ClydeIO][clydeio] you can spend your efforts implementing your busine
 
  Because it is based on node we can use the myriad of awesome node packages out there and integrate within your filters.
 
-![Rquest flow]({{ site.url }}{{ site.baseurl }}assets/uploads/2015-09-clyde-dataflow.png)
+![Rquest flow]({{ site.url }}{{ site.baseurl }}/assets/uploads/2015-09-clyde-dataflow.png)
 
 
 ## Why a new system instead contribute to an existent one?

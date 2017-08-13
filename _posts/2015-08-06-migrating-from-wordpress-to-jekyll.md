@@ -31,13 +31,13 @@ The steps about the migration were basically:
 
 - Export your WordPress content on Tools > Export menu.
 
-![export]({{ site.url }}{{ site.baseurl }}assets/uploads/2015-08-11_wordpress_export.png)
+![export]({{ site.url }}{{ site.baseurl }}/assets/uploads/2015-08-11_wordpress_export.png)
 
 - Use [jekyll-import](https://github.com/jekyll/jekyll-import) tool to create a jekyll site from the WordPress export file. The tool creates all the posts and pages but unfortunally attach to much information on the front-matter section I don't like neither want. So I must apply many modification manually on each postand, in most cases to translate from HTML to markdown syntax (using the only [to-markdown](https://domchristie.github.io/to-markdown/) translator tool).
 
 - Migrate all WordPress comments to [Disqus](https://disqus.com/) platform. For this, I need to install the [Disqus Comment System](https://wordpress.org/plugins/disqus-comment-system/) plugin and have a configured account. Once you configure the plugin all the comments are migrated automatically. Here the step was a bit more cumbersome because the new blog is in a different URL. So I need to export all the Disqus discussions, update manually all the URLs and import again in the system.
 
-![export]({{ site.url }}{{ site.baseurl }}assets/uploads/2015-08-13_wp_disqus_pluguin.png)
+![export]({{ site.url }}{{ site.baseurl }}/assets/uploads/2015-08-13_wp_disqus_pluguin.png)
 
 - Chose a jekyll theme and adapt a bit for my needs. I chose the [Kasper](https://github.com/rosario/kasper), a Ghost's theme ported to jekyll. I changed the theme to include some more header buttons (one for each page) and add random images, from the [unsplash](https://unsplash.com/) project using the nice [unsplash.it](https://unsplash.it/) service.
 

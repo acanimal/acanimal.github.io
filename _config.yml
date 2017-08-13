@@ -4,7 +4,7 @@ meta_description:   "technology, gis, javascript, web, mapping, openlayers, leaf
 author:             "acanimal"
 author_description: "Computer Science, passionate programmer and an eternal rookie guitar player."
 url:                "http://acuriousanimal.com"
-baseurl:            "/"
+baseurl:            ""
 
 markdown:           kramdown
 

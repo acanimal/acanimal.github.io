@@ -10,7 +10,7 @@ Recently I updated my we page and one of the nice features I included on it is t
 
 To embed the unsplash images in my web site I used the [unsplash.it](https://unsplash.it/) service, its slogan says *Beautiful placeholders using images from unsplash*.
 
-[![unsplash-it]({{ site.url }}{{ site.baseurl }}assets/uploads/2015-08-17_unsplashit.png)](https://unsplash.it/)
+[![unsplash-it]({{ site.url }}{{ site.baseurl }}/assets/uploads/2015-08-17_unsplashit.png)](https://unsplash.it/)
 
 It was created by  [David Marby](http://dmarby.se/) and [Nijiko Yonskai](https://github.com/Nijikokun) and the code is publicly available at the github [unsplash-it](https://github.com/DMarby/unsplash-it) repository (if you are interested it is a NodeJS based project).
 

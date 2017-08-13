@@ -24,4 +24,4 @@ Finally, remember this book is self published, no great publishing company is be
 
 Antonio Santiago ([@acanimal](https://twitter.com/acanimal)) - [#thebookofopenlayers3](https://twitter.com/hashtag/thebookofopenlayers3?src=hash)
 
-[![thebookofopenlayers3]({{ site.url }}{{ site.baseurl }}assets/uploads/thebookofopenlayers3-230x300.jpeg)](https://leanpub.com/thebookofopenlayers3)
+[![thebookofopenlayers3]({{ site.url }}{{ site.baseurl }}/assets/uploads/thebookofopenlayers3-230x300.jpeg)](https://leanpub.com/thebookofopenlayers3)

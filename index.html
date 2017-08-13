@@ -7,16 +7,15 @@ cover: https://unsplash.it/1500/500?random&blur
 <header class="main-header {% if page.cover %}" style="background-image: url({{ page.cover }}) {%else%}no-cover{% endif %}">
     <nav class="main-nav overlay clearfix">
             {% if page.logo %}
-                <a class="blog-logo" href="{{ site.url }}{{ site.baseurl }}">
+                <a class="blog-logo" href="{{ site.url }}{{ site.baseurl }}/">
                     <img src="{{ page.logo }}" alt="Blog Logo" />
                 </a>
             {% endif %}
-        <a class="subscribe-button icon-feed" href="{{ site.url }}{{ site.baseurl }}rss.xml">Subscribe</a>
-
-        <a class="subscribe-button" href='{{ site.url }}{{ site.baseurl }}archive.html'>Archive</a>
-        <a class="subscribe-button" href='{{ site.url }}{{ site.baseurl }}about.html'>About Me</a>
-        <a class="subscribe-button" href='{{ site.url }}{{ site.baseurl }}projects'>Projects & Works</a>
-        <a class="subscribe-button" href='{{ site.url }}{{ site.baseurl }}books'>Books</a>
+        <a class="subscribe-button icon-feed" href="{{ site.url }}{{ site.baseurl }}/rss.xml">Subscribe</a>
+        <a class="subscribe-button" href='{{ site.url }}{{ site.baseurl }}/archive.html'>Archive</a>
+        <a class="subscribe-button" href='{{ site.url }}{{ site.baseurl }}/about.html'>About Me</a>
+        <a class="subscribe-button" href='{{ site.url }}{{ site.baseurl }}/projects'>Projects & Works</a>
+        <a class="subscribe-button" href='{{ site.url }}{{ site.baseurl }}/books'>Books</a>
     </nav>
     <div class="vertical">
         <div class="main-header-content inner">
