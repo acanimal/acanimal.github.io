@@ -8,11 +8,12 @@ baseurl:            "/"
 
 markdown:           kramdown
 
+highlighter:        rouge
+
 kramdown:
   input: GFM
   hard_wrap: false
-
-highlighter:        rouge
+  syntax_highlighter: rouge
 
 logo:               true
 paginate:           10

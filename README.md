@@ -23,3 +23,5 @@ I try to make site as independent as possible but there are some tasks we don't 
 This website makes use of docker to avoid installing ruby and jekyll locally. Install docker engine and run:
 
 `$ docker-compose up`
+
+Open your browser in `http://127.0.0.1:4000`.
