@@ -15,31 +15,101 @@ tags:
 
 The cluster module allow us to load balance the incoming request among a set of worker processes and, because of this, improving the throughput of our application.
 
-<!--more-->
+In the previous post [Understanding the NodeJS cluster module]({{ site.baseurl }}{% post_url 2017-08-12-understanding-the-nodejs-cluster-module %}) I introduced the cluster module and show some basic usages of it to create worker processes and comunicate them with the master process. In this post we are going to see how to use the cluster module when creating HTTP servers, both using plain [HTTP](https://nodejs.org/api/http.html) module and with ExpressJS.
 
-In the previous post [Understanding the NodeJS cluster module]({{ site.baseurl }}{% post_url 2017-08-12-understanding-the-nodejs-cluster-module %}) I introduced the cluster module and show some basic usages of it to create worker processes and comunicate them with the master process. This post is specifically oriented to talk about using the cluster module and HTTP server, both using plain NodeJS http and with ExpressJS.
+<!--more-->
 
 ## Using cluster module with HTTP servers
 
-https://stackoverflow.com/questions/9830741/how-does-the-cluster-module-work-in-node-js
-http://onlinevillage.blogspot.com.es/2011/11/how-nodejs-multiprocess-load-balancing.html
+Lets go to see how we can create a really basic HTTP server that takes profit of the cluster module.
 
-## Balancing HTTP
+```javascript
+const cluster = require('cluster');
+const http = require('http');
+const numCPUs = require('os').cpus().length;
 
-Cluster module is really powerfull when we are creating a HTTP server, no matter if an API, an ExpressJS web site to return some web pages, what we want is nodejs to be 
+if (cluster.isMaster) {
+  masterProcess();
+} else {
+  childProcess();  
+}
+
+function masterProcess() {
+  console.log(`Master ${process.pid} is running`);
+
+  for (let i = 0; i < numCPUs; i++) {
+    console.log(`Forking process number ${i}...`);
+    cluster.fork();
+  }
+}
+
+function childProcess() {
+  console.log(`Worker ${process.pid} started...`);
+
+  http.createServer((req, res) => {
+    res.writeHead(200);
+    res.end('Hello World');
+  }).listen(3000);
+}
+```
+
+We have diveded the code in two parts, the one corresponding to the master process and the one where we initialize the worker processes. This way the `masterProcess` function forks a worker process per CPU code. On the other hand the `childProcess` simply creates an HTTP server listenen on port 3000 and returning a nice `Hello World` text string with a 200 status code.
+
+If you run the code the output must show something like:
+
+```bash
+$ node app.js
+
+Master 1859 is running
+Forking process number 0...
+Forking process number 1...
+Forking process number 2...
+Forking process number 3...
+Worker 1860 started...
+Worker 1862 started...
+Worker 1863 started...
+Worker 1861 started...
+```
+
+Basically our initial process (the master) is spawing a new worker process per CPU that runs an HTTP server that handle requests. As you can see this can improve a lot your server performance because it is not the same having one processing attending one million of requests than having four processes attending one millun requests.
+
+## How cluster module works with network connections ?
+
+The previous example is simple but hides something tricky, some *magic* NodeJS make to simplify our live as developer.
+
+In any OS a process can use a port to communicate with other systems and, that means, the given port can only be used by that process. So, the question is, **how can the forked worker processes use the same port?**
+
+The answer, the simplified answer, is the master process is the one who listens in the given port and load balances the requests among all the child/worker processes. From the offical documentation:
+
+> The worker processes are spawned using the child_process.fork() method, so that they can communicate with the parent via IPC and pass server handles back and forth.
+>
+> The cluster module supports two methods of distributing incoming connections.
+>
+> * The first one (and the default one on all platforms except Windows), is the round-robin approach, where the master process listens on a port, accepts new connections and distributes them across the workers in a round-robin fashion, with some built-in smarts to avoid overloading a worker process.
+>
+> * The second approach is where the master process creates the listen socket and sends it to interested workers. The workers then accept incoming connections directly.
+>
+> **As long as there are some workers still alive, the server will continue to accept connections. If no workers are alive, existing connections will be dropped and new connections will be refused.**
+
+See also (How Node.js Multiprocess Load Balancing Works)[http://onlinevillage.blogspot.com.es/2011/11/how-nodejs-multiprocess-load-balancing.html].
+
+
+## Other alternatives to load balance
 
 https://medium.com/@fermads/node-js-process-load-balancing-comparing-cluster-iptables-and-nginx-6746aaf38272
 
-## Cluster module and network connections
-
-How does it works?
 
 
 ## PM2
+
+Workers are separated processes, they can be killed or re-spawned from the master process. More important, processes can be killed from command line or system can reboot and kill all the running processes.
+
+NodeJS does not automatically manage the number of processes, it is responsibility of the application and, as we can imagine, there are many casuistics that can arise and we need to control.
+
+For these reason have appeared different modules and tools to simlpify the lifecycle of worker processes. In my opinion the most active developed and complete solution is [PM2](https://github.com/Unitech/pm2).
 
 https://keymetrics.io/2015/03/26/pm2-clustering-made-easy/
 
 ## Graceful shutdown
 
 http://glynnbird.tumblr.com/post/54739664725/graceful-server-shutdown-with-nodejs-and-express
-
