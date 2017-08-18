@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'Using cluster module with HTTP servers'
-date: 2017-08-13 01:34
+date: 2017-08-18 19:18
 excerpt_separator: <!--more-->
 tags:
 - nodejs
@@ -91,25 +91,17 @@ The answer, the simplified answer, is the master process is the one who listens 
 >
 > **As long as there are some workers still alive, the server will continue to accept connections. If no workers are alive, existing connections will be dropped and new connections will be refused.**
 
-See also (How Node.js Multiprocess Load Balancing Works)[http://onlinevillage.blogspot.com.es/2011/11/how-nodejs-multiprocess-load-balancing.html].
+## Other alternatives to cluster module load balancing
 
+Cluster module allow the master process to receive request and load balance it among all the worker processes. This is a way to improve performance but it is not the only one.
 
-## Other alternatives to load balance
+In the post [Node.js process load balance performance: comparing cluster module, iptables and Nginx](https://medium.com/@fermads/node-js-process-load-balancing-comparing-cluster-iptables-and-nginx-6746aaf38272) you can find a performance comparison among: node cluster module, iptables and nginx reverse proxy.
 
-https://medium.com/@fermads/node-js-process-load-balancing-comparing-cluster-iptables-and-nginx-6746aaf38272
+## Conclusions
 
+Nowadays performance is mandatory on any web applications, we need to support high throughput and serve data fast.
 
+The cluster module is one possible solution, it allows us to have one master process and create a worker processes for each core, so that they run an HTTP server. The cluster module offers two great features:
 
-## PM2
-
-Workers are separated processes, they can be killed or re-spawned from the master process. More important, processes can be killed from command line or system can reboot and kill all the running processes.
-
-NodeJS does not automatically manage the number of processes, it is responsibility of the application and, as we can imagine, there are many casuistics that can arise and we need to control.
-
-For these reason have appeared different modules and tools to simlpify the lifecycle of worker processes. In my opinion the most active developed and complete solution is [PM2](https://github.com/Unitech/pm2).
-
-https://keymetrics.io/2015/03/26/pm2-clustering-made-easy/
-
-## Graceful shutdown
-
-http://glynnbird.tumblr.com/post/54739664725/graceful-server-shutdown-with-nodejs-and-express
+* simplifies communication among master and workers, by creating an IPC channel and allowing send messages with `process.send()`,
+* allow worker processes share the same port. This is done making the master process the one which receives requests and multiplexe them among workers.
