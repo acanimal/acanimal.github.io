@@ -17,6 +17,13 @@ Hopefully for us NodeJS offers the [cluster](https://nodejs.org/api/cluster.html
 
 <!--more-->
 
+---
+> In this series:
+> 1. **Understanding the NodeJS cluster module**
+> 2. [Using cluster module with HTTP servers]({{ site.baseurl }}{% post_url 2017-08-13-using-cluster-module-with-http-servers.md %})
+> 3. Using PM2 to manage a NodeJS cluster
+> 4. Graceful shutdown of a NodeJS cluster
+
 ## Introducing the cluster module
 
 The cluster module is a NodeJS module that contains a set of functions and properties that help us forking processes to take advantage of multi-core systems. It is propably the first level of scalability you must take care in your node application, specifally if you are working in a HTTP server application, before going to a higher scalability levels (I mean scaling vertically and horizontally in different machines).

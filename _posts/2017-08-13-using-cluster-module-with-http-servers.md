@@ -19,6 +19,14 @@ In the previous post [Understanding the NodeJS cluster module]({{ site.baseurl }
 
 <!--more-->
 
+---
+
+> In this series:
+> 1. [Understanding the NodeJS cluster module]({{ site.baseurl }}{% post_url 2017-08-12-understanding-the-nodejs-cluster-module %})
+> 2. **Using cluster module with HTTP servers**
+> 3. Using PM2 to manage a NodeJS cluster
+> 4. Graceful shutdown a cluster of HTTP servers
+
 ## Using cluster module with HTTP servers
 
 Lets go to see how we can create a really basic HTTP server that takes profit of the cluster module.

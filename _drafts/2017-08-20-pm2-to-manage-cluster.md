@@ -16,6 +16,13 @@ tags:
 
 <!--more-->
 
+---
+> In this series:
+> 1. [Understanding the NodeJS cluster module]({{ site.baseurl }}{% post_url 2017-08-12-understanding-the-nodejs-cluster-module %})
+> 2. [Using cluster module with HTTP servers]({{ site.baseurl }}{% post_url 2017-08-13-using-cluster-module-with-http-servers.md %})
+> 3. **Using PM2 to manage a NodeJS cluster**
+> 4. Graceful shutdown of a NodeJS cluster
+
 ## PM2
 
 Workers are separated processes, they can be killed or re-spawned from the master process. More important, processes can be killed from command line or system can reboot and kill all the running processes.
