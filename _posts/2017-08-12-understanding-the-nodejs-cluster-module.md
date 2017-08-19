@@ -18,11 +18,12 @@ Hopefully for us NodeJS offers the [cluster](https://nodejs.org/api/cluster.html
 <!--more-->
 
 ---
-> In this series:
-> 1. **Understanding the NodeJS cluster module**
-> 2. [Using cluster module with HTTP servers]({{ site.baseurl }}{% post_url 2017-08-13-using-cluster-module-with-http-servers.md %})
-> 3. Using PM2 to manage a NodeJS cluster
-> 4. Graceful shutdown of a NodeJS cluster
+More on this series:
+
+1. **Understanding the NodeJS cluster module**
+2. [Using cluster module with HTTP servers]({{ site.baseurl }}{% post_url 2017-08-13-using-cluster-module-with-http-servers %})
+3. Using PM2 to manage a NodeJS cluster
+4. Graceful shutdown of a NodeJS cluster
 
 ## Introducing the cluster module
 
