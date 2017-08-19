@@ -11,7 +11,7 @@ tags:
 - tip
 ---
 
-*TL;DR* NodeJS processes runs on a single process, which means it does not take adavantage from multi-core systems by default. If you have an 8 core CPU and run a  NodeJS program via `$ node app.js` it will run in a single process, wasting the rest of CPUs.
+NodeJS processes runs on a single process, which means it does not take adavantage from multi-core systems by default. If you have an 8 core CPU and run a  NodeJS program via `$ node app.js` it will run in a single process, wasting the rest of CPUs.
 
 Hopefully for us NodeJS offers the [cluster](https://nodejs.org/api/cluster.html) module that contains a set of functions and properties that help us to create programs that uses all the CPUs. Not a surprise the mechanism the cluster module uses to maximize the CPU usage was via forking processes, similar to the old [fork()](http://www.includehelp.com/c-programs/c-fork-function-linux-example.aspx) system call Unix systems.
 
@@ -24,6 +24,7 @@ More on this series:
 2. [Using cluster module with HTTP servers]({{ site.baseurl }}{% post_url 2017-08-13-using-cluster-module-with-http-servers %})
 3. Using PM2 to manage a NodeJS cluster
 4. Graceful shutdown of a NodeJS cluster
+---
 
 ## Introducing the cluster module
 

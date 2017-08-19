@@ -11,7 +11,7 @@ tags:
 - tip
 ---
 
-*TL;DR* The [cluster](https://nodejs.org/api/cluster.html) module allow us improve performance of our application in multicore CPU systems. This is specially important no matter if working on an APIs or an, i.e. ExpressJS based, web servers, what we desire is to take advantage of all the CPUs on each machine our NodeJS application is running.
+The [cluster](https://nodejs.org/api/cluster.html) module allow us improve performance of our application in multicore CPU systems. This is specially important no matter if working on an APIs or an, i.e. ExpressJS based, web servers, what we desire is to take advantage of all the CPUs on each machine our NodeJS application is running.
 
 The cluster module allow us to load balance the incoming request among a set of worker processes and, because of this, improving the throughput of our application.
 
@@ -20,13 +20,13 @@ In the previous post [Understanding the NodeJS cluster module]({{ site.baseurl }
 <!--more-->
 
 ---
-
 More on this series:
 
 1. [Understanding the NodeJS cluster module]({{ site.baseurl }}{% post_url 2017-08-12-understanding-the-nodejs-cluster-module %})
 2. **Using cluster module with HTTP servers**
 3. Using PM2 to manage a NodeJS cluster
 4. Graceful shutdown of a NodeJS cluster
+---
 
 ## Using cluster module with HTTP servers
 
