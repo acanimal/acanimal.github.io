@@ -21,7 +21,7 @@ tags:
 <p><img class="aligncenter" src="{{ site.url }}{{ site.baseurl }}/assets/uploads/staticmap.png" alt="" width="600" height="300" /></p>
 <p>Unfortunately, using libraries other than Google Maps, like OpenLayers or Leaflet, there is no similar solution. Probably the best, simple and powerful one, is to install a plugin on your browser to take screenshots. But well.. I think that does not deserve to write a post :p</p>
 <h2>How to render a web page element to an image?</h2>
-<p>After writing my last post (<a title="Taking web page screenshots" href="{{ site.url }}{{ site.baseurl }}/2012/09/15/taking-web-page-screenshots/">Taking Web Page Screenshots</a>), where I show to to take a screenshot of a whole page, I was thinking on using PhantomJS to render only a portion of a page to an image.</p>
+<p>After writing my last post (<a title="Taking web page screenshots" href="{{ site.url }}{{ site.baseurl }}/2012/09/15/taking-web-page-screenshots">Taking Web Page Screenshots</a>), where I show to to take a screenshot of a whole page, I was thinking on using PhantomJS to render only a portion of a page to an image.</p>
 <p>The PhantomJS's <code>WebPage</code> object has a <code>clipRect</code> property which determines the portion of the web page that must be rendered. With this in mind we can see a solution could be:</p>
 <ul>
 <li>Get the bounding rectangle of the desired DOM element to be rasterized.</li>
@@ -30,8 +30,8 @@ tags:
 </ul>
 <p>For that purpose I have prepared a little JavaScript application to run with PhantomJS. Its usage is as follows:</p>
 <pre class="prettyprint">./bin/phantomjs ./examples/rasterize_element.js URL output_file selector</pre>
-<p>For example, the next execution against the demo of <a title="Animated marker cluster strategy for OpenLayers" href="{{ site.url }}{{ site.baseurl }}/2012/08/19/animated-marker-cluster-strategy-for-openlayers/">Animated Cluster Strategy for OpenLayers</a> selecting the first map:</p>
-<pre class="prettyprint">./bin/phantomjs ./examples/rasterize_element.js http://acanimal.github.io/AnimatedCluster map.png '#map1'</pre>
+<p>For example, the next execution against the demo of <a title="Animated marker cluster strategy for OpenLayers" href="{{ site.url }}{{ site.baseurl }}/2012/08/19/animated-marker-cluster-strategy-for-openlayers">Animated Cluster Strategy for OpenLayers</a> selecting the first map:</p>
+<pre class="prettyprint">./bin/phantomjs ./examples/rasterize_element.js http://www.acuriousanimal.com/AnimatedCluster map.png '#map1'</pre>
 <p>Produces the image:</p>
 <p><a href="{{ site.url }}{{ site.baseurl }}/wp-content/uploads/2012/09/map.png"><img class="aligncenter size-full wp-image-899" title="map" src="{{ site.url }}{{ site.baseurl }}/assets/uploads/map.png" alt="" width="828" height="300" /></a></p>
 <p>Next is the whole code of the program (called <code>rasterize_element.js</code> and based on the <code>rasterize.js</code> application attached on the PhantomJS package):</p>

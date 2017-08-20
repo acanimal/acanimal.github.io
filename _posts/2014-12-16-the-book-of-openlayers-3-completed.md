@@ -13,7 +13,7 @@ It was a long road but finally it comes true: The Book of OpenLayers 3 is finish
 
 The chapter _Controls and Interactions_ concludes the exploration of the main concepts related with OpenLayers version 3\. This chapter is focused on showing how to work with the two main tools necessary to interact with the maps and its contents.
 
-New samples have been created. Remember the source code can be found at [https://github.com/acanimal/thebookofopenlayers3](https://github.com/acanimal/thebookofopenlayers3) and a running demo is available at [http://acanimal.github.io/thebookofopenlayers3/](http://acanimal.github.io/thebookofopenlayers3/).
+New samples have been created. Remember the source code can be found at [https://github.com/acanimal/thebookofopenlayers3](https://github.com/acanimal/thebookofopenlayers3) and a running demo is available at [http://www.acuriousanimal.com/thebookofopenlayers3/](http://www.acuriousanimal.com/thebookofopenlayers3/).
 
 I must admit _finished_ is not the best word to apply, OpenLayers3 is big, complex and awesome enough to write tons of chapters, but I must put a final dot and leave the typewriter... for a while :)
 

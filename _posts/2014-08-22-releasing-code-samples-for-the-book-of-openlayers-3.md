@@ -9,7 +9,7 @@ tags:
 ---
 Writing a book is hard, requires constance and motivation and, more important, be strong to keep them both. Least but not last you need time. Time to see the source code and learn. Time to see the examples and learn. Time to understand all the concepts and learn. Time to explain in your words what you have learnt.
 
-Today, I announced the links where you can find the [online samples](http://acanimal.github.io/thebookofopenlayers3/) and [code repository](https://github.com/acanimal/thebookofopenlayers3) for [The book of OpenLayers3](https://leanpub.com/thebookofopenlayers3). **Code repository is open, so don't hesitate to download and contribute with new samples**.
+Today, I announced the links where you can find the [online samples](http://www.acuriousanimal.com/thebookofopenlayers3/) and [code repository](https://github.com/acanimal/thebookofopenlayers3) for [The book of OpenLayers3](https://leanpub.com/thebookofopenlayers3). **Code repository is open, so don't hesitate to download and contribute with new samples**.
 
 The work is not complete, I need to finish the theory part of a chapter related to vector information and write two more chapters I have in mind and, of course, create some samples to see the theory in practice. I will write another post introducing the book with a more in depth chapter description. This post is only about the code samples. **Your feedback is really valuable for me !!!**
 

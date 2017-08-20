@@ -12,7 +12,7 @@ The Book of OpenLayers3 is progressing well. It is not finished but I would like
 
 At this moment the book contains five chapters covering the most important topics of the new architecture and design of the library. All chapters are divided in a theory section, where I explain all the concepts and involved classes, and a practice section, where I show real working examples.
 
-Remember, all the examples are also freely available at the GitHub repository: [https://github.com/acanimal/thebookofopenlayers3](https://github.com/acanimal/thebookofopenlayers3) are right now running at: [http://acanimal.github.io/thebookofopenlayers3](http://acanimal.github.io/thebookofopenlayers3).
+Remember, all the examples are also freely available at the GitHub repository: [https://github.com/acanimal/thebookofopenlayers3](https://github.com/acanimal/thebookofopenlayers3) are right now running at: [http://www.acuriousanimal.com/thebookofopenlayers3](http://www.acuriousanimal.com/thebookofopenlayers3).
 
 My intention is continue writing, at least, two more chapters. One dedicated to the controls OpenLayers3 offers to interact with the map, and a second one, related to the concept of overlays. I hope to cover these two chapter in one month.
 

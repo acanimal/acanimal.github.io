@@ -23,27 +23,27 @@ So, in summary, we need to deal with image upload, thumbnail generation and S3 s
 
 ## Uploading images
 
-For image uploading we have used the [VichUploaderBundle](vichuploader). Uploading images isn't a secret but can involve some extra tasks. The [VichUploaderBundle](vichuploader) helps working with file uploads that are attached to ORM entities, that is, it is responsible to move the images to some configured place and attach it to your entity.
+For image uploading we have used the [VichUploaderBundle](https://github.com/dustin10/VichUploaderBundle). Uploading images isn't a secret but can involve some extra tasks. The [VichUploaderBundle](https://github.com/dustin10/VichUploaderBundle) helps working with file uploads that are attached to ORM entities, that is, it is responsible to move the images to some configured place and attach it to your entity.
 
-In addition, we want to store images in folders classified by user and collection, something like `user_X/collection_Y/some_image`, where `X` and `Y` are identifiers. A nice feature [VichUploaderBundle](vichuploader) offers is the possibility to attach the so called *directory namer* or *file namer* that determines the final name for the upload file. This way when a file is uploaded, given the current user and the selected collection, we determine dynamically the target folder where the bundle must store the image.
+In addition, we want to store images in folders classified by user and collection, something like `user_X/collection_Y/some_image`, where `X` and `Y` are identifiers. A nice feature [VichUploaderBundle](https://github.com/dustin10/VichUploaderBundle) offers is the possibility to attach the so called *directory namer* or *file namer* that determines the final name for the upload file. This way when a file is uploaded, given the current user and the selected collection, we determine dynamically the target folder where the bundle must store the image.
 
 Note the ORM entity only has the image file name. The path to the file is computed through the specified directory and/or file namers. For this reason, the bundle also includes the methods require to get the absolute path to a file given the file name stored within the entity.
 
 ## Generating thumbnails
 
-To generate thumbnails we have used the [LiipImagineBundle](liipimagine) bundle. With it, when you reference an image within your templates you don't get the original image but a new one obtained applying some filters. Next line shows how to include an image in your twig template obtained after applying a `my_thumbnail` configuration:
+To generate thumbnails we have used the [LiipImagineBundle](https://github.com/liip/LiipImagineBundle) bundle. With it, when you reference an image within your templates you don't get the original image but a new one obtained applying some filters. Next line shows how to include an image in your twig template obtained after applying a `my_thumbnail` configuration:
 
 ```html
 <img src="{{ '/relative/path/to/image.jpg' | imagine_filter('my_thumbnail') }}" />
 ```
 
-The good thing is [LiipImagineBundle](liipimagine) generates the thumbnails when images are first time accessed and stores them in a *cache* folder for next calls.
+The good thing is [LiipImagineBundle](https://github.com/liip/LiipImagineBundle) generates the thumbnails when images are first time accessed and stores them in a *cache* folder for next calls.
 
 ## Abstracting the file system
 
 The issue is we want to upload images and generate thumbnails into a local folder at development time and to S3 when running in staging or production.
 
-Hopefully for us there is the [Gaufrette](gaufrette) bundle, which is an abstract filesystem. It offers a common interface to read/write to different filesystem and a bunch of implementations to work against the local filesystem, an FTP server, Amazon S3 service, ... and many more.
+Hopefully for us there is the [Gaufrette](https://github.com/KnpLabs/Gaufrette) bundle, which is an abstract filesystem. It offers a common interface to read/write to different filesystem and a bunch of implementations to work against the local filesystem, an FTP server, Amazon S3 service, ... and many more.
 
 ## Putting it all together
 
@@ -55,7 +55,7 @@ Arrived here, the main question is how to configure the three bundles to work to
 
 We have divided the configuration between the `config.yml` file and the `config_prod.yml`. The first contains the configuration for the previous three bundles ready to work locally. The second overrides some propertires to work in production, using S3.
 
-The first point is to configure the [Gaufrette](gaufrette) bundle to abstract our filesystem. Next is the configuration in the `config.yml`:
+The first point is to configure the [Gaufrette](https://github.com/KnpLabs/Gaufrette) bundle to abstract our filesystem. Next is the configuration in the `config.yml`:
 
 ```yaml
 # config.yml
@@ -92,7 +92,7 @@ knp_gaufrette:
 
 We define a `custom_uploads_fs` filesystem which by default uses a `local` adapter and in production uses an `aws_s3` one.
 
-Next step is to configure the [VichUploaderBundle](vichuploader) bundle. Hopefully it is designed to integrate with Gaufrette so it is easy to specify how to upload files through gaufrette. Next is the configuration:
+Next step is to configure the [VichUploaderBundle](https://github.com/dustin10/VichUploaderBundle) bundle. Hopefully it is designed to integrate with Gaufrette so it is easy to specify how to upload files through gaufrette. Next is the configuration:
 
 ```yaml
 # config.yml
@@ -113,7 +113,7 @@ vich_uploader:
 
 As you can see we are specifying we want to use gaufrette with `storage: gaufrette` and the upload destination is the previous defined gaufrette filesystem `custom_uploads_fs`. This means all images will be uploaded through the Gaufrette filesystem to that destination. Note, within the target filesystem, the final folder and file name are determined by a custom directory namer we have implemented (`app.vich_uploader.custom.directory.namer` which adds the user ID to the path) and the file namer `vich_uploader.namer_uniqid` offered by Gaufrette, which assigns a unique name to each file.
 
-Finally, we need to configure the [LiipImagineBundle](liipimagine) bundle. Next is the configuration used for local development. We need to specify the cache folder where to generate the thumbnails in adition to our filter, that will generate with size `350x450` and half quality:
+Finally, we need to configure the [LiipImagineBundle](https://github.com/liip/LiipImagineBundle) bundle. Next is the configuration used for local development. We need to specify the cache folder where to generate the thumbnails in adition to our filter, that will generate with size `350x450` and half quality:
 
 ```yaml
 # config.yml
@@ -164,11 +164,6 @@ liip_imagine:
 
 # Conclusions
 
-[VichUploaderBundle](vichuploader), [LiipImagineBundle](liipimagine) and [Gaufrette](gaufrette) are three great Symfony2 bundles. The configuration to make work all them can by tricky so hope this post can help others.
+[VichUploaderBundle](https://github.com/dustin10/VichUploaderBundle), [LiipImagineBundle](https://github.com/liip/LiipImagineBundle) and [Gaufrette](https://github.com/KnpLabs/Gaufrette) are three great Symfony2 bundles. The configuration to make work all them can by tricky so hope this post can help others.
 
-While [VichUploaderBundle](vichuploader) is designed to work with [Gaufrette](gaufrette), and its configuration is almost trivial, [LiipImagineBundle](liipimagine) is not and requires some extra tasks. For [LiipImagineBundle](liipimagine) we need to configure its main components, which are the *cache* and the `data_loader`.
-
-
-[gaufrette]: https://github.com/KnpLabs/Gaufrette
-[uploader]: https://github.com/dustin10/VichUploaderBundle
-[imagine]: https://github.com/liip/LiipImagineBundle
+While [VichUploaderBundle](https://github.com/dustin10/VichUploaderBundle) is designed to work with [Gaufrette](https://github.com/KnpLabs/Gaufrette), and its configuration is almost trivial, [LiipImagineBundle](https://github.com/liip/LiipImagineBundle) is not and requires some extra tasks. For [LiipImagineBundle](https://github.com/liip/LiipImagineBundle) we need to configure its main components, which are the *cache* and the `data_loader`.

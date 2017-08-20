@@ -77,15 +77,15 @@ One of the key features of the Dojo is the possibility to create new widgets to 
 
 [The Book of OpenLayers3](https://leanpub.com/thebookofopenlayers3) contains an extensive set of samples that helps better understand of the concepts explained.
 
-The examples source code are freely available at [https://github.com/acanimal/thebookofopenlayers3](https://github.com/acanimal/thebookofopenlayers3) github repository. You can find a hosted version too at [http://acanimal.github.io/thebookofopenlayers3](http://acanimal.github.io/thebookofopenlayers3).
+The examples source code are freely available at [https://github.com/acanimal/thebookofopenlayers3](https://github.com/acanimal/thebookofopenlayers3) github repository. You can find a hosted version too at [http://www.acuriousanimal.com/thebookofopenlayers3](http://www.acuriousanimal.com/thebookofopenlayers3).
 
-[![demo]({{ site.url }}{{ site.baseurl }}/assets/uploads/thebookofopenlayers3_demo.png)](http://acanimal.github.io/thebookofopenlayers3/)
+[![demo]({{ site.url }}{{ site.baseurl }}/assets/uploads/thebookofopenlayers3_demo.png)](http://www.acuriousanimal.com/thebookofopenlayers3/)
 
 ## <a name="the-nobel-prize"></a>The Nobel Prize
 
 After discovering [Nobel Prize](http://www.nobelprize.org/nobel_organizations/nobelmedia/nobelprize_org/developer/) web site offers an API to query both prizes and laureates from the beginning of the history of the prizes, I was thinking in the creating of a kind of dynamic infography to allow explore the information in a useful and simplified way.
 
-[![]({{ site.url }}{{ site.baseurl }}/assets/uploads/Screenshot-08142013-042534-PM.png)](http://acanimal.github.io/nobel-prize-explorer/)
+[![]({{ site.url }}{{ site.baseurl }}/assets/uploads/Screenshot-08142013-042534-PM.png)](http://www.acuriousanimal.com/nobel-prize-explorer/)
 
 ## <a name="animatedcluster-strategy"></a>AnimatedCluster Strategy
 
@@ -103,7 +103,7 @@ For the OpenLayers Cookbook I wrote a set of examples so the readers can also se
 
 ## <a name="simplywrite"></a>SimplyWrite
 
-[SimplyWrite](http://acanimal.github.io/SimplyWrite/) is a free web distraction writing tool that recognizes the lightweight markup language [Markdown](http://en.wikipedia.org/wiki/Markdown), an easy-to-read, easy-to-write plain format which allow to enrich the text.. [Read more]({{ site.url }}/2013/04/29/simplywrite-a-free-web-distraction-writing-tool.html)...
+[SimplyWrite](http://www.acuriousanimal.com/SimplyWrite/) is a free web distraction writing tool that recognizes the lightweight markup language [Markdown](http://en.wikipedia.org/wiki/Markdown), an easy-to-read, easy-to-write plain format which allow to enrich the text.. [Read more]({{ site.url }}/2013/04/29/simplywrite-a-free-web-distraction-writing-tool.html)...
 
 ![]({{ site.url }}{{ site.baseurl }}/assets/uploads/simplywrtie2.png)
 

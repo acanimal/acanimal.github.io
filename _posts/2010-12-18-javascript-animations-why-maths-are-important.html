@@ -16,7 +16,7 @@ tags:
 <p>Ok, we are able to execute some code asynchronously but the question is: How we can smoothly scroll to an element?</p>
 <p>The answer requires a decent explanation so lets start with a couple of basic samples:</p>
 <h3>Step 1: Scrolling to an element without animation</h3>
-<p>On this sample (<a href="http://www.acuriousanimal.com/code/JSAnimation/test1.html">demo here</a>) we put a button on our page which execute the <em>pageScroll </em>function:</p>
+<p>On this sample we put a button on our page which execute the <em>pageScroll </em>function:</p>
 <pre class="brush:xml">&lt;button id="scroll" onclick="pageScroll();"&gt;Scroll&lt;/button&gt;</pre>
 <p>This function scrolls the browser viewport till our desired element, which we have identified as <em>target</em>:</p>
 <pre class="brush:js">function pageScroll() {
@@ -30,7 +30,7 @@ tags:
 <p>Simply get the vertical offset till our desired target element and use the <em>scrollBy </em>method to scroll the viewport.</p>
 <h3>Step 2: Scrolling to an element with basic animation</h3>
 <p>The previous sample isn't much impressive, the page simply moves to the target element, it isn't a nice smooth animation.</p>
-<p>This second sample (<a href="http://www.acuriousanimal.com/code/JSAnimation/test2.html">demo here</a>) introduces the previously commented <em>setTimeout </em>functions:</p>
+<p>This second sample introduces the previously commented <em>setTimeout </em>functions:</p>
 <pre class="brush:js">function pageScroll() {
 	// Get a reference to the target element and its top offset.
 	var target = document.getElementById('target');
@@ -70,7 +70,7 @@ tags:
     return c*(t/=d)*t + b;
 };</pre>
 <h3>Using tweening function for animation</h3>
-<p>Now we know a bit about tweening functions needed to create a nice animation and now we need to put it all together in our JavaScript code (<a href="http://www.acuriousanimal.com/code/JSAnimation/test3.html">demo here</a>).</p>
+<p>Now we know a bit about tweening functions needed to create a nice animation and now we need to put it all together in our JavaScript code.</p>
 <p>First, using <a href="http://www.robertpenner.com/easing/penner_chapter7_tweening.pdf">one </a>of the functions you can found in the bottom references, we have created a nice bounce tweening function:</p>
 <pre class="brush:js">var tweenEeaseOutBouncePosition = function (t, b, c, d) {
 	if ((t/=d) &lt; (1/2.75)) {

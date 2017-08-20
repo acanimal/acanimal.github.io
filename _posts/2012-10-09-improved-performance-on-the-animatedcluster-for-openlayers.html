@@ -14,12 +14,12 @@ tags:
  >AnimatedCluster strategy for OpenLayers</a> that extends the basic Cluster strategy,
   animating cluster when user changes the zoom.</p>
 
-<p style="text-align: center;"><a href="http://acanimal.github.io/AnimatedCluster"><img class="size-full wp-image-861 aligncenter" title="anim_cluster_212" src="{{ site.url }}{{ site.baseurl }}/assets/uploads/anim_cluster_212.png" alt="" width="491" height="314" /></a></p>
+<p style="text-align: center;"><a href="http://www.acuriousanimal.com/AnimatedCluster"><img class="size-full wp-image-861 aligncenter" title="anim_cluster_212" src="{{ site.url }}{{ site.baseurl }}/assets/uploads/anim_cluster_212.png" alt="" width="491" height="314" /></a></p>
 
 <p>The problem with the previous version is the code makes some computations for all the clusters, no matter if they are inside or outside the map's viewport.</p>
 <h2>The problem</h2>
 <p>This issues is clearly reproducible in the old version. Zoom in until cluster contains one or two features and you will see a degradation of the animation.</p>
-<p>Now, compare with the <a href="http://acanimal.github.io/AnimatedCluster">new improved version</a>, which supports 50.000 features without problem (at least on my computer :) ).</p>
+<p>Now, compare with the <a href="http://www.acuriousanimal.com/AnimatedCluster">new improved version</a>, which supports 50.000 features without problem (at least on my computer :) ).</p>
 <h2>How do I improve it?</h2>
 <p>The solution was easy, only manage the animation of those clusters inside the map's viewport:</p>
 
@@ -44,5 +44,5 @@ for(var i=0; i<this.features.length; ++i) {
 <h2>References</h2>
 <ul>
 <li>GitHub source code <a href="https://github.com/acanimal/AnimatedCluster">here</a></li>
-<li>GitHub demo source code <a href="http://acanimal.github.io/AnimatedCluster/">here</a></li>
+<li>GitHub demo source code <a href="http://www.acuriousanimal.com/AnimatedCluster/">here</a></li>
 </ul>
