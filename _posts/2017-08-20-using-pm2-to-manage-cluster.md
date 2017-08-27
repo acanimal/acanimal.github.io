@@ -26,7 +26,7 @@ More on this series:
 1. [Understanding the NodeJS cluster module]({{ site.baseurl }}{% post_url 2017-08-12-understanding-the-nodejs-cluster-module %})
 2. [Using cluster module with HTTP servers]({{ site.baseurl }}{% post_url 2017-08-18-using-cluster-module-with-http-servers %})
 3. **Using PM2 to manage a NodeJS cluster**
-4. Graceful shutdown of a NodeJS cluster
+4. [Graceful shutdown NodeJS HTTP server when using PM2]({{ site.baseurl }}{% post_url 2017-08-27-graceful-shutdown-node-processes %})
 
 
 ## Introducing PM2
