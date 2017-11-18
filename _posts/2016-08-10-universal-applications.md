@@ -39,7 +39,7 @@ As a summary, RIA works as follows:
 
 ### Pros and cons of RIA applications
 
-RIA have meant a significant step in the context of web based applications. I remember when GMail appears and how its UX was much better than other competitors. In GMail the app was loaded once and any change or data loading was handled asynchronously, without the need to reload the page. This is, probably, the most important fact about RIA apps, their similarity with native applications.
+RIA have meant a significant step in the context of web based applications. I remember when GMail appeared and how its UX was much better than other competitors. In GMail the app was loaded once and any change or data loading was handled asynchronously, without the need to reload the page. This is, probably, the most important fact about RIA apps, their similarity with native applications.
 
 But real life always teach us something and the truth is RIA apps has a problem. Lets examine what the flow of a RIA app:
 
