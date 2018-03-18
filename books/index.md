@@ -10,7 +10,7 @@ As Albert Einstein said: ***If you can't explain it simply, you don't understand
 
 ## The NodeJS cluster module
 
-Short book introducing the NodeJS cluster module. NodeJS processes runs on a single process, which means it does not take advantage from multi-core systems by default. If you have an 8 core CPU and run a NodeJS program via $ node app.js it will run in a single process, wasting the rest of CPUs.
+[The NodeJS cluster module](https://leanpub.com/thenodejsclustermodule) is a short book, extracted from this post articles, introducing the NodeJS cluster module. NodeJS processes runs on a single process, which means it does not take advantage from multi-core systems by default. If you have an 8 core CPU and run a NodeJS program via $ node app.js it will run in a single process, wasting the rest of CPUs.
 
 Hopefully for us NodeJS offers the cluster module that contains a set of functions and properties that help us to create programs that uses all the CPUs.
 
