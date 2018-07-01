@@ -16,11 +16,15 @@ Hopefully for us NodeJS offers the cluster module that contains a set of functio
 
 ![thenodecluestermodule]({{ site.url }}{{ site.baseurl }}/assets/uploads/thenodecluestermodule.png)
 
+> LeanPub link: [https://leanpub.com/thenodejsclustermodule](https://leanpub.com/thenodejsclustermodule)
+
 ## The Book of OpenLayers3
 
 [The Book of OpenLayers3](thebookofopenlayers3.html): Published on 2014, just before the first release of OpenLayers3 was release, the book covers the most important topics of this awesome web mapping library.
 
 [![thebookofopenlayers3]({{ site.url }}{{ site.baseurl }}/assets/uploads/thebookofopenlayers3.jpeg)](thebookofopenlayers3.html)
+
+> LeanPub link: [https://leanpub.com/thebookofopenlayers3](https://leanpub.com/thebookofopenlayers3)
 
 ## OpenLayers Cookbook
 

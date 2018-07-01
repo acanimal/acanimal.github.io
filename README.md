@@ -12,7 +12,7 @@ This blog is made using:
 
 ## Jekyll plugins
 
-I try to make site as independent as possible but there are some tasks we don't need to reinvent the wheel:
+I try to make site as independent as possible but there are some tasks we need to not reinvent the wheel:
 
 - [jekyll-sitemap](https://help.github.com/articles/sitemaps-for-github-pages/): Plugin to generate the `sitemap.xml` file.
 - [jekyll-paginate](https://github.com/jekyll/jekyll-paginate): Pagination generator

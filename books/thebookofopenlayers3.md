@@ -8,6 +8,8 @@ I don't remember when I start writing, I think the 2014 christmas, but what I kn
 
 [![thebookofopenlayers3]({{ site.url }}{{ site.baseurl }}/assets/uploads/thebookofopenlayers3.jpeg)](https://leanpub.com/thebookofopenlayers3)
 
+> LeanPub link: [https://leanpub.com/thebookofopenlayers3](https://leanpub.com/thebookofopenlayers3)
+
 ## The book
 
 The book is oriented for any kind of reader with some knowledge in JavaScript that requires to create web mapping applications. No matter if you are new to OpenLayers or an experienced user that comes from version 2, OpenLayers3 is a new redesign and rewrite of the project that requires invest some time to learn it again. Yes, I didn't write "spent some time" because your time understanding how to work with OpenLayers3 is not wasted time, but an investment in a new and very powerful tool.
