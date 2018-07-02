@@ -1,7 +1,7 @@
 version: '3'
 services:
   site:
-    command: jekyll serve --drafts --config _config.yml,_config-dev.yml
+    command: jekyll serve --incremental --drafts --config _config.yml,_config-dev.yml
     image: jekyll/jekyll:latest
     volumes:
       - $PWD:/srv/jekyll
