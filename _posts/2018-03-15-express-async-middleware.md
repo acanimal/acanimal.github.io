@@ -160,7 +160,7 @@ Because if for some reason the code inside the async funcion fails it will throw
 The right way would be as:
 
 ```javascript
-// NEVER DO THIS !!!
+// DO THIS !!!
 app.get('/hello', async (req, res, next) => {
   try {
     // Do something
