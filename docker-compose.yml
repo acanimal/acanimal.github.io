@@ -1,10 +1,14 @@
 version: '3'
 services:
   site:
-    command: jekyll serve --incremental --drafts --config _config.yml,_config-dev.yml
+    command: jekyll serve --incremental --drafts --future --config _config.yml,_config-dev.yml
     image: jekyll/jekyll:latest
+    environment: 
+      JEKYLL_DEBUG: "false"
+      VERBOSE: "true"
     volumes:
       - $PWD:/srv/jekyll
     ports:
       - 4000:4000
+      - 4001:4001
 
