@@ -3,10 +3,13 @@ import styled from "@emotion/styled"
 import PropTypes from "prop-types"
 import React from "react"
 
+
 const Content = styled.div`
+  align-self: center;
   max-width: 860px;
   padding: 1rem 1.0875rem;
   font-size: 1.2rem;
+  text-align: center;
 `
 
 const NavLink = styled(Link)`
@@ -15,6 +18,7 @@ const NavLink = styled(Link)`
   text-decoration: none;
   display: inline-block;
   position: relative;
+  text-shadow: 1px 1px 1px #FFFFFF;
 
   ::after {
     content: "";
@@ -35,12 +39,13 @@ const NavLink = styled(Link)`
   }
 `
 
-const GitHubLink = styled.a`
+const NavOutLink = styled.a`
   color: black;
   margin-left: 15px;
   text-decoration: none;
   display: inline-block;
   position: relative;
+  text-shadow: 1px 1px 1px #FFFFFF;
 
   ::after {
     content: "";
@@ -60,38 +65,65 @@ const GitHubLink = styled.a`
     transform-origin: bottom left;
   }
 `
+
+const GitHubLink = styled(NavOutLink)``
 
 const HomeLink = styled(NavLink)`
   margin-left: 0;
 `
 
 const SiteHeader = styled.header`
-  background: transparent;
   display: flex;
+  flex-direction: column;
   align-content: center;
   justify-content: center;
+  height: 200px;
+  background-color: #EEEEEE;
+  background-image: url("https://unsplash.it/1500/500?random&blur");
 `
 
-const Header = ({ siteTitle }) => (
+// const Description = styled.p`
+//   padding: 0;
+//   margin-bottom: 1rem;
+//   font-size: 1.4rem;
+//   text-shadow: 1px 1px 1px #FFFFFF;
+//   color: #606060;
+// `
+
+const Description = styled.h3`
+  margin-top: 10px;
+  color: #606060;
+`
+
+const NameHeader = styled.h1`
+  font-size: 3rem;
+  margin-bottom: 0;
+  text-shadow: 1px 1px 1px #FFFFFF;
+`
+
+const Header = ({ siteTitle, siteSubtitle }) => (
   <SiteHeader>
     <Content>
-      <p>
-        <HomeLink to="/">{siteTitle}</HomeLink>
-        <NavLink to="/blog">Blog</NavLink>
-        <GitHubLink href="https://github.com/niklasmtj/gatsby-starter-julia">
-          GitHub
-        </GitHubLink>
-      </p>
+      <HomeLink to="/">Home</HomeLink>
+      <NavLink to="/blog">Blog</NavLink>
+      <GitHubLink href="https://github.com/niklasmtj/gatsby-starter-julia">GitHub</GitHubLink>
+    </Content>
+
+    <Content>
+      <NameHeader>{siteTitle}</NameHeader>
+      <Description>{siteSubtitle}</Description>
     </Content>
   </SiteHeader>
 )
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
+  siteSubtitle: PropTypes.string,
 }
 
 Header.defaultProps = {
-  siteTitle: ``,
+  siteTitle: '',
+  siteSubtitle: '',
 }
 
 export default Header

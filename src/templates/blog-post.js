@@ -10,21 +10,21 @@ const Content = styled.div`
   padding: 1.45rem 1.0875rem;
 `
 
-const MarkedHeader = styled.h1`
-  display: inline;
-  border-radius: 1em 0 1em 0;
-  background-image: linear-gradient(
-    -100deg,
-    rgba(255, 250, 150, 0.15),
-    rgba(255, 250, 150, 0.8) 100%,
-    rgba(255, 250, 150, 0.25)
-  );
-`
+// const MarkedHeader = styled.h1`
+//   display: inline;
+//   border-radius: 1em 0 1em 0;
+//   background-image: linear-gradient(
+//     -100deg,
+//     rgba(255, 250, 150, 0.15),
+//     rgba(255, 250, 150, 0.8) 100%,
+//     rgba(255, 250, 150, 0.25)
+//   );
+// `
 
-const HeaderDate = styled.h3`
-  margin-top: 10px;
-  color: #606060;
-`
+// const HeaderDate = styled.h3`
+//   margin-top: 10px;
+//   color: #606060;
+// `
 
 // STYLE THE TAGS INSIDE THE MARKDOWN HERE
 const MarkdownContent = styled.div`
@@ -52,17 +52,18 @@ const MarkdownContent = styled.div`
 
 export default ({ data }) => {
   const post = data.markdownRemark
+  const title = post.frontmatter.title;
+  const subtitle = `${post.frontmatter.date} - ${post.fields.readingTime.text}`;
+
   return (
-    <Layout>
+    <Layout siteTitle={title} siteSubtitle={subtitle}>
       <SEO
-        title={post.frontmatter.title}
+        title={title}
         description={post.frontmatter.description || post.excerpt}
       />
       <Content>
-        <MarkedHeader>{post.frontmatter.title}</MarkedHeader>
-        <HeaderDate>
-          {post.frontmatter.date} - {post.fields.readingTime.text}
-        </HeaderDate>
+        {/* <MarkedHeader>{title}</MarkedHeader> */}
+        {/* <HeaderDate>{subtitle}</HeaderDate> */}
         <MarkdownContent dangerouslySetInnerHTML={{ __html: post.html }} />
       </Content>
     </Layout>

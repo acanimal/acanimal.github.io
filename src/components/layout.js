@@ -27,22 +27,27 @@ const GatsbyLink = styled.a`
 const Footer = styled.footer`
   display: flex;
   justify-content: center;
+  font-size: 0.7em;
 `
 
-const Layout = ({ children }) => (
+const Layout = ({ children, siteTitle, siteSubtitle }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
         site {
           siteMetadata {
-            title
+            title,
+            subtitle
           }
         }
       }
     `}
     render={data => (
       <>
-        <Header siteTitle={data.site.siteMetadata.title} />
+        <Header
+          siteTitle={siteTitle || data.site.siteMetadata.title}
+          siteSubtitle={siteSubtitle || data.site.siteMetadata.subtitle}
+        />
         <Content>
           <main>{children}</main>
           <Footer>
@@ -58,6 +63,8 @@ const Layout = ({ children }) => (
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
+  siteTitle: PropTypes.string,
+  siteSubtitle: PropTypes.string,
 }
 
 export default Layout
