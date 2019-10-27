@@ -41,10 +41,12 @@ const IndexPage = ({ data }) => {
     <Layout>
       <SEO title="Blog" />
       <Content>
-        {data.allMarkdownRemark.edges.map(({ node }) => (
+        {data.allMarkdownRemark.edges
+          // .filter(({ node }) => node.fields.slug)
+          .map(({ node }) => (
           <div key={node.id}>
             <Link
-              to={node.frontmatter.path}
+              to={node.fields.slug}
               css={css`
                 text-decoration: none;
                 color: inherit;
@@ -81,7 +83,6 @@ export const query = graphql`
           frontmatter {
             title
             date(formatString: "DD MMMM, YYYY")
-            path
           }
           fields {
             slug

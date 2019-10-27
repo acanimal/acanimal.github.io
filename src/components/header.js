@@ -77,27 +77,19 @@ const SiteHeader = styled.header`
   flex-direction: column;
   align-content: center;
   justify-content: center;
-  height: 200px;
   background-color: #EEEEEE;
   background-image: url("https://unsplash.it/1500/500?random&blur");
 `
 
-// const Description = styled.p`
-//   padding: 0;
-//   margin-bottom: 1rem;
-//   font-size: 1.4rem;
-//   text-shadow: 1px 1px 1px #FFFFFF;
-//   color: #606060;
-// `
-
-const Description = styled.h3`
-  margin-top: 10px;
-  color: #606060;
+const SiteTitle = styled.h1`
+  font-size: 2.5rem;
+  margin-bottom: 0;
+  text-shadow: 1px 1px 1px #FFFFFF;
 `
 
-const NameHeader = styled.h1`
-  font-size: 3rem;
-  margin-bottom: 0;
+const SiteSubtitle = styled.h3`
+  margin-top: 10px;
+  color: #606060;
   text-shadow: 1px 1px 1px #FFFFFF;
 `
 
@@ -110,8 +102,8 @@ const Header = ({ siteTitle, siteSubtitle }) => (
     </Content>
 
     <Content>
-      <NameHeader>{siteTitle}</NameHeader>
-      <Description>{siteSubtitle}</Description>
+      <SiteTitle>{siteTitle}</SiteTitle>
+      <SiteSubtitle>{siteSubtitle}</SiteSubtitle>
     </Content>
   </SiteHeader>
 )

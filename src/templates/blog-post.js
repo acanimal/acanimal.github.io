@@ -72,15 +72,15 @@ export default ({ data }) => {
 
 export const pageQuery = graphql`
   query($path: String!) {
-    markdownRemark(frontmatter: { path: { eq: $path } }) {
+    markdownRemark(fields: { slug: { eq: $path } }) {
       html
       excerpt(pruneLength: 160)
       frontmatter {
         date(formatString: "DD MMMM, YYYY")
-        path
         title
       }
       fields {
+        slug
         readingTime {
           text
         }
