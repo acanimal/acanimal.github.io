@@ -67,4 +67,9 @@ Layout.propTypes = {
   siteSubtitle: PropTypes.string,
 }
 
+Layout.defaultProps = {
+  siteTitle: null,
+  siteSubtitle: null,
+}
+
 export default Layout

@@ -42,7 +42,7 @@ const IndexPage = ({ data }) => {
       <SEO title="Blog" />
       <Content>
         {data.allMarkdownRemark.edges
-          // .filter(({ node }) => node.fields.slug)
+          .filter(({ node }) => node.frontmatter.layout === 'post')
           .map(({ node }) => (
           <div key={node.id}>
             <Link
@@ -83,6 +83,7 @@ export const query = graphql`
           frontmatter {
             title
             date(formatString: "DD MMMM, YYYY")
+            layout
           }
           fields {
             slug
