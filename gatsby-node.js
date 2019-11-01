@@ -51,6 +51,7 @@ exports.createPages = ({ graphql, actions }) => {
               slug
             },
             frontmatter {
+              path
               layout
             }
           }
@@ -65,20 +66,22 @@ exports.createPages = ({ graphql, actions }) => {
 
     result.data.allMarkdownRemark.edges.forEach((post, index) => {
       const { node } = post
-
-      if (node.frontmatter.layout === 'page') {
+      
+      if (node.frontmatter.layout === 'page') {  
         createPage({
-          path: node.fields.slug || node.frontmatter.path,
+          path: node.frontmatter.path,
           component: pageTemplate,
-          slug: node.fields.slug,
-          context: {},
+          context: {
+            slug: node.fields.slug,
+          },
         })
       } else if (node.frontmatter.layout === 'post') {
         createPage({
-          path: node.fields.slug || node.frontmatter.path,
+          path: node.fields.slug,
           component: blogPostTemplate,
-          slug: node.fields.slug,
-          context: {},
+          context: {
+            slug: node.fields.slug,
+          },
         })
       } else {
         console.error('error: Invalid page type. The frontmatter.layout filed must be post or page')

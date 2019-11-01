@@ -1,4 +1,6 @@
 ## A Curious Animal
 
-Created with Gatsby from the [julia](https://github.com/niklasmtj/gatsby-starter-julia) starter.
+Yet another tech blog.
+
+- Created with [Gatsby](https://www.gatsbyjs.org) from the [julia](https://github.com/niklasmtj/gatsby-starter-julia) starter.
 

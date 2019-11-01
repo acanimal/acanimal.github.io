@@ -2,7 +2,7 @@ import { Link } from "gatsby"
 import styled from "@emotion/styled"
 import PropTypes from "prop-types"
 import React from "react"
-
+import SubscribeLogo from "../images/rss-symbol.svg"
 
 const Content = styled.div`
   align-self: center;
@@ -66,8 +66,6 @@ const NavOutLink = styled.a`
   }
 `
 
-const GitHubLink = styled(NavOutLink)``
-
 const HomeLink = styled(NavLink)`
   margin-left: 0;
 `
@@ -93,12 +91,25 @@ const SiteSubtitle = styled.h3`
   text-shadow: 1px 1px 1px #FFFFFF;
 `
 
+const SubscriptionLink = styled(NavLink)`
+  position: absolute;
+  top: 20px;
+  right: 20px;
+`
+const SubscriptionLogo = styled.img`
+  width: 15px;
+  height: 15px;
+`
+
 const Header = ({ siteTitle, siteSubtitle }) => (
   <SiteHeader>
+    <SubscriptionLink to="/rss.xml"><SubscriptionLogo alt="logo" src={SubscribeLogo} /></SubscriptionLink>
     <Content>
       <HomeLink to="/">Home</HomeLink>
+      <NavLink to="/books">Books</NavLink>
+      <NavLink to="/projects">Projects</NavLink>
+      <NavLink to="/archive">Archive</NavLink>
       <NavLink to="/about">About</NavLink>
-      <GitHubLink href="https://github.com/niklasmtj/gatsby-starter-julia">GitHub</GitHubLink>
     </Content>
 
     <Content>
