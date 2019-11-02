@@ -22,6 +22,7 @@
     "gatsby-source-filesystem": "^2.0.38",
     "gatsby-transformer-remark": "^2.3.12",
     "gatsby-transformer-sharp": "^2.1.21",
+    "gh-pages": "^2.1.1",
     "prism-themes": "^1.1.0",
     "prismjs": "^1.16.0",
     "prop-types": "^15.7.2",
@@ -45,6 +46,7 @@
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
     "serve": "gatsby serve",
+    "deploy": "gatsby build && gh-pages -d public -b master",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
   },
   "repository": {

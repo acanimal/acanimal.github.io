@@ -52,7 +52,7 @@ const Layout = ({ children, siteTitle, siteSubtitle }) => (
               julia
             </ExternalLink>
             and made a bunch of modifications. The full content is available in my
-            <ExternalLink href="https://github.com/acanimal" target="_blank">
+            <ExternalLink href="https://github.com/acanimal/acanimal.github.io" target="_blank">
               repository
             </ExternalLink>
             . Icons made by
