@@ -1,8 +1,6 @@
-code {
-  background-color: hsla(0, 0%, 0%, 0.04);
-}
-
-body {
+html, body, #___gatsby, #gatsby-focus-wrapper {
+  width: 100%;
+  height: 100%;
   margin: 0;
   font-family: 'Nunito', 'Avenir', 'Helvetica', 'sans-serif';
   -webkit-font-smoothing: antialiased;
@@ -90,6 +88,9 @@ img {
 }
 svg:not(:root) {
   overflow: hidden;
+}
+code {
+  background-color: hsla(0, 0%, 0%, 0.04);
 }
 code,
 kbd,

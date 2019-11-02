@@ -16,7 +16,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
         if (!date || !title) {
           console.error(`Invalid filename ${filename}. Change name to start with a valid date and title`)
         } else {
-          const slug = `/${slugify(date, "/")}/${title}/`
+          const slug = `/blog/${slugify(date, "/")}/${title}/`
           createNodeField({
             node,
             name: `slug`,
@@ -64,9 +64,27 @@ exports.createPages = ({ graphql, actions }) => {
       return Promise.reject(result.errors)
     }
 
-    result.data.allMarkdownRemark.edges.forEach((post, index) => {
-      const { node } = post
-      
+    const markdownItems = result.data.allMarkdownRemark.edges
+
+    // Create blog-list pages
+    const posts = markdownItems.filter(item => item.node.frontmatter.layout === 'post')
+    const postsPerPage = 6
+    const numPages = Math.ceil(posts.length / postsPerPage)
+    Array.from({ length: numPages }).forEach((_, i) => {
+      createPage({
+        path: i === 0 ? `/blog` : `/blog/${i + 1}`,
+        component: path.resolve("./src/templates/blog-list.js"),
+        context: {
+          limit: postsPerPage,
+          skip: i * postsPerPage,
+          numPages,
+          currentPage: i + 1,
+        },
+      })
+    })
+
+    // Create pages and blog post pages
+    markdownItems.forEach(({ node }) => {
       if (node.frontmatter.layout === 'page') {  
         createPage({
           path: node.frontmatter.path,

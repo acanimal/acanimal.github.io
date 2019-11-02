@@ -25,6 +25,6 @@ and this is what job mates says:
 
 You can know a bit more of him:
 
-* Reading his website [http://acuriousanimal.com](http://acuriousanimal.com/),
-* Following his Twitter account [@acanimal](https://twitter.com/acanimal).
-* Visiting his [LinkedIn](http://es.linkedin.com/pub/antonio-santiago/27/739/858) profile,
+* Reading his website [http://acuriousanimal.com](http://acuriousanimal.com/)
+* Following his Twitter account [@acanimal](https://twitter.com/acanimal)
+* Visiting his [LinkedIn](https://www.linkedin.com/in/acanimal/) profile

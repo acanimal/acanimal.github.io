@@ -1,99 +1,65 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
-import { css } from "@emotion/core"
 import styled from "@emotion/styled"
-
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import { Content, ImageLogo } from '../components/elements'
+import TwitterLogo from "../images/twitter-hand-drawn-logo.svg"
+import LinkedInLogo from "../images/linkedin-logo-hand-drawn-outline.svg"
+import GithubLogo from "../images/octocat-hand-drawn-logo-outline.svg"
 
-const Content = styled.div`
-  margin: 0 auto;
+const NavOutLink = styled.a`
+  color: black;
+  margin-left: 15px;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+  text-shadow: 1px 1px 1px #FFFFFF;
+
+  ::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    transform-origin: bottom right;
+    transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
+  }
+
+  :hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+`
+
+const LinksContent = styled.div`
+  align-self: center;
   max-width: 860px;
-  padding: 1.45rem 1.0875rem;
+  font-size: 1.2rem;
+  text-align: center;
 `
 
-const ArticleDate = styled.h5`
-  display: inline;
-  color: #606060;
-  margin-bottom: 10px;
-`
-
-const MarkerHeader = styled.h3`
-  display: inline;
-  border-radius: 1em 0 1em 0;
-  margin-bottom: 10px;
-  background-image: linear-gradient(
-    -100deg,
-    rgba(255, 250, 150, 0.15),
-    rgba(255, 250, 150, 0.8) 100%,
-    rgba(255, 250, 150, 0.25)
-  );
-`
-
-const ReadingTime = styled.h5`
-  display: inline;
-  color: #606060;
-  margin-bottom: 10px;
-`
-
-const IndexPage = ({ data }) => {
+const IndexPage = () => {
   return (
-    <Layout>
+    <Layout page={"index"}>
       <SEO title="Blog" />
       <Content>
-        {data.allMarkdownRemark.edges
-          .filter(({ node }) => node.frontmatter.layout === 'post')
-          .map(({ node }) => (
-          <div key={node.id}>
-            <Link
-              to={node.fields.slug}
-              css={css`
-                text-decoration: none;
-                color: inherit;
-              `}
-            >
-              <MarkerHeader>{node.frontmatter.title} </MarkerHeader>
-              <div>
-                <ArticleDate>{node.frontmatter.date}</ArticleDate>
-                <ReadingTime> - {node.fields.readingTime.text}</ReadingTime>
-              </div>
-              <p>{node.excerpt}</p>
-            </Link>
-          </div>
-        ))}
+        <LinksContent>
+          <NavOutLink href="https://twitter.com/acanimal" target="_blank">
+            <ImageLogo alt="logo" src={TwitterLogo} /> @acanimal
+          </NavOutLink>
+          <NavOutLink href="https://github.com/acanimal" target="_blank">
+            <ImageLogo alt="logo" src={GithubLogo} /> GitHub
+          </NavOutLink>
+          <NavOutLink href="https://www.linkedin.com/in/acanimal" target="_blank">
+            <ImageLogo alt="logo" src={LinkedInLogo} /> LinkedIn
+          </NavOutLink>
+        </LinksContent>
       </Content>
     </Layout>
   )
 }
 
 export default IndexPage
-
-export const query = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
-      totalCount
-      edges {
-        node {
-          id
-          frontmatter {
-            title
-            date(formatString: "DD MMMM, YYYY")
-            layout
-          }
-          fields {
-            slug
-            readingTime {
-              text
-            }
-          }
-          excerpt(pruneLength: 500)
-        }
-      }
-    }
-  }
-`

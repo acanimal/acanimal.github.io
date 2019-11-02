@@ -1,33 +1,22 @@
-/**
- * Layout component that queries for data
- * with Gatsby's StaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/static-query/
- */
-
 import React from "react"
 import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
 import styled from "@emotion/styled"
-
 import Header from "./header"
+import { Footer, Content } from "./elements"
+
 import "./layout.css"
 
-const Content = styled.div`
-  margin: 0 auto;
-  max-width: 860px;
-  padding: 0 1.0875rem 1rem;
-  padding-top: 0;
-`
-
-const GatsbyLink = styled.a`
-  margin-left: 5px;
-`
-
-const Footer = styled.footer`
+const Wrapper = styled.div`
   display: flex;
-  justify-content: center;
-  font-size: 0.7em;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+`
+
+const ExternalLink = styled.a`
+  margin-left: 5px;
+  margin-right: 5px;
 `
 
 const Layout = ({ children, siteTitle, siteSubtitle }) => (
@@ -36,27 +25,50 @@ const Layout = ({ children, siteTitle, siteSubtitle }) => (
       query SiteTitleQuery {
         site {
           siteMetadata {
-            title,
+            title
             subtitle
           }
         }
       }
     `}
     render={data => (
-      <>
+      <Wrapper>
         <Header
           siteTitle={siteTitle || data.site.siteMetadata.title}
-          siteSubtitle={siteSubtitle || data.site.siteMetadata.subtitle}
+          siteSubtitle={siteSubtitle || data.site.siteMetadata.subtitle}
         />
         <Content>
           <main>{children}</main>
           <Footer>
-            © {new Date().getFullYear()}, Built with
-            {` `}
-            <GatsbyLink href="https://www.gatsbyjs.org">Gatsby</GatsbyLink>
+            © I built this site with
+            <ExternalLink href="https://www.gatsbyjs.org" target="_blank">
+              Gatsby
+            </ExternalLink>
+            from the starter
+            <ExternalLink
+              href="https://github.com/niklasmtj/gatsby-starter-julia"
+              target="_blank"
+            >
+              julia
+            </ExternalLink>
+            and made a bunch of modifications. The full content is available in my
+            <ExternalLink href="https://github.com/acanimal" target="_blank">
+              repository
+            </ExternalLink>
+            . Icons made by
+            <ExternalLink
+              href="https://www.flaticon.com/authors/freepik"
+              target="_blank"
+            >
+              Freepik
+            </ExternalLink>{" "}
+            from{" "}
+            <ExternalLink href="https://www.flaticon.com" target="_blank">
+              Flaticon
+            </ExternalLink>
           </Footer>
         </Content>
-      </>
+      </Wrapper>
     )}
   />
 )
