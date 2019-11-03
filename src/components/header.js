@@ -65,13 +65,10 @@ const HomeLink = styled(NavLink)`
   margin-left: 0;
 `
 
-const SubscriptionLink = styled(NavLink)`
+const SubscriptionLink = styled.a`
   position: absolute;
   top: 20px;
   right: 20px;
-  ::after {
-    height: 0;
-  }
 `
 
 const Header = ({ siteTitle, siteSubtitle }) => (
@@ -83,7 +80,7 @@ const Header = ({ siteTitle, siteSubtitle }) => (
       <NavLink to="/projects">Projects</NavLink>
       <NavLink to="/archive">Archive</NavLink>
       <NavLink to="/about">About</NavLink>
-      <SubscriptionLink to="/rss.xml"><ImageLogo alt="logo" src={SubscribeLogo} /></SubscriptionLink>
+      <SubscriptionLink href="/rss.xml"><ImageLogo alt="logo" src={SubscribeLogo} /></SubscriptionLink>
     </HeaderContent>
 
     <HeaderContent>
