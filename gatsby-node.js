@@ -25,21 +25,14 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
         }
       }
     }
-    
-    if (node.frontmatter.layout === 'page') {
-      createNodeField({
-        node,
-        name: `slug`,
-        value: filename
-      })
-    }
   }
 }
 
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
-  const blogPostTemplate = path.resolve(`src/templates/blog-post.js`);
-  const pageTemplate = path.resolve(`src/templates/page.js`);
+  const blogListTemplate = path.resolve("./src/templates/blog-list.js")
+  const blogPostTemplate = path.resolve(`src/templates/blog-post.js`)
+  const pageTemplate = path.resolve(`src/templates/page.js`)
 
   return graphql(
     `
@@ -73,7 +66,7 @@ exports.createPages = ({ graphql, actions }) => {
     Array.from({ length: numPages }).forEach((_, i) => {
       createPage({
         path: i === 0 ? `/blog` : `/blog/${i + 1}`,
-        component: path.resolve("./src/templates/blog-list.js"),
+        component: blogListTemplate,
         context: {
           limit: postsPerPage,
           skip: i * postsPerPage,
@@ -89,9 +82,6 @@ exports.createPages = ({ graphql, actions }) => {
         createPage({
           path: node.frontmatter.path,
           component: pageTemplate,
-          context: {
-            slug: node.fields.slug,
-          },
         })
       } else if (node.frontmatter.layout === 'post') {
         createPage({
