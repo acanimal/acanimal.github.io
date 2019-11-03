@@ -44,7 +44,7 @@ const LinksContent = styled.div`
 const IndexPage = () => {
   return (
     <Layout page={"index"}>
-      <SEO title="Blog" />
+      <SEO title="Home" />
       <Content>
         <LinksContent>
           <NavOutLink href="https://twitter.com/acanimal" target="_blank">
