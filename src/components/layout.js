@@ -39,6 +39,7 @@ const Layout = ({ children, siteTitle, siteSubtitle }) => (
         />
         <Content>
           <main>{children}</main>
+
           <Footer>
             © I built this site with
             <ExternalLink href="https://www.gatsbyjs.org" target="_blank">

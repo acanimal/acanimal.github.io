@@ -2,7 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { Content, MarkdownContent } from "../components/elements"
+import { MarkdownContent } from "../components/elements"
 
 export default ({ data }) => {
   const post = data.markdownRemark
@@ -15,11 +15,11 @@ export default ({ data }) => {
         title={title}
         description={post.frontmatter.description || post.excerpt}
       />
-      <Content>
-        {/* <PostHeader>{title}</PostHeader>
-        <PostSubHeader>{subtitle}</PostSubHeader> */}
-        <MarkdownContent dangerouslySetInnerHTML={{ __html: post.html }} />
-      </Content>
+      {/*
+      <PostHeader>{title}</PostHeader>
+      <PostSubHeader>{subtitle}</PostSubHeader>
+      */}
+      <MarkdownContent dangerouslySetInnerHTML={{ __html: post.html }} />
     </Layout>
   )
 }

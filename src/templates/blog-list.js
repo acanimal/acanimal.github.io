@@ -4,7 +4,6 @@ import { css } from "@emotion/core"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import styled from "@emotion/styled"
-import { Content } from '../components/elements'
 
 const ArticleDate = styled.h5`
   display: inline;
@@ -30,12 +29,17 @@ const ArticleReadingTime = styled.h5`
   margin-bottom: 10px;
 `
 
+const PrevNextLinks = styled.div`
+  display: flex;
+`
+
 const PrevLink = styled(Link)`
-  float: left;
+  flex-grow: 1;
 `
 
 const NextLink = styled(Link)`
-  float: right;
+  flex-grow: 1;
+  text-align: right;
 `
 
 export default class BlogList extends React.Component {
@@ -50,28 +54,29 @@ export default class BlogList extends React.Component {
     return (
       <Layout>
         <SEO title="Blog" />
-        <Content>
-          {posts
-            // .filter(({ node }) => node.frontmatter.layout === 'post')
-            .map(({ node }) => (
-            <div key={node.id}>
-              <Link
-                to={node.fields.slug}
-                css={css`
-                  text-decoration: none;
-                  color: inherit;
-                `}
-              >
-                <ArticleTitle>{node.frontmatter.title} </ArticleTitle>
-                <div>
-                  <ArticleDate>{node.frontmatter.date}</ArticleDate>
-                  <ArticleReadingTime> - {node.fields.readingTime.text}</ArticleReadingTime>
-                </div>
-                <p>{node.excerpt}</p>
-              </Link>
-            </div>
-          ))}
 
+        {posts
+          // .filter(({ node }) => node.frontmatter.layout === 'post')
+          .map(({ node }) => (
+          <div key={node.id}>
+            <Link
+              to={node.fields.slug}
+              css={css`
+                text-decoration: none;
+                color: inherit;
+              `}
+            >
+              <ArticleTitle>{node.frontmatter.title} </ArticleTitle>
+              <div>
+                <ArticleDate>{node.frontmatter.date}</ArticleDate>
+                <ArticleReadingTime> - {node.fields.readingTime.text}</ArticleReadingTime>
+              </div>
+              <p>{node.excerpt}</p>
+            </Link>
+          </div>
+        ))}
+
+        <PrevNextLinks>
           {!isFirst && (
             <PrevLink to={prevPage} rel="prev">
               <span role="img" aria-label="prev">👈</span> Previous Page
@@ -82,7 +87,7 @@ export default class BlogList extends React.Component {
               Next Page <span role="img" aria-label="next">👉</span>
             </NextLink>
           )}
-        </Content>
+        </PrevNextLinks>
       </Layout>
     )
   }
