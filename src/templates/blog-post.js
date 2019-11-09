@@ -15,10 +15,6 @@ export default ({ data }) => {
         title={title}
         description={post.frontmatter.description || post.excerpt}
       />
-      {/*
-      <PostHeader>{title}</PostHeader>
-      <PostSubHeader>{subtitle}</PostSubHeader>
-      */}
       <MarkdownContent dangerouslySetInnerHTML={{ __html: post.html }} />
     </Layout>
   )

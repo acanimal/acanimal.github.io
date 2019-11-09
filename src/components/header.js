@@ -6,12 +6,10 @@ import { ImageLogo } from "../components/elements"
 import SubscribeLogo from "../images/rss-feed-hand-drawn-symbol.svg"
 
 const SiteHeader = styled.header`
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
   background-color: #EEEEEE;
   background: url("https://unsplash.it/1500/500?random&blur") no-repeat center center fixed;
   background-size: cover;
+  height: 100%;
 `
 
 const SiteTitle = styled.h1`

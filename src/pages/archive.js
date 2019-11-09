@@ -24,7 +24,10 @@ const IndexPage = ({ data }) => {
 
   const years = {}
   data.allMarkdownRemark.edges.forEach(({ node }) => {
-    const d = new Date(node.frontmatter.date)
+    const datetime = node.frontmatter.date
+    const date = datetime.split(' ')[0]
+    const d = new Date(date)
+
     const year = d.getFullYear()
 
     if (!years[year]) {
