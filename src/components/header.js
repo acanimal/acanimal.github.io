@@ -28,6 +28,7 @@ const HeaderContent = styled.div`
   align-self: center;
   max-width: 860px;
   padding: 1rem 1.0875rem;
+  margin: 0 auto;
   font-size: 1.2rem;
   text-align: center;
 `
