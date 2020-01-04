@@ -16,7 +16,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
         if (!date || !title) {
           console.error(`Invalid filename ${filename}. Change name to start with a valid date and title`)
         } else {
-          const slug = `/blog/${slugify(date, "/")}/${title}/`
+          const slug = `/blog/${slugify(date, "/")}/${title}`
           createNodeField({
             node,
             name: `slug`,
@@ -79,11 +79,13 @@ exports.createPages = ({ graphql, actions }) => {
     // Create pages and blog post pages
     markdownItems.forEach(({ node }) => {
       if (node.frontmatter.layout === 'page') {  
+        console.info(`> Page: ${node.frontmatter.path}`)
         createPage({
           path: node.frontmatter.path,
           component: pageTemplate,
         })
       } else if (node.frontmatter.layout === 'post') {
+        console.info(`> Post: ${node.fields.slug}`)
         createPage({
           path: node.fields.slug,
           component: blogPostTemplate,
