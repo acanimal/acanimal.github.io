@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'How to update a column type (in PostgreSQL)'
+title: How to update a column's type (in PostgreSQL)
 date: 2020-01-04 16:01
 excerpt_separator: <!--more-->
 tags:

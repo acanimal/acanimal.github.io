@@ -79,13 +79,11 @@ exports.createPages = ({ graphql, actions }) => {
     // Create pages and blog post pages
     markdownItems.forEach(({ node }) => {
       if (node.frontmatter.layout === 'page') {  
-        console.info(`> Page: ${node.frontmatter.path}`)
         createPage({
           path: node.frontmatter.path,
           component: pageTemplate,
         })
       } else if (node.frontmatter.layout === 'post') {
-        console.info(`> Post: ${node.fields.slug}`)
         createPage({
           path: node.fields.slug,
           component: blogPostTemplate,
