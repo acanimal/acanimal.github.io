@@ -32,7 +32,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     createNodeField({
       node,
       name: `slug`,
-      value: `/digest/${slug(node.name)}`
+      value: `/digest/${slug(node.date)}`
     })
   }
 }

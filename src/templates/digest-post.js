@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import styled from "@emotion/styled"
+import moment from "moment"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
@@ -23,8 +24,8 @@ const Description = styled.p`
 `
 
 const Cover = styled.img`
-  min-width: 15%;
-  max-width: 15%; 
+  min-width: 30%;
+  max-width: 30%; 
   object-fit: cover;
   margin: auto 20px;
   border-radius: 10px;
@@ -32,9 +33,16 @@ const Cover = styled.img`
 `
 
 export default ({ data }) => {
-  const { name, items} = data.digestJson
-  const title = name;
+  const { name, date, items} = data.digestJson
+  const title = name ||`week ${moment(date).format('YYYY-WW')}`
   const subtitle = 'Whatever that catch my attention'
+
+  // Sort digest items by web_scraper_order field
+  items.sort((a, b) => {
+    const ia = Number(a.web_scraper_order.split('-')[1])
+    const ib = Number(b.web_scraper_order.split('-')[1])
+    return ia - ib;
+  })
 
   return (
     <Layout siteTitle={title} siteSubtitle={subtitle}>
@@ -43,7 +51,7 @@ export default ({ data }) => {
         description={subtitle}
       />
 
-      {items.reverse().map((item) => 
+      {items.map((item) => 
         <Item key={item.url_href}>
           <Cover src={item.cover_src} />
           <ItemDescription>
@@ -61,11 +69,13 @@ export const query = graphql`
   query($path: String!) {
     digestJson(fields: { slug: { eq: $path } }) {
       name
+      date
       items {
         title
         description
         cover_src
         url_href
+        web_scraper_order
       }
     }
   }
