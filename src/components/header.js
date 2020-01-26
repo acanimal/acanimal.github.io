@@ -25,10 +25,7 @@ const SiteSubtitle = styled.h3`
 `
 
 const HeaderContent = styled.div`
-  align-self: center;
-  max-width: 860px;
-  padding: 1rem 1.0875rem;
-  margin: 0 auto;
+  padding: 1rem 2rem;
   font-size: 1.2rem;
   text-align: center;
 `

@@ -26,8 +26,9 @@ const Cover = styled.img`
   min-width: 15%;
   max-width: 15%; 
   object-fit: cover;
-  margin: auto 10px;
+  margin: auto 20px;
   border-radius: 10px;
+  box-shadow: 5px 5px 10px #888888;
 `
 
 export default ({ data }) => {
