@@ -8,9 +8,9 @@ const Item = styled.div`
   margin: 20px 0;
   border-bottom: 1px solid #EEEEEE;
   display: flex;
-
 `
-const ItemDescription = styled.div
+const ItemDescription = styled.div`
+`
 
 const Title = styled.h4`
   border-radius: 1em 0 1em 0;
