@@ -1,10 +1,11 @@
 const path = require(`path`)
-const slugify = require(`slugify`)
+const slug = require(`slug`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions
 
+  // Add extra fields to markdown nodes
   if (node.internal.type === `MarkdownRemark`) {
     const filename = createFilePath({ node, getNode, basePath: `blog`})
 
@@ -16,25 +17,38 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
         if (!date || !title) {
           console.error(`Invalid filename ${filename}. Change name to start with a valid date and title`)
         } else {
-          const slug = `/blog/${slugify(date, "/")}/${title}`
           createNodeField({
             node,
             name: `slug`,
-            value: slug
+            value: `/blog/${slug(date, "/")}/${title}`
           })
         }
       }
     }
   }
+
+  // Add extra fields to digest nodes
+  if (node.internal.type === 'DigestJson') {
+    createNodeField({
+      node,
+      name: `slug`,
+      value: `/digest/${slug(node.name)}`
+    })
+  }
 }
 
-exports.createPages = ({ graphql, actions }) => {
+exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
   const blogListTemplate = path.resolve("./src/templates/blog-list.js")
   const blogPostTemplate = path.resolve(`src/templates/blog-post.js`)
   const pageTemplate = path.resolve(`src/templates/page.js`)
+  const digestTemplate = path.resolve(`src/templates/digest-post.js`)
 
-  return graphql(
+  // Create pages for:
+  // - markdown pages
+  // - paginated blog entries
+  // - blog posts
+  await graphql(
     `
     {
       allMarkdownRemark {
@@ -42,7 +56,7 @@ exports.createPages = ({ graphql, actions }) => {
           node {
             fields {
               slug
-            },
+            }
             frontmatter {
               path
               layout
@@ -94,6 +108,36 @@ exports.createPages = ({ graphql, actions }) => {
       } else {
         console.error('error: Invalid page type. The frontmatter.layout filed must be post or page')
       }
+    })
+  })
+
+  await graphql(
+    `
+    {
+      allDigestJson {
+        edges {
+          node {
+            fields {
+              slug
+            }
+          }
+        }
+      }
+    }
+    `
+  ).then(result => {
+    if(result.errors) {
+      return Promise.reject(result.errors)
+    }
+
+    result.data.allDigestJson.edges.forEach(({ node }) => {
+      createPage({
+        path: node.fields.slug,
+        component: digestTemplate,
+        context: {
+          slug: node.fields.slug,
+        },
+      })
     })
   })
 }

@@ -37,6 +37,14 @@ module.exports = {
         path: `${__dirname}/src/pages-markdown/`,
       },
     },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'digest',
+        path: `${__dirname}/digest/`,
+      },
+    },
+    `gatsby-transformer-json`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-emotion`,

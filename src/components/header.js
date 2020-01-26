@@ -75,6 +75,7 @@ const Header = ({ siteTitle, siteSubtitle }) => (
     <HeaderContent>
       <HomeLink to="/">Home</HomeLink>
       <NavLink to="/blog">Blog</NavLink>
+      <NavLink to="/digest">Digest</NavLink>
       <NavLink to="/books">Books</NavLink>
       <NavLink to="/projects">Projects</NavLink>
       <NavLink to="/archive">Archive</NavLink>
