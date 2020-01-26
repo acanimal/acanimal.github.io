@@ -18,7 +18,7 @@ const ReadingTime = styled.h5`
   margin-bottom: 10px;
 `
 
-const IndexPage = ({ data }) => {
+const ArchivePage = ({ data }) => {
   const title = 'Archive'
   const subtitle = '...'
 
@@ -72,7 +72,7 @@ const IndexPage = ({ data }) => {
   )
 }
 
-export default IndexPage
+export default ArchivePage
 
 export const query = graphql`
   query {

@@ -3,16 +3,9 @@ import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
 import styled from "@emotion/styled"
 import Header from "./header"
-import { Footer, Content } from "./elements"
+import { Wrapper, Content, Footer } from "./elements"
 
 import "./layout.css"
-
-const Wrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 100%;
-`
 
 const ExternalLink = styled.a`
   margin-left: 5px;
@@ -38,7 +31,7 @@ const Layout = ({ children, siteTitle, siteSubtitle }) => (
           siteSubtitle={siteSubtitle || data.site.siteMetadata.subtitle}
         />
         <Content>
-          <main>{children}</main>
+          {children}
 
           <Footer>
             © I built this site with

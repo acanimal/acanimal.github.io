@@ -899,6 +899,13 @@
   dependencies:
     regenerator-runtime "^0.13.2"
 
+"@babel/runtime@^7.7.6":
+  version "7.8.3"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.8.3.tgz#0811944f73a6c926bb2ad35e918dcc1bfab279f1"
+  integrity sha512-fVHx1rzEmwB130VTkLnxR+HmxcTjGzH12LYQcFFoBwakMd3aOMD4OsRN7tGG/UOYE2ektgFrS8uACAoRk1CY0w==
+  dependencies:
+    regenerator-runtime "^0.13.2"
+
 "@babel/template@^7.1.0", "@babel/template@^7.1.2", "@babel/template@^7.2.2":
   version "7.2.2"
   resolved "https://registry.yarnpkg.com/@babel/template/-/template-7.2.2.tgz#005b3fdf0ed96e88041330379e0da9a708eb2907"
@@ -2458,6 +2465,11 @@ bluebird@^3.5.5:
   version "3.5.5"
   resolved "https://registry.yarnpkg.com/bluebird/-/bluebird-3.5.5.tgz#a8d0afd73251effbbd5fe384a77d73003c17a71f"
   integrity sha512-5am6HnnfN+urzt4yfg7IgTbotDjIT/u8AJpEt0sIU9FtXfVeezXAPKswrG+xKUCOYAINpSdgZVDU6QFh+cuH3w==
+
+bluebird@^3.7.2:
+  version "3.7.2"
+  resolved "https://registry.yarnpkg.com/bluebird/-/bluebird-3.7.2.tgz#9f229c15be272454ffa973ace0dbee79a1b0c36f"
+  integrity sha512-XpNj6GDQzdfW+r2Wnn7xiSAd7TM3jzkxGXBGTtWKuSXv1xUV+azxAm8jdWZN06QTQk+2N2XB9jRDkvbmQmcRtg==
 
 bmp-js@0.0.3:
   version "0.0.3"
@@ -5683,6 +5695,14 @@ gatsby-telemetry@^1.1.4:
     stack-utils "1.0.2"
     uuid "3.3.2"
 
+gatsby-transformer-json@^2.2.25:
+  version "2.2.25"
+  resolved "https://registry.yarnpkg.com/gatsby-transformer-json/-/gatsby-transformer-json-2.2.25.tgz#22e08af51958d24d95dba7866d998cb2c49ffead"
+  integrity sha512-vOJrHua/ljg4v5BSDU6QXpIHdSkLVZ23BfmYIF7OuM2xeXqJOzrwKW1Nb4tylg97RPtEuhYDINW1UsKNdWqd5g==
+  dependencies:
+    "@babel/runtime" "^7.7.6"
+    bluebird "^3.7.2"
+
 gatsby-transformer-remark@^2.3.12:
   version "2.6.3"
   resolved "https://registry.yarnpkg.com/gatsby-transformer-remark/-/gatsby-transformer-remark-2.6.3.tgz#501943e809e37a2d4e698a59aff1d6257ca99a7d"
@@ -8375,7 +8395,7 @@ mkdirp@0.5.1, mkdirp@0.5.x, mkdirp@^0.5.0, mkdirp@^0.5.1, mkdirp@~0.5.0, mkdirp@
   dependencies:
     minimist "0.0.8"
 
-moment@^2.21.0:
+moment@^2.21.0, moment@^2.24.0:
   version "2.24.0"
   resolved "https://registry.yarnpkg.com/moment/-/moment-2.24.0.tgz#0d055d53f5052aa653c9f6eb68bb5d12bf5c2b5b"
   integrity sha512-bV7f+6l2QigeBBZSM/6yTNq4P2fNpSWj/0e7jQcy87A8e7o2nAfP/34/2ky5Vw4B9S446EtIhodAzkFCcR4dQg==
@@ -11233,10 +11253,12 @@ slice-ansi@^2.1.0:
     astral-regex "^1.0.0"
     is-fullwidth-code-point "^2.0.0"
 
-slugify@^1.3.5:
-  version "1.3.5"
-  resolved "https://registry.yarnpkg.com/slugify/-/slugify-1.3.5.tgz#90210678818b6d533cb060083aed0e8238133508"
-  integrity sha512-5VCnH7aS13b0UqWOs7Ef3E5rkhFe8Od+cp7wybFv5mv/sYSRkucZlJX0bamAJky7b2TTtGvrJBWVdpdEicsSrA==
+slug@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/slug/-/slug-2.1.0.tgz#293f8d53de7e55c15871846fd1bc36114841a8c7"
+  integrity sha512-Q4foEgcE7E8UB/BFg4kEzFUICoppzsbbfRjrdKiOM4Z4EFZF5tdn6amkgeaGur3kI4lMWP2BoMv7XJcKZvLg9Q==
+  dependencies:
+    unicode ">= 0.3.1"
 
 snapdragon-node@^2.0.1:
   version "2.1.1"
@@ -12278,6 +12300,11 @@ unicode-property-aliases-ecmascript@^1.0.4:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/unicode-property-aliases-ecmascript/-/unicode-property-aliases-ecmascript-1.0.5.tgz#a9cc6cc7ce63a0a3023fc99e341b94431d405a57"
   integrity sha512-L5RAqCfXqAwR3RriF8pM0lU0w4Ryf/GgzONwi6KnL1taJQa7x1TCxdJnILX59WIGOwR57IVxn7Nej0fz1Ny6fw==
+
+"unicode@>= 0.3.1":
+  version "12.1.0"
+  resolved "https://registry.yarnpkg.com/unicode/-/unicode-12.1.0.tgz#7ee53a7a0ca5539b353419432823d8da58bbbf33"
+  integrity sha512-Ty6+Ew21DiYTWLYtd05RF/X4c1ekOvOgANyHbBj0h3MaXpfaGr2Rdmc0hMFuGQLyPLb9cU4ArNxl0bTF5HSzXw==
 
 unified@^6.1.5:
   version "6.2.0"

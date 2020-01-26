@@ -25,10 +25,7 @@ const SiteSubtitle = styled.h3`
 `
 
 const HeaderContent = styled.div`
-  align-self: center;
-  max-width: 860px;
-  padding: 1rem 1.0875rem;
-  margin: 0 auto;
+  padding: 1rem 2rem;
   font-size: 1.2rem;
   text-align: center;
 `
@@ -75,6 +72,7 @@ const Header = ({ siteTitle, siteSubtitle }) => (
     <HeaderContent>
       <HomeLink to="/">Home</HomeLink>
       <NavLink to="/blog">Blog</NavLink>
+      <NavLink to="/digest">Digest</NavLink>
       <NavLink to="/books">Books</NavLink>
       <NavLink to="/projects">Projects</NavLink>
       <NavLink to="/archive">Archive</NavLink>
