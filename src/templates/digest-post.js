@@ -16,6 +16,10 @@ const ItemDescription = styled.div`
 const Title = styled.h4`
   border-radius: 1em 0 1em 0;
   margin-bottom: 10px;
+
+  a {
+    text-decoration: none;
+  }
 `
 
 const Description = styled.p`
@@ -30,6 +34,14 @@ const Cover = styled.img`
   margin: auto 20px;
   border-radius: 10px;
   box-shadow: 5px 5px 10px #888888;
+`
+const Domain = styled.p`
+  color: #666666;
+  font-size: 0.8rem;
+
+  a {
+    text-decoration: none;
+  }
 `
 
 export default ({ data }) => {
@@ -55,8 +67,13 @@ export default ({ data }) => {
         <Item key={item.url_href}>
           <Cover src={item.cover_src} />
           <ItemDescription>
-            <Title><a href={item.url_href} target="_blank" rel="noopener noreferrer">{item.title}</a></Title>
+            <Title>
+              <a href={item.url_href} target="_blank" rel="noopener noreferrer">{item.title}</a>
+            </Title>
             <Description>{item.description}</Description>
+            <Domain>
+              <a href={item.url_href} target="_blank" rel="noopener noreferrer">{item.domain.split(' ')[0]}</a>
+            </Domain>
           </ItemDescription>
         </Item>
       )}
@@ -76,6 +93,7 @@ export const query = graphql`
         cover_src
         url_href
         web_scraper_order
+        domain
       }
     }
   }
