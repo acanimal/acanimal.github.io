@@ -21,7 +21,7 @@ const DigestPage = ({ data }) => {
     <Layout siteTitle={title} siteSubtitle={subtitle}>
       <SEO title={title} />
       <Content>
-        {data.allDigestJson.edges.reverse().map(({ node }) => {
+        {data.allDigestJson.edges.map(({ node }) => {
           const date = `week ${moment(node.date).format('WW')} - year ${moment(node.date).format('YYYY')}`
           const title = node.name || date
 
