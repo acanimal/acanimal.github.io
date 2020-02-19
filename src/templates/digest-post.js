@@ -13,7 +13,7 @@ const Item = styled.div`
 const ItemDescription = styled.div`
 `
 
-const Title = styled.h4`
+const Title = styled.h3`
   border-radius: 1em 0 1em 0;
   margin-bottom: 10px;
 
