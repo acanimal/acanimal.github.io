@@ -131,11 +131,11 @@ Express is one of the most famous and used NodeJS frameworks. Among other things
 In express, a middleware is nothing more than a callback function that receives three params: `function middleware (request, response, next) {}`
 
 * `request`: Reference to the object representing the HTTP request. We use it to get any data associated to the request: body, url, headers, etc.
-* `response`: Reference to the object repreenting the HTTP response. We need it to write a response: response code, body, headers, etc.
+* `response`: Reference to the object representing the HTTP response. We need it to write a response: response code, body, headers, etc.
 * `next`: Callback we need to execute if we want to continue the pipeline of middlewares.
 
 ```javascript
-const require = require('express');
+const express = require('express');
 
 const app = express();
 
@@ -171,7 +171,7 @@ app.get('/hello', async (req, res, next) => {
 });
 ```
 
-Inside the middleware we make some actions and if things goes fine we invoke the net middleware or catch the error and invoke the next middleware with the error, this way expressjs will detect and handle the error.
+Inside the middleware we make some actions and if things goes fine we invoke the next middleware or catch the error and invoke the next middleware with the error, this way expressjs will detect and handle the error.
 
 ### Applying some DRY
 
