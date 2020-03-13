@@ -1,0 +1,56 @@
+{
+  "name": "",
+  "date": "2020-02-24",
+  "items": [
+    {
+      "web-scraper-order": "1584085707-19",
+      "web-scraper-start-url": "https://app.raindrop.io/#/collection/10196636",
+      "title": "Isolation Repeatable Read in PostgreSQL versus MySQL",
+      "description": "To avoid having concurrent transactions interfere with each other,SQL engines implement isolation as a feature.This property corresponds to the I letter in t...",
+      "cover-src": "https://stella.raindrop.io/imager/screenshot.jpg?width=460&url=https%3A%2F%2Fpostgresql.verite.pro%2Fblog%2F2020%2F02%2F14%2Fisolation-repeatable-read-postgresql-mysql.html",
+      "url": "",
+      "url-href": "https://postgresql.verite.pro/blog/2020/02/14/isolation-repeatable-read-postgresql-mysql.html",
+      "domain": "verite.pro  ·"
+    },
+    {
+      "web-scraper-order": "1584085707-16",
+      "web-scraper-start-url": "https://app.raindrop.io/#/collection/10196636",
+      "title": "Best Ways to Hire Developers for Remote Jobs to Work from Home",
+      "description": "Are you looking to hire dedicated developers for remote jobs? Whoa! You are on the right page.",
+      "cover-src": "https://stella.raindrop.io/imager/thumb.jpg?url=https%3A%2F%2Fhackernoon.com%2Fdrafts%2Fit2cg36wc.png&width=100",
+      "url": "",
+      "url-href": "https://hackernoon.com/best-ways-to-hire-developers-for-remote-jobs-to-work-from-home-w8g736je",
+      "domain": "hackernoon.com  ·"
+    },
+    {
+      "web-scraper-order": "1584085707-17",
+      "web-scraper-start-url": "https://app.raindrop.io/#/collection/10196636",
+      "title": "r/reactjs - Where does business logic go?",
+      "description": "0 votes and 3 comments so far on Reddit",
+      "cover-src": "https://stella.raindrop.io/imager/thumb.jpg?url=https%3A%2F%2Fwww.redditstatic.com%2Fdesktop2x%2Fimg%2FrenderTimingPixel.png&width=100",
+      "url": "",
+      "url-href": "https://www.reddit.com/r/reactjs/comments/fba72t/where_does_business_logic_go/",
+      "domain": "reddit.com  ·"
+    },
+    {
+      "web-scraper-order": "1584085707-20",
+      "web-scraper-start-url": "https://app.raindrop.io/#/collection/10196636",
+      "title": "Firebase Retention Cohort Query on BigQuery · Rakam.io Blog",
+      "description": "Composing an efficient retention query on BigQuery using probabilistic cardinality estimation function: HyperLogLog++",
+      "cover-src": "https://stella.raindrop.io/imager/thumb.jpg?url=https%3A%2F%2Frakam.io%2Fblog-content%2F2020%2F02%2F18%2Fretention_firebase.png&width=100",
+      "url": "",
+      "url-href": "https://rakam.io/blog/firebase-retention-cohort-query-on-bigquery/",
+      "domain": "rakam.io  ·"
+    },
+    {
+      "web-scraper-order": "1584085707-18",
+      "web-scraper-start-url": "https://app.raindrop.io/#/collection/10196636",
+      "title": "13 GraphQL Tools and Libraries You Should Know in 2019",
+      "description": "Useful tools and libraries to boost your GraphQL APIs development workflow.",
+      "cover-src": "https://stella.raindrop.io/imager/thumb.jpg?url=https%3A%2F%2Fmiro.medium.com%2Ffreeze%2Fmax%2F900%2F1*KRfuVE0CnbmtmvAVYWLDDw.gif&width=100",
+      "url": "",
+      "url-href": "https://blog.bitsrc.io/13-graphql-tools-and-libraries-you-should-know-in-2019-e4b9005f6fc2",
+      "domain": "bitsrc.io  ·"
+    }
+  ]
+}

@@ -111,6 +111,7 @@ exports.createPages = async ({ graphql, actions }) => {
     })
   })
 
+  // Create pages for digests
   await graphql(
     `
     {

@@ -1,0 +1,126 @@
+{
+  "name": "",
+  "date": "2020-02-17",
+  "items": [
+    {
+      "web-scraper-order": "1584085593-9",
+      "web-scraper-start-url": "https://app.raindrop.io/#/collection/10196630",
+      "title": "Our Redux Anti Pattern",
+      "description": "In this talk, we will walk you through how Redux is an instance of a Publish/Subscribe (Pub/Sub) model. I’ll use that perspective to redefine what an \"Action\" should represent to enable scalability with ease. To benefit from this talk, you must have a fundamental understanding of Redux.",
+      "cover-src": "https://stella.raindrop.io/imager/thumb.jpg?url=https%3A%2F%2Fs3.amazonaws.com%2Fmedia-p.slid.es%2Fthumbnails%2Fde085a21ca1a3419ca186eb718b6968e%2Fthumb.jpg%3F1574989196%3D&width=100",
+      "url": "",
+      "url-href": "https://rangle.slides.com/yazanalaboudi/deck#/",
+      "domain": "slides.com  ·"
+    },
+    {
+      "web-scraper-order": "1584085593-7",
+      "web-scraper-start-url": "https://app.raindrop.io/#/collection/10196630",
+      "title": "sindresorhus/got",
+      "description": "🌐 Human-friendly and powerful HTTP request library for Node.js - sindresorhus/got",
+      "cover-src": "https://stella.raindrop.io/imager/thumb.jpg?url=https%3A%2F%2Favatars3.githubusercontent.com%2Fu%2F170270%3Fs%3D400%26v%3D4&width=100",
+      "url": "",
+      "url-href": "https://github.com/sindresorhus/got/releases/tag/v10.0.0",
+      "domain": "github.com  ·"
+    },
+    {
+      "web-scraper-order": "1584085593-4",
+      "web-scraper-start-url": "https://app.raindrop.io/#/collection/10196630",
+      "title": "enquirer/enquirer",
+      "description": "Stylish, intuitive and user-friendly prompts. Contribute to enquirer/enquirer development by creating an account on GitHub.",
+      "cover-src": "https://stella.raindrop.io/imager/thumb.jpg?url=https%3A%2F%2Favatars1.githubusercontent.com%2Fu%2F21160645%3Fs%3D400%26v%3D4&width=100",
+      "url": "",
+      "url-href": "https://github.com/enquirer/enquirer",
+      "domain": "github.com  ·"
+    },
+    {
+      "web-scraper-order": "1584085593-11",
+      "web-scraper-start-url": "https://app.raindrop.io/#/collection/10196630",
+      "title": "Faster JavaScript Apps with JSON.parse()",
+      "description": null,
+      "cover-src": "https://stella.raindrop.io/imager/thumb.jpg?url=https%3A%2F%2Fwww.bram.us%2Fwordpress%2Fwp-content%2Fuploads%2F2019%2F11%2Fmathias-json-parse.jpg&width=100",
+      "url": "",
+      "url-href": "https://www.bram.us/2019/11/25/faster-javascript-apps-with-json-parse/",
+      "domain": "bram.us  ·"
+    },
+    {
+      "web-scraper-order": "1584085593-6",
+      "web-scraper-start-url": "https://app.raindrop.io/#/collection/10196630",
+      "title": "connor4312/cockatiel",
+      "description": "A resilience and transient-fault-handling library that allows developers to express policies such as Backoff, Retry, Circuit Breaker, Timeout, Bulkhead Isolation, and Fallback. Inspired by .NET Pol...",
+      "cover-src": "https://stella.raindrop.io/imager/thumb.jpg?url=https%3A%2F%2Favatars0.githubusercontent.com%2Fu%2F2230985%3Fs%3D400%26v%3D4&width=100",
+      "url": "",
+      "url-href": "https://github.com/connor4312/cockatiel",
+      "domain": "github.com  ·"
+    },
+    {
+      "web-scraper-order": "1584085593-12",
+      "web-scraper-start-url": "https://app.raindrop.io/#/collection/10196630",
+      "title": "graphile/postgraphile",
+      "description": "Execute one command (or mount one Node.js middleware) and get an instant high-performance GraphQL API for your PostgreSQL database! - graphile/postgraphile",
+      "cover-src": "https://stella.raindrop.io/imager/thumb.jpg?url=https%3A%2F%2Favatars1.githubusercontent.com%2Fu%2F30540084%3Fs%3D400%26v%3D4&width=100",
+      "url": "",
+      "url-href": "https://github.com/graphile/postgraphile",
+      "domain": "github.com  ·"
+    },
+    {
+      "web-scraper-order": "1584085593-15",
+      "web-scraper-start-url": "https://app.raindrop.io/#/collection/10196630",
+      "title": "TypeScript interface vs. type | pawelgrzybek.com",
+      "description": "Should it be an interface or a type alias? This is a question asked a lot by newcomers. Let me clarify the difference.",
+      "cover-src": "https://stella.raindrop.io/imager/thumb.jpg?url=https%3A%2F%2Fpawelgrzybek.com%2Fphotos%2F2019-05-28.jpg&width=100",
+      "url": "",
+      "url-href": "https://pawelgrzybek.com/typescript-interface-vs-type/",
+      "domain": "pawelgrzybek.com  ·"
+    },
+    {
+      "web-scraper-order": "1584085593-14",
+      "web-scraper-start-url": "https://app.raindrop.io/#/collection/10196630",
+      "title": "Sales Velocity Is The Most Important Metric You Aren't Tracking",
+      "description": "Sales velocity can tell you how much money your business makes in a day — if you aren't measuring it, you're missing out on some insightful data. Comparing your business' sales velocity over time can reveal the best ways to optimize your selling efforts. Learn how to track and boost your sales velocity to make the most of each and every day.",
+      "cover-src": "https://stella.raindrop.io/imager/thumb.jpg?url=https%3A%2F%2Flearn.g2.com%2Fhubfs%2FArtboard%25201%2520copy%252018%402x.png%23keepProtocol&width=100",
+      "url": "",
+      "url-href": "https://learn.g2.com/sales-velocity",
+      "domain": "g2.com  ·"
+    },
+    {
+      "web-scraper-order": "1584085593-8",
+      "web-scraper-start-url": "https://app.raindrop.io/#/collection/10196630",
+      "title": "Docz",
+      "description": "It has never been so easy to document your things",
+      "cover-src": "https://stella.raindrop.io/imager/screenshot.jpg?width=460&url=https%3A%2F%2Fwww.docz.site%2F",
+      "url": "",
+      "url-href": "https://www.docz.site/",
+      "domain": "docz.site  ·"
+    },
+    {
+      "web-scraper-order": "1584085593-10",
+      "web-scraper-start-url": "https://app.raindrop.io/#/collection/10196630",
+      "title": "For the Sake of Your Event Listeners, Use Web Workers",
+      "description": "I’ve been tinkering with the Web Worker API lately, and as a result, I’m really feeling the guilt of not looking into this well-supported…",
+      "cover-src": "https://stella.raindrop.io/imager/thumb.jpg?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1542044801-30d3e45ae49a%3Fauto%3Dformat%26fit%3Dcrop%26ixid%3DeyJhcHBfaWQiOjEyMDd9%26ixlib%3Drb-1.2.1%26q%3D100%26w%3D1200&width=100",
+      "url": "",
+      "url-href": "https://macarthur.me/posts/use-web-workers-for-your-event-listeners",
+      "domain": "macarthur.me  ·"
+    },
+    {
+      "web-scraper-order": "1584085593-5",
+      "web-scraper-start-url": "https://app.raindrop.io/#/collection/10196630",
+      "title": "Audit your app",
+      "description": "Do you wake up at night fearing your app's dependencies might have scary vulnerabilities?",
+      "cover-src": "https://stella.raindrop.io/imager/thumb.jpg?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1571397457816-3b250bd660a1%3Fcrop%3Dedges%26fit%3Dcrop%26h%3D400%26w%3D1226&width=100",
+      "url": "",
+      "url-href": "https://javascript.christmas/2019/4",
+      "domain": "javascript.christmas  ·"
+    },
+    {
+      "web-scraper-order": "1584085593-13",
+      "web-scraper-start-url": "https://app.raindrop.io/#/collection/10196630",
+      "title": "Continuavano a chiamarlo Trinità - partita a poker con Wild Cat Hendriks",
+      "description": "Enjoy the videos and music you love, upload original content, and share it all with friends, family, and the world on YouTube.",
+      "cover-src": "https://stella.raindrop.io/imager/thumb.jpg?url=https%3A%2F%2Fi.ytimg.com%2Fvi%2FGgJ6bMOTaRg%2Fhqdefault.jpg&width=100",
+      "url": "",
+      "url-href": "https://www.youtube.com/watch?v=GgJ6bMOTaRg&feature=share",
+      "domain": "youtube.com  ·"
+    }
+  ]
+}

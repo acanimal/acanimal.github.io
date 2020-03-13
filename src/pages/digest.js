@@ -21,24 +21,27 @@ const DigestPage = ({ data }) => {
     <Layout siteTitle={title} siteSubtitle={subtitle}>
       <SEO title={title} />
       <Content>
-        {data.allDigestJson.edges.map(({ node }) => {
-          const date = `week ${moment(node.date).format('WW')} - year ${moment(node.date).format('YYYY')}`
-          const title = node.name || date
+        {
+          data.allDigestJson.edges
+            .sort((e1, e2) => e1.node.date < e2.node.date ? 1 : -1)
+            .map(({ node }) => {
+              const title = node.name || `year ${moment(node.date).format('YYYY')} - week ${moment(node.date).format('WW')}`
 
-          return (
-            <div key={node.id}>
-              <Link
-                to={node.fields.slug}
-                css={css`
-                  text-decoration: none;
-                  color: none;
-                `}
-              >
-                <DigestName>{title}</DigestName>
-              </Link>
-            </div>
-          )
-        })}
+              return (
+                <div key={node.id}>
+                  <Link
+                    to={node.fields.slug}
+                    css={css`
+                      text-decoration: none;
+                      color: none;
+                    `}
+                  >
+                    <DigestName>{title}</DigestName>
+                  </Link>
+                </div>
+              )
+            })
+        }
       </Content>
     </Layout>
   )

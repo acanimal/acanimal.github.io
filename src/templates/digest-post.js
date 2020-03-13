@@ -48,6 +48,7 @@ export default ({ data }) => {
   const { name, date, items} = data.digestJson
   const title = name ||`week ${moment(date).format('YYYY-WW')}`
   const subtitle = 'Whatever that catch my attention'
+  const description = items.map((item) => item.title).join(' | ');
 
   // Sort digest items by web_scraper_order field
   items.sort((a, b) => {
@@ -60,7 +61,7 @@ export default ({ data }) => {
     <Layout siteTitle={title} siteSubtitle={subtitle}>
       <SEO
         title={title}
-        description={subtitle}
+        description={description}
       />
 
       {items.map((item) => 

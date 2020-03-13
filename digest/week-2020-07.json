@@ -1,0 +1,36 @@
+{
+  "name": "",
+  "date": "2020-02-10",
+  "items": [
+    {
+      "web-scraper-order": "1584085542-3",
+      "web-scraper-start-url": "https://app.raindrop.io/#/collection/9918852",
+      "title": "How Discord achieves native iOS performance with React Native",
+      "description": "Early on at Discord, we adopted React Native as soon as it was open sourced to build our iOS app from the core of our React app. Years…",
+      "cover-src": "https://stella.raindrop.io/imager/thumb.jpg?url=https%3A%2F%2Fmiro.medium.com%2Fmax%2F1200%2F1*Xrs64ioQm2DcmH9Si-M3pw.png&width=100",
+      "url": "",
+      "url-href": "https://blog.discordapp.com/how-discord-achieves-native-ios-performance-with-react-native-390c84dcd502",
+      "domain": "discordapp.com  ·"
+    },
+    {
+      "web-scraper-order": "1584085542-1",
+      "web-scraper-start-url": "https://app.raindrop.io/#/collection/9918852",
+      "title": "Asynchronous Communication: What It Is & Why You Should Care About It",
+      "description": "All you need to know about asynchronous communication from a company that practices it, and how to create a more async culture at your company.",
+      "cover-src": "https://stella.raindrop.io/imager/thumb.jpg?url=https%3A%2F%2Fi1.wp.com%2Fdoist.com%2Fblog%2Fwp-content%2Fuploads%2Fsites%2F3%2F2019%2F10%2FY_Asynchronous-Communication-The-Real-Reason-Remote-Workers-Are-More-Productive.png%3Ffit%3D2880%252C1200%26quality%3D85%26ssl%3D1%26strip%3Dall&width=100",
+      "url": "",
+      "url-href": "https://doist.com/blog/asynchronous-communication/",
+      "domain": "doist.com  ·"
+    },
+    {
+      "web-scraper-order": "1584085542-2",
+      "web-scraper-start-url": "https://app.raindrop.io/#/collection/9918852",
+      "title": "The Performance Review Guide for Managers — Templates and Examples for Better Feedback",
+      "description": "Performance reviews are key to accelerating your report's career. A former Airbnb Product Lead shares the conversation template that he's used to build high-performing teams and motivate growth all year long.",
+      "cover-src": "https://stella.raindrop.io/imager/thumb.jpg?url=https%3A%2F%2Fs3.amazonaws.com%2Fmarquee-test-akiaisur2rgicbmpehea%2FjU4cPEsHQGeNubGCl6y2_Lenny-Rachitsky_164RT.jpg&width=100",
+      "url": "",
+      "url-href": "https://firstround.com/review/the-power-of-performance-reviews-use-this-system-to-become-a-better-manager/",
+      "domain": "firstround.com  ·"
+    }
+  ]
+}
