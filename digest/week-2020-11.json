@@ -1,0 +1,96 @@
+{
+  "name": "",
+  "date": "2020-03-09",
+  "items": [
+    {
+      "web-scraper-order": "1584297921-1",
+      "web-scraper-start-url": "https://app.raindrop.io/#/collection/10196656",
+      "title": "Welcome to the No-Code Software Revolution",
+      "description": "The future of software is about ‘no-code’ platforms",
+      "cover-src": "https://stella.raindrop.io/imager/thumb.jpg?url=https%3A%2F%2Fmiro.medium.com%2Ffocal%2F1200%2F632%2F46%2F50%2F1*gLLyNHtgR47bUCKzIRiqLg.jpeg&width=100",
+      "url": "",
+      "url-href": "https://link.medium.com/SONfAds3R4",
+      "domain": "medium.com  ·"
+    },
+    {
+      "web-scraper-order": "1584297921-2",
+      "web-scraper-start-url": "https://app.raindrop.io/#/collection/10196656",
+      "title": "7 Reasons Why Smart, Hardworking People Don’t Become Successful",
+      "description": "For the longest time, I believed that if smart people worked hard and grew up in a reasonably nurturing environment, success would come…",
+      "cover-src": "https://stella.raindrop.io/imager/thumb.jpg?url=https%3A%2F%2Fmiro.medium.com%2Fmax%2F1200%2F1*SKkkedxkFkk2qH0u8eSFyA.jpeg&width=100",
+      "url": "",
+      "url-href": "https://medium.com/@melissachu/7-reasons-why-smart-hardworking-people-dont-become-successful-d4d3b6119cbc",
+      "domain": "medium.com  ·"
+    },
+    {
+      "web-scraper-order": "1584297921-4",
+      "web-scraper-start-url": "https://app.raindrop.io/#/collection/10196656",
+      "title": "Expressive error handling in TypeScript and benefits for domain-driven design",
+      "description": "Using errors to express business rules from your domain",
+      "cover-src": "https://stella.raindrop.io/imager/thumb.jpg?url=https%3A%2F%2Fmiro.medium.com%2Fmax%2F1200%2F0*iHzzRgUFCulhv0kU&width=100",
+      "url": "",
+      "url-href": "https://medium.com/inato/expressive-error-handling-in-typescript-and-benefits-for-domain-driven-design-70726e061c86",
+      "domain": "medium.com  ·"
+    },
+    {
+      "web-scraper-order": "1584297921-9",
+      "web-scraper-start-url": "https://app.raindrop.io/#/collection/10196656",
+      "title": "Sword and Stone - Live · Bonfire",
+      "description": "Fireworks... Still Alive!!! (16 Explosive Hits) [Live], an album by Bonfire on Spotify",
+      "cover-src": "https://stella.raindrop.io/imager/thumb.jpg?url=https%3A%2F%2Fi.scdn.co%2Fimage%2Fab67616d0000b273aff955eba692beb5ae600772&width=100",
+      "url": "",
+      "url-href": "https://open.spotify.com/album/1zbdTYMxcfFM6b7qRp0GVk",
+      "domain": "spotify.com  ·"
+    },
+    {
+      "web-scraper-order": "1584297921-8",
+      "web-scraper-start-url": "https://app.raindrop.io/#/collection/10196656",
+      "title": "QRCode Monkey - The free QR Code Generator to create custom QR Codes with Logo",
+      "description": "Create custom QR Codes with Logo, Color and Design for free. This QR Code Maker offers free vector formats for best print quality.",
+      "cover-src": "https://stella.raindrop.io/imager/thumb.jpg?url=http%3A%2F%2Fqrcode-monkey.com%2Fimg%2Fqrcode-logo.png&width=100",
+      "url": "",
+      "url-href": "https://www.qrcode-monkey.com/",
+      "domain": "qrcode-monkey.com  ·"
+    },
+    {
+      "web-scraper-order": "1584297921-3",
+      "web-scraper-start-url": "https://app.raindrop.io/#/collection/10196656",
+      "title": "JavaScript Promises: 9 Questions - Dan Levy's Programming Blog",
+      "description": "Come for the JavaScript, stay for the cat memes.",
+      "cover-src": "https://stella.raindrop.io/imager/thumb.jpg?url=https%3A%2F%2Fdanlevy.net%2Fstatic%2Folav-ahrens-rotne-jvBXiynINGE-resized-0d760c24bc968155c46e41c61c7deb54-160fa.png&width=100",
+      "url": "",
+      "url-href": "https://danlevy.net/javascript-promises-quiz/?s=r",
+      "domain": "danlevy.net  ·"
+    },
+    {
+      "web-scraper-order": "1584297921-5",
+      "web-scraper-start-url": "https://app.raindrop.io/#/collection/10196656",
+      "title": "The Most Clever Life-Hack I’ve Ever Learned",
+      "description": "Stop Masturbating",
+      "cover-src": "https://stella.raindrop.io/imager/thumb.jpg?url=https%3A%2F%2Fmiro.medium.com%2Fmax%2F1200%2F0*3_Q-We9ThHjFIiRa&width=100",
+      "url": "",
+      "url-href": "https://medium.com/@Chef_BoyarDEJI/the-most-clever-life-hack-ive-ever-learned-4648e5631b51",
+      "domain": "medium.com  ·"
+    },
+    {
+      "web-scraper-order": "1584297921-6",
+      "web-scraper-start-url": "https://app.raindrop.io/#/collection/10196656",
+      "title": "The importance of a handbook-first approach to documentation",
+      "description": "Code, test &amp; deploy with GitLab. Everyone can contribute!",
+      "cover-src": "https://stella.raindrop.io/imager/thumb.jpg?url=https%3A%2F%2Fabout.gitlab.com%2Fimages%2Fopengraph%2Fall-remote.jpg&width=100",
+      "url": "",
+      "url-href": "https://about.gitlab.com/company/culture/all-remote/handbook-first-documentation/",
+      "domain": "gitlab.com  ·"
+    },
+    {
+      "web-scraper-order": "1584297921-7",
+      "web-scraper-start-url": "https://app.raindrop.io/#/collection/10196656",
+      "title": "Remote Work Tips for Teams",
+      "description": "Many teams may find themselves unexpectedly signed up for remote work. Here are some tips to start off prepared.",
+      "cover-src": "https://stella.raindrop.io/imager/thumb.jpg?url=https%3A%2F%2Fdev.to%2Fsocial_previews%2Farticle%2F276368.png&width=100",
+      "url": "",
+      "url-href": "https://dev.to/laurieontech/remote-work-tips-for-teams-51ap?utm_source=digest_mailer&utm_medium=email&utm_campaign=digest_email",
+      "domain": "dev.to  ·"
+    }
+  ]
+}
