@@ -1,0 +1,46 @@
+{
+  "name": "",
+  "date": "2020-03-23",
+  "items": [
+    {
+      "web-scraper-order": "1585477558-15",
+      "web-scraper-start-url": "https://app.raindrop.io/#/collection/10400911",
+      "title": "History of Icons - a visual brief on icon history by FUTURAMO",
+      "description": "History of computer icons through different graphical user interfaces in different operating systems.",
+      "cover-src": "https://stella.raindrop.io/imager/thumb.jpg?url=https%3A%2F%2Fhistoryoficons.com%2Fassets%2Fcss%2Fimages%2Fhistory-of-icons.png&width=100",
+      "url": "",
+      "url-href": "https://historyoficons.com/",
+      "domain": "historyoficons.com  ·"
+    },
+    {
+      "web-scraper-order": "1585477558-14",
+      "web-scraper-start-url": "https://app.raindrop.io/#/collection/10400911",
+      "title": "Apophis King",
+      "description": null,
+      "cover-src": "https://stella.raindrop.io/imager/thumb.jpg?url=https%3A%2F%2Fi.scdn.co%2Fimage%2Fab67616d0000b27320c7767bb3cce7ab035d7172&width=100",
+      "url": "",
+      "url-href": "https://open.spotify.com/track/03568865PjezgCHcOFK9xB?si=ezEvG2POQ1ua4jFUaRUWIA",
+      "domain": "spotify.com  ·"
+    },
+    {
+      "web-scraper-order": "1585477558-16",
+      "web-scraper-start-url": "https://app.raindrop.io/#/collection/10400911",
+      "title": "32+ funny Code Comments that people actually wrote - JavaScript in Plain English",
+      "description": "Nothing Serious Here. Read This Just For Fun!",
+      "cover-src": "https://stella.raindrop.io/imager/thumb.jpg?url=https%3A%2F%2Fmiro.medium.com%2Fmax%2F1200%2F1*AHRnDJxM4qwj9gJRVPrWkQ.jpeg&width=100",
+      "url": "",
+      "url-href": "https://medium.com/javascript-in-plain-english/30-funny-code-comments-that-will-make-you-laugh-1c1b54d4ab00",
+      "domain": "medium.com  ·"
+    },
+    {
+      "web-scraper-order": "1585477558-17",
+      "web-scraper-start-url": "https://app.raindrop.io/#/collection/10400911",
+      "title": "How to Make Your Remote Working Experience Better",
+      "description": "We have been working remotely since we created the company, in 2014. We want to share a few personal tips that will make remote working a better experience and sustainable over time.",
+      "cover-src": "https://stella.raindrop.io/imager/thumb.jpg?url=https%3A%2F%2Fmarsbased.com%2Fimages%2Fblog%2F20200316-c5d2b513.jpg&width=100",
+      "url": "",
+      "url-href": "https://marsbased.com/blog/2020/03/16/how-to-make-remote-working-experience-better/",
+      "domain": "marsbased.com  ·"
+    }
+  ]
+}
