@@ -1,0 +1,116 @@
+{
+  "name": "",
+  "date": "2020-03-30",
+  "items": [
+    {
+      "web-scraper-order": "1586157041-3",
+      "web-scraper-start-url": "https://app.raindrop.io/#/collection/10407052",
+      "title": "Twitter Direct Message Caching and Firefox – Mozilla Hacks - the Web developer blog",
+      "description": "Distinguished engineer Martin Thomson explains how this problem occurred, the implications for people who might be affected, and how problems of this nature might be avoided in future. To get ...",
+      "cover-src": "https://stella.raindrop.io/imager/thumb.jpg?url=https%3A%2F%2Fhacks.mozilla.org%2Fwp-content%2Fthemes%2FHax%2Fimg%2Fhacks-meta-image.jpg&width=100",
+      "url": "",
+      "url-href": "https://hacks.mozilla.org/2020/04/twitter-direct-message-caching-and-firefox/",
+      "domain": "mozilla.org  ·"
+    },
+    {
+      "web-scraper-order": "1586157041-4",
+      "web-scraper-start-url": "https://app.raindrop.io/#/collection/10407052",
+      "title": "Redux saga: managing your side effects. Also: generators in es6",
+      "description": "Explanation of redux-saga for its use in React and React Native. Contains an explanation about ES6 generators, used in sagas, with emphasis in generators to ma…",
+      "cover-src": "https://stella.raindrop.io/imager/thumb.jpg?url=https%3A%2F%2Fcdn.slidesharecdn.com%2Fss_thumbnails%2Fredux-saga-170510234042-thumbnail-4.jpg%3Fcb%3D1494492153&width=100",
+      "url": "",
+      "url-href": "https://www.slideshare.net/nachomartin/redux-saga-managing-your-side-effects-also-generators-in-es6?ref=http://nacho-martin.com/",
+      "domain": "slideshare.net  ·"
+    },
+    {
+      "web-scraper-order": "1586157041-2",
+      "web-scraper-start-url": "https://app.raindrop.io/#/collection/10407052",
+      "title": "An introduction to Lambda Calculus, explained through JavaScript",
+      "description": "I have recently become very interested in functional programming - using pure functional languages such as Haskell, as well as functional programming in JavaScript. One of the main areas of study that is often cited as significant for functional programmers is lambda calculus.",
+      "cover-src": "https://stella.raindrop.io/imager/screenshot.jpg?width=460&url=http%3A%2F%2Fwilltaylor.blog%2Fan-introduction-to-lambda-calculus-explained-through-javascript%2F",
+      "url": "",
+      "url-href": "http://willtaylor.blog/an-introduction-to-lambda-calculus-explained-through-javascript/",
+      "domain": "willtaylor.blog  ·"
+    },
+    {
+      "web-scraper-order": "1586157041-6",
+      "web-scraper-start-url": "https://app.raindrop.io/#/collection/10407052",
+      "title": "Announcing our full speaker lineup for our free, remote React conference",
+      "description": "👋 Kristian from Bytesized Code here – super excited to announce the speaker lineup for Byteconf React...",
+      "cover-src": "https://stella.raindrop.io/imager/thumb.jpg?url=https%3A%2F%2Fres.cloudinary.com%2Fpracticaldev%2Fimage%2Ffetch%2Fs--0fuuTeFE--%2Fc_imagga_scale%2Cf_auto%2Cfl_progressive%2Ch_500%2Cq_auto%2Cw_1000%2Fhttps%3A%2F%2Fres.cloudinary.com%2Fpracticaldev%2Fimage%2Ffetch%2Fs--WlhzlXnz--%2Fc_imagga_scale%252Cf_auto%252Cfl_progressive%252Ch_420%252Cq_auto%252Cw_1000%2Fhttps%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fi%2Folyaw6sp7coc3c146fd1.png&width=100",
+      "url": "",
+      "url-href": "https://dev.to/bytesizedcode/announcing-our-full-speaker-lineup-for-our-free-remote-react-conference-2oia",
+      "domain": "dev.to  ·"
+    },
+    {
+      "web-scraper-order": "1586157041-8",
+      "web-scraper-start-url": "https://app.raindrop.io/#/collection/10407052",
+      "title": "I never liked technical interviews",
+      "description": "I never liked technical interviews. When I was a young developer, certain interviews made me feel so bad that I developed interviewingophobia – unconditional fear of all interviews. Instead of enjoying technical interviews and learning from senior colleagues, I tried to survive. Survive like prey, surrounded by all-knowing hyenas.",
+      "cover-src": "https://stella.raindrop.io/imager/thumb.jpg?url=http%3A%2F%2Fsizovs.net%2Fimages%2Fme.png&width=100",
+      "url": "",
+      "url-href": "https://sizovs.net/2019/06/09/i-never-liked-tech-interviews/",
+      "domain": "sizovs.net  ·"
+    },
+    {
+      "web-scraper-order": "1586157041-10",
+      "web-scraper-start-url": "https://app.raindrop.io/#/collection/10407052",
+      "title": "Apple’s attack on service workers",
+      "description": "Kiss your service workers goodbye on iOS.",
+      "cover-src": "https://stella.raindrop.io/imager/thumb.jpg?url=https%3A%2F%2Fadactio.com%2Fimages%2Fphoto-300.jpg&width=100",
+      "url": "",
+      "url-href": "https://adactio.com/journal/16619",
+      "domain": "adactio.com  ·"
+    },
+    {
+      "web-scraper-order": "1586157041-5",
+      "web-scraper-start-url": "https://app.raindrop.io/#/collection/10407052",
+      "title": "localhost.run - Instant localhost sharing",
+      "description": null,
+      "cover-src": "https://stella.raindrop.io/imager/screenshot.jpg?width=460&url=http%3A%2F%2Flocalhost.run%2F",
+      "url": "",
+      "url-href": "http://localhost.run/",
+      "domain": "localhost.run  ·"
+    },
+    {
+      "web-scraper-order": "1586157041-7",
+      "web-scraper-start-url": "https://app.raindrop.io/#/collection/10407052",
+      "title": "NodeSource on Twitter",
+      "description": "Don't miss it!#NodeJS ✨Best Practices ✨ by @julian_duque ♥️ https://t.co/DvTGRHIoL7— NodeSource (@NodeSource) April 1, 2020",
+      "cover-src": "https://stella.raindrop.io/imager/screenshot.jpg?width=460&url=https%3A%2F%2Ftwitter.com%2Fnodesource%2Fstatus%2F1245434009590644737%3Fs%3D12",
+      "url": "",
+      "url-href": "https://twitter.com/nodesource/status/1245434009590644737?s=12",
+      "domain": "twitter.com  ·"
+    },
+    {
+      "web-scraper-order": "1586157041-1",
+      "web-scraper-start-url": "https://app.raindrop.io/#/collection/10407052",
+      "title": "Theia 1.0 - Finally a Good Browser IDE",
+      "description": "We are excited to announce Version 1.0 of Eclipse Theia, the vendor-neutral open-source IDE platform...",
+      "cover-src": "https://stella.raindrop.io/imager/thumb.jpg?url=https%3A%2F%2Fdev.to%2Fsocial_previews%2Farticle%2F295162.png&width=100",
+      "url": "",
+      "url-href": "https://dev.to/svenefftinge/theia-1-0-finally-a-good-browser-ide-3ok0",
+      "domain": "dev.to  ·"
+    },
+    {
+      "web-scraper-order": "1586157041-9",
+      "web-scraper-start-url": "https://app.raindrop.io/#/collection/10407052",
+      "title": "[LIVE] Who's freezing hiring from coronavirus",
+      "description": "With coronavirus and a possible recession, many companies are cutting headcount in 2020 and pausing hiring — learn who's affected.",
+      "cover-src": "https://stella.raindrop.io/imager/thumb.jpg?url=https%3A%2F%2Fcandor.co%2Fstatic%2Fhiring-freezes-b6e8db72e4d1dea3f5764abec30e1a5b.png&width=100",
+      "url": "",
+      "url-href": "https://candor.co/hiring-freezes",
+      "domain": "candor.co  ·"
+    },
+    {
+      "web-scraper-order": "1586157041-11",
+      "web-scraper-start-url": "https://app.raindrop.io/#/collection/10407052",
+      "title": "Caching Static Sites",
+      "description": "An important part of creating a very fast website is setting up proper HTTP caching. HTTP caching allows browsers to cache resources from a…",
+      "cover-src": "https://stella.raindrop.io/imager/thumb.jpg?url=https%3A%2F%2Fgatsbyjs.org%2Fstatic%2Fgatsby-icon-4a9773549091c227cd2eb82ccd9c5e3a.png&width=100",
+      "url": "",
+      "url-href": "https://www.gatsbyjs.org/docs/caching/",
+      "domain": "gatsbyjs.org  ·"
+    }
+  ]
+}
