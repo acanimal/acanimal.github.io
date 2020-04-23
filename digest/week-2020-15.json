@@ -1,0 +1,116 @@
+{
+  "name": "",
+  "date": "2020-04-06",
+  "items": [
+    {
+      "web-scraper-order": "1587626996-17",
+      "web-scraper-start-url": "https://app.raindrop.io/#/collection/10560988",
+      "title": "Good Copy • Email copy from great companies",
+      "description": null,
+      "cover-src": "https://stella.raindrop.io/imager/screenshot.jpg?width=460&url=https%3A%2F%2Fwww.goodemailcopy.com%2F",
+      "url": "",
+      "url-href": "https://www.goodemailcopy.com/",
+      "domain": "goodemailcopy.com  ·"
+    },
+    {
+      "web-scraper-order": "1587626996-16",
+      "web-scraper-start-url": "https://app.raindrop.io/#/collection/10560988",
+      "title": "Google - Site Reliability Engineering",
+      "description": null,
+      "cover-src": "https://stella.raindrop.io/imager/screenshot.jpg?width=460&url=https%3A%2F%2Flanding.google.com%2Fsre%2Fbooks%2F",
+      "url": "",
+      "url-href": "https://landing.google.com/sre/books/",
+      "domain": "google.com  ·"
+    },
+    {
+      "web-scraper-order": "1587626996-12",
+      "web-scraper-start-url": "https://app.raindrop.io/#/collection/10560988",
+      "title": "Resolve Merge Conflicts in yarn.lock",
+      "description": "Getting merge conflicts in your yarn.lock file when attempting to merge pull requests into master can be a pain. In this post I'll describe a simple trick you can use to make the process a lot easier.",
+      "cover-src": "https://stella.raindrop.io/imager/thumb.jpg?url=https%3A%2F%2Fwww.jakewiesler.com%2Fimg%2Fthumbnail.jpeg&width=100",
+      "url": "",
+      "url-href": "https://www.jakewiesler.com/blog/merge-conflicts-in-yarn-lock/",
+      "domain": "jakewiesler.com  ·"
+    },
+    {
+      "web-scraper-order": "1587626996-9",
+      "web-scraper-start-url": "https://app.raindrop.io/#/collection/10560988",
+      "title": "🌳🚀 CS Visualized: Useful Git Commands",
+      "description": "Although Git is a very powerful tool, I think most people would agree when I say it can also be... a...",
+      "cover-src": "https://stella.raindrop.io/imager/thumb.jpg?url=https%3A%2F%2Fres.cloudinary.com%2Fpracticaldev%2Fimage%2Ffetch%2Fs--3k4ftA0w--%2Fc_imagga_scale%2Cf_auto%2Cfl_progressive%2Ch_500%2Cq_auto%2Cw_1000%2Fhttps%3A%2F%2Fres.cloudinary.com%2Fpracticaldev%2Fimage%2Ffetch%2Fs--AS0ya8UC--%2Fc_imagga_scale%252Cf_auto%252Cfl_progressive%252Ch_420%252Cq_auto%252Cw_1000%2Fhttps%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fi%2Frixan4h4z8y94eq89som.png&width=100",
+      "url": "",
+      "url-href": "https://dev.to/lydiahallie/cs-visualized-useful-git-commands-37p1",
+      "domain": "dev.to  ·"
+    },
+    {
+      "web-scraper-order": "1587626996-11",
+      "web-scraper-start-url": "https://app.raindrop.io/#/collection/10560988",
+      "title": "dev.events",
+      "description": "All developer events in once place",
+      "cover-src": "https://stella.raindrop.io/imager/thumb.jpg?url=https%3A%2F%2Fdev.events%2Fimage.png&width=100",
+      "url": "",
+      "url-href": "https://dev.events/EU",
+      "domain": "dev.events  ·"
+    },
+    {
+      "web-scraper-order": "1587626996-15",
+      "web-scraper-start-url": "https://app.raindrop.io/#/collection/10560988",
+      "title": "Here Are 11 Console Commands Every Developer Should Know",
+      "description": "Boost your everyday productivity with these console commands",
+      "cover-src": "https://stella.raindrop.io/imager/thumb.jpg?url=https%3A%2F%2Fmiro.medium.com%2Fmax%2F1200%2F0*ya4dNTm8Mvfui1fD&width=100",
+      "url": "",
+      "url-href": "https://medium.com/better-programming/here-are-11-console-commands-every-developer-should-know-54e348ef22fa",
+      "domain": "medium.com  ·"
+    },
+    {
+      "web-scraper-order": "1587626996-13",
+      "web-scraper-start-url": "https://app.raindrop.io/#/collection/10560988",
+      "title": "Prevent your SSH connection from freezing",
+      "description": "Recently I was finding that my SSH connection to a Media Temple (dv) Centos 5 server was freezing. Creating a local config file fixed it. For anyone else suffering the same problem here's how to do it.",
+      "cover-src": "https://stella.raindrop.io/imager/thumb.jpg?url=https%3A%2F%2Fshapeshed.com%2Fimages%2Fgeorge-400.jpg&width=100",
+      "url": "",
+      "url-href": "https://shapeshed.com/prevent-your-ssh-connection-from-freezing/",
+      "domain": "shapeshed.com  ·"
+    },
+    {
+      "web-scraper-order": "1587626996-19",
+      "web-scraper-start-url": "https://app.raindrop.io/#/collection/10560988",
+      "title": "An Introduction to Remote Project Management",
+      "description": "We look at how remote project management differs from more traditional methods, and steps you can take to manage your remote projects successfully.",
+      "cover-src": "https://stella.raindrop.io/imager/thumb.jpg?url=https%3A%2F%2Fwww.float.com%2Fblog%2Fcontent%2Fimages%2F2019%2F12%2FRemote-PM-blog-image-1.png&width=100",
+      "url": "",
+      "url-href": "https://www.float.com/blog/an-introduction-to-remote-project-management/",
+      "domain": "float.com  ·"
+    },
+    {
+      "web-scraper-order": "1587626996-10",
+      "web-scraper-start-url": "https://app.raindrop.io/#/collection/10560988",
+      "title": "homeferences/list",
+      "description": "List of Homeferences. Contribute to homeferences/list development by creating an account on GitHub.",
+      "cover-src": "https://stella.raindrop.io/imager/thumb.jpg?url=https%3A%2F%2Favatars0.githubusercontent.com%2Fu%2F62211626%3Fs%3D400%26v%3D4&width=100",
+      "url": "",
+      "url-href": "https://github.com/homeferences/list",
+      "domain": "github.com  ·"
+    },
+    {
+      "web-scraper-order": "1587626996-18",
+      "web-scraper-start-url": "https://app.raindrop.io/#/collection/10560988",
+      "title": "Git Explorer",
+      "description": "GitExplorer: Find the right git commands you need without digging through the web",
+      "cover-src": "https://stella.raindrop.io/imager/thumb.jpg?url=https%3A%2F%2Fgitexplorer.com%2Fimages%2Fgitcommand.png&width=100",
+      "url": "",
+      "url-href": "https://gitexplorer.com/",
+      "domain": "gitexplorer.com  ·"
+    },
+    {
+      "web-scraper-order": "1587626996-14",
+      "web-scraper-start-url": "https://app.raindrop.io/#/collection/10560988",
+      "title": "How to Make Your Remote Working Experience Better",
+      "description": "We have been working remotely since we created the company, in 2014. We want to share a few personal tips that will make remote working a better experience and sustainable over time.",
+      "cover-src": "https://stella.raindrop.io/imager/thumb.jpg?url=https%3A%2F%2Fmarsbased.com%2Fimages%2Fblog%2F20200316-c5d2b513.jpg&width=100",
+      "url": "",
+      "url-href": "https://marsbased.com/blog/2020/03/16/how-to-make-remote-working-experience-better/",
+      "domain": "marsbased.com  ·"
+    }
+  ]
+}

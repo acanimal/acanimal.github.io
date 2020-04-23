@@ -1,0 +1,86 @@
+{
+  "name": "",
+  "date": "2020-04-13",
+  "items": [
+    {
+      "web-scraper-order": "1587626730-8",
+      "web-scraper-start-url": "https://app.raindrop.io/#/collection/10674505",
+      "title": "Conventional Commits",
+      "description": "A specification for adding human and machine readable meaning to commit messages",
+      "cover-src": "https://stella.raindrop.io/imager/screenshot.jpg?width=460&url=https%3A%2F%2Fwww.conventionalcommits.org%2Fen%2Fv1.0.0-beta.4%2F",
+      "url": "",
+      "url-href": "https://www.conventionalcommits.org/en/v1.0.0-beta.4/",
+      "domain": "conventionalcommits.org  ·"
+    },
+    {
+      "web-scraper-order": "1587626730-3",
+      "web-scraper-start-url": "https://app.raindrop.io/#/collection/10674505",
+      "title": "What is SKIP LOCKED for in PostgreSQL 9.5?",
+      "description": "PostgreSQL 9.5 introduces a new SKIP LOCKED option to SELECT ... FOR [KEY] UPDATE|SHARE. It’s used in the same place as NOWAIT and, like NOWAIT, affects behaviour when the tuple is locked by another transaction. The main utility of SKIP LOCKED is for building simple, reliable and efficient concurrent work queues. Most work queue implementations […]",
+      "cover-src": "https://stella.raindrop.io/imager/screenshot.jpg?width=460&url=https%3A%2F%2Fwww.2ndquadrant.com%2Fen%2Fblog%2Fwhat-is-select-skip-locked-for-in-postgresql-9-5%2F",
+      "url": "",
+      "url-href": "https://www.2ndquadrant.com/en/blog/what-is-select-skip-locked-for-in-postgresql-9-5/",
+      "domain": "2ndquadrant.com  ·"
+    },
+    {
+      "web-scraper-order": "1587626730-7",
+      "web-scraper-start-url": "https://app.raindrop.io/#/collection/10674505",
+      "title": "Do you miss the office?",
+      "description": "An office noise generator - providing you with the soothing tones of modern office life to help you focus when working from home.",
+      "cover-src": "https://stella.raindrop.io/imager/thumb.jpg?url=https%3A%2F%2Fi.ibb.co%2FSRrWKmp%2FSEO-IMAGE.png&width=100",
+      "url": "",
+      "url-href": "https://imisstheoffice.eu/",
+      "domain": "imisstheoffice.eu  ·"
+    },
+    {
+      "web-scraper-order": "1587626730-6",
+      "web-scraper-start-url": "https://app.raindrop.io/#/collection/10674505",
+      "title": "Gabriel weinberg",
+      "description": null,
+      "cover-src": "https://stella.raindrop.io/imager/screenshot.jpg?width=460&url=https%3A%2F%2Fwww.quora.com%2FWhat-does-Google-know-about-me%2Fanswer%2FGabriel-Weinberg",
+      "url": "",
+      "url-href": "https://www.quora.com/What-does-Google-know-about-me/answer/Gabriel-Weinberg",
+      "domain": "quora.com  ·"
+    },
+    {
+      "web-scraper-order": "1587626730-2",
+      "web-scraper-start-url": "https://app.raindrop.io/#/collection/10674505",
+      "title": "nightborn-be/signum",
+      "description": "Generate leads through your website with our open source solution. - nightborn-be/signum",
+      "cover-src": "https://stella.raindrop.io/imager/thumb.jpg?url=https%3A%2F%2Favatars2.githubusercontent.com%2Fu%2F44729024%3Fs%3D400%26v%3D4&width=100",
+      "url": "",
+      "url-href": "https://github.com/nightborn-be/signum",
+      "domain": "github.com  ·"
+    },
+    {
+      "web-scraper-order": "1587626730-1",
+      "web-scraper-start-url": "https://app.raindrop.io/#/collection/10674505",
+      "title": "r/javascript - Nobody talks about the real reason to use Tabs over Spaces",
+      "description": "1,840 votes and 781 comments so far on Reddit",
+      "cover-src": "https://stella.raindrop.io/imager/screenshot.jpg?width=460&url=https%3A%2F%2Fwww.reddit.com%2Fr%2Fjavascript%2Fcomments%2Fc8drjo%2Fnobody_talks_about_the_real_reason_to_use_tabs%2F",
+      "url": "",
+      "url-href": "https://www.reddit.com/r/javascript/comments/c8drjo/nobody_talks_about_the_real_reason_to_use_tabs/",
+      "domain": "reddit.com  ·"
+    },
+    {
+      "web-scraper-order": "1587626730-4",
+      "web-scraper-start-url": "https://app.raindrop.io/#/collection/10674505",
+      "title": "Top JavaScript Frameworks and Topics to Learn in 2020 and the New Decade",
+      "description": "If you want to land a great JavaScript job or catch up on important tech for 2020 and important technologies in the new decade, this post…",
+      "cover-src": "https://stella.raindrop.io/imager/thumb.jpg?url=https%3A%2F%2Fmiro.medium.com%2Fmax%2F1200%2F1*ex_zCLVsajdKQMpYfZS2bw.png&width=100",
+      "url": "",
+      "url-href": "https://medium.com/javascript-scene/top-javascript-frameworks-and-topics-to-learn-in-2020-and-the-new-decade-ced6e9d812f9",
+      "domain": "medium.com  ·"
+    },
+    {
+      "web-scraper-order": "1587626730-5",
+      "web-scraper-start-url": "https://app.raindrop.io/#/collection/10674505",
+      "title": "JavaScript Quick Tip — Avoid Serial Request Waterfalls",
+      "description": "One gotcha that comes up frequently and has a serious impact on application performance is the tendency to accidentally fetch data in…",
+      "cover-src": "https://stella.raindrop.io/imager/thumb.jpg?url=https%3A%2F%2Fmiro.medium.com%2Fmax%2F1200%2F1*FCfVfV3u-RGV7O0U-GCwDg.png&width=100",
+      "url": "",
+      "url-href": "https://medium.com/javascript-scene/javascript-quick-tip-avoid-serial-request-waterfalls-d03c4021d5fa",
+      "domain": "medium.com  ·"
+    }
+  ]
+}
