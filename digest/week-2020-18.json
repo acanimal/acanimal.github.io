@@ -1,0 +1,36 @@
+{
+  "name": "",
+  "date": "2020-04-27",
+  "items": [
+    {
+      "web-scraper-order": "1590396491-5",
+      "web-scraper-start-url": "https://app.raindrop.io/#/collection/11540825",
+      "title": "How to move your project to TypeScript - at your own pace",
+      "description": "Learn how you can move your existing JavaScript project, step by step to TypeScript. All at your own pace and as much as you want. Even without doing any code changes.",
+      "cover-src": "https://stella.raindrop.io/imager/thumb.jpg?url=https%3A%2F%2Ftwilio-cms-prod.s3.amazonaws.com%2Foriginal_images%2F1jt1K6xUWs_YCZZo-BiSoNeAAbFzm-dUb-BTx3VtEzJvDZD4uctfMQ46iLnKu6EPRrchs1VAMORypg&width=100",
+      "url": "",
+      "url-href": "https://www.twilio.com/blog/move-to-typescript",
+      "domain": "twilio.com  ·"
+    },
+    {
+      "web-scraper-order": "1590396491-4",
+      "web-scraper-start-url": "https://app.raindrop.io/#/collection/11540825",
+      "title": "KeyDB as a [possible] replacement for Redis",
+      "description": "Our experience with a multi-threaded Redis alternative",
+      "cover-src": "https://stella.raindrop.io/imager/thumb.jpg?url=https%3A%2F%2Fmiro.medium.com%2Fmax%2F780%2F0*7iI7IGsS9WUr8sQN.png&width=100",
+      "url": "",
+      "url-href": "https://medium.com/flant-com/keydb-replacement-for-redis-fd9bd159fa9e",
+      "domain": "medium.com  ·"
+    },
+    {
+      "web-scraper-order": "1590396491-6",
+      "web-scraper-start-url": "https://app.raindrop.io/#/collection/11540825",
+      "title": "9 signs that your business idea will probably fail - Dan Norris",
+      "description": "After 14 years running my own businesses, I’ve failed a lot. I haven’t kept count thankfully, but I’d say I’ve started at least 50 businesses / ideas and out of those, 3 have worked. And when I say worked I don’t mean staying in business, I mean resulting in either a decent income for me […]",
+      "cover-src": "https://stella.raindrop.io/imager/thumb.jpg?url=https%3A%2F%2Fdannorris.me%2Fwp-content%2Fuploads%2F2020%2F05%2Fadvice.jpg&width=100",
+      "url": "",
+      "url-href": "https://dannorris.me/9-signs-that-your-business-idea-will-probably-fail/",
+      "domain": "dannorris.me  ·"
+    }
+  ]
+}

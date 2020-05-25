@@ -1,0 +1,36 @@
+{
+  "name": "",
+  "date": "2020-04-20",
+  "items": [
+    {
+      "web-scraper-order": "1590396440-2",
+      "web-scraper-start-url": "https://app.raindrop.io/#/collection/10901664",
+      "title": "How to disable images and CSS in Puppeteer to speed up web scraping",
+      "description": "Learn how to disable images and CSS of an entire web page using Google Chrome Headless or Chromium using Puppeteer and Node JS, for web scraping",
+      "cover-src": "https://stella.raindrop.io/imager/thumb.jpg?url=https%3A%2F%2Fwww.scrapehero.com%2Fwp%2Fwp-content%2Fuploads%2F2018%2F09%2FDisable-Images-and-CSS-using-Puppeteer.png&width=100",
+      "url": "",
+      "url-href": "https://www.scrapehero.com/how-to-increase-web-scraping-speed-using-puppeteer/",
+      "domain": "scrapehero.com  ·"
+    },
+    {
+      "web-scraper-order": "1590396440-1",
+      "web-scraper-start-url": "https://app.raindrop.io/#/collection/10901664",
+      "title": "Micro Frontends",
+      "description": "How to split up your large, complex, frontend codebases into simple, composable, independently deliverable apps.",
+      "cover-src": "https://stella.raindrop.io/imager/thumb.jpg?url=https%3A%2F%2Fmartinfowler.com%2Farticles%2Fmicro-frontends%2Fcard.png&width=100",
+      "url": "",
+      "url-href": "https://martinfowler.com/articles/micro-frontends.html",
+      "domain": "martinfowler.com  ·"
+    },
+    {
+      "web-scraper-order": "1590396440-3",
+      "web-scraper-start-url": "https://app.raindrop.io/#/collection/10901664",
+      "title": "Five tips I wish I knew when I started with Typescript",
+      "description": "(Disclaimer: opinionated article) I have now been working with Typescript for a year on an important codebase for trainline.com. I can tell…",
+      "cover-src": "https://stella.raindrop.io/imager/thumb.jpg?url=https%3A%2F%2Fmiro.medium.com%2Fmax%2F1200%2F1*lHnNGaEeAwccbD0jbF9DyQ.jpeg&width=100",
+      "url": "",
+      "url-href": "https://codeburst.io/five-tips-i-wish-i-knew-when-i-started-with-typescript-c9e8609029db",
+      "domain": "codeburst.io  ·"
+    }
+  ]
+}

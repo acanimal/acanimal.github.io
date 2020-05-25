@@ -1,0 +1,46 @@
+{
+  "name": "",
+  "date": "2020-05-18",
+  "items": [
+    {
+      "web-scraper-order": "1590396707-19",
+      "web-scraper-start-url": "https://app.raindrop.io/#/collection/11540857",
+      "title": "The Deno Handbook: a concise introduction to Deno 🦕",
+      "description": "Get up and running quickly with Deno, a modern Node.js alternative",
+      "cover-src": "https://stella.raindrop.io/imager/thumb.jpg?url=https%3A%2F%2Fflaviocopes.com%2Fdeno%2Fbanner.png&width=100",
+      "url": "",
+      "url-href": "https://flaviocopes.com/deno/",
+      "domain": "flaviocopes.com  ·"
+    },
+    {
+      "web-scraper-order": "1590396707-18",
+      "web-scraper-start-url": "https://app.raindrop.io/#/collection/11540857",
+      "title": "lukechilds/keyv",
+      "description": "Simple key-value storage with support for multiple backends - lukechilds/keyv",
+      "cover-src": "https://stella.raindrop.io/imager/thumb.jpg?url=https%3A%2F%2Favatars2.githubusercontent.com%2Fu%2F2123375%3Fs%3D400%26v%3D4&width=100",
+      "url": "",
+      "url-href": "https://github.com/lukechilds/keyv",
+      "domain": "github.com  ·"
+    },
+    {
+      "web-scraper-order": "1590396707-20",
+      "web-scraper-start-url": "https://app.raindrop.io/#/collection/11540857",
+      "title": "State of Microfrontends",
+      "description": "Originally published at Bits and Pieces. One of the more controversial topics in frontend web dev is...",
+      "cover-src": "https://stella.raindrop.io/imager/thumb.jpg?url=https%3A%2F%2Fres.cloudinary.com%2Fpracticaldev%2Fimage%2Ffetch%2Fs--pDSSIANC--%2Fc_imagga_scale%2Cf_auto%2Cfl_progressive%2Ch_500%2Cq_auto%2Cw_1000%2Fhttps%3A%2F%2Fres.cloudinary.com%2Fpracticaldev%2Fimage%2Ffetch%2Fs--ezhMI3SW--%2Fc_imagga_scale%252Cf_auto%252Cfl_progressive%252Ch_420%252Cq_auto%252Cw_1000%2Fhttps%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fi%2F2hcsdczs3imizavn95r8.jpeg&width=100",
+      "url": "",
+      "url-href": "https://dev.to/florianrappl/state-of-microfrontends-1j3p",
+      "domain": "dev.to  ·"
+    },
+    {
+      "web-scraper-order": "1590396707-21",
+      "web-scraper-start-url": "https://app.raindrop.io/#/collection/11540857",
+      "title": "React-spring visualizer, tweak your spring configuration",
+      "description": "The missing visualizer for your react-spring UI animations. Check scale, translate, rotate, opacity & more",
+      "cover-src": "https://stella.raindrop.io/imager/thumb.jpg?url=https%3A%2F%2Freact-spring-visualizer.com%2Fstatic%2Fog-image.png&width=100",
+      "url": "",
+      "url-href": "https://react-spring-visualizer.com/",
+      "domain": "react-spring-visualizer.com  ·"
+    }
+  ]
+}

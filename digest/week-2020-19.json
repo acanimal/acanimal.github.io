@@ -1,0 +1,56 @@
+{
+  "name": "",
+  "date": "2020-05-04",
+  "items": [
+    {
+      "web-scraper-order": "1590396643-10",
+      "web-scraper-start-url": "https://app.raindrop.io/#/collection/11135533",
+      "title": "How to Micro Frontend with React",
+      "description": "This tutorial shows an example how to create a micro frontend architecture for React with Webpack ...",
+      "cover-src": "https://stella.raindrop.io/imager/thumb.jpg?url=https%3A%2F%2Fwww.robinwieruch.de%2Fstatic%2F4a4349e0086847b3b844db262ac802e9%2F9842e%2Fbanner.jpg&width=100",
+      "url": "",
+      "url-href": "https://www.robinwieruch.de/react-micro-frontend",
+      "domain": "robinwieruch.de  ·"
+    },
+    {
+      "web-scraper-order": "1590396643-7",
+      "web-scraper-start-url": "https://app.raindrop.io/#/collection/11135533",
+      "title": "aholachek/bundle-wizard",
+      "description": "Magically easy insight into the JavaScript loaded by a web app - aholachek/bundle-wizard",
+      "cover-src": "https://stella.raindrop.io/imager/thumb.jpg?url=https%3A%2F%2Favatars3.githubusercontent.com%2Fu%2F3680488%3Fs%3D400%26v%3D4&width=100",
+      "url": "",
+      "url-href": "https://github.com/aholachek/bundle-wizard",
+      "domain": "github.com  ·"
+    },
+    {
+      "web-scraper-order": "1590396643-11",
+      "web-scraper-start-url": "https://app.raindrop.io/#/collection/11135533",
+      "title": "How to Build a Node.js API (Part One)",
+      "description": "We want to share with you how we built a Node.js API for a client, describing some patterns and javascript conventions we used.",
+      "cover-src": "https://stella.raindrop.io/imager/thumb.jpg?url=https%3A%2F%2Fmarsbased.com%2Fimages%2Fblog%2F20180403-4390fc54.jpg&width=100",
+      "url": "",
+      "url-href": "https://marsbased.com/blog/2018/04/13/how-to-build-nodejs-api-pt1/",
+      "domain": "marsbased.com  ·"
+    },
+    {
+      "web-scraper-order": "1590396643-9",
+      "web-scraper-start-url": "https://app.raindrop.io/#/collection/11135533",
+      "title": "Los mejores conciertos de la historia - Tokyvideo.com",
+      "description": "Disfruta de la música en directo de los mejores artistas de la historia con esta recopilación de conciertos que marcaron un antes y un después en la industria del espectáculo. - Tokyvideo.com",
+      "cover-src": "https://stella.raindrop.io/imager/screenshot.jpg?width=460&url=https%3A%2F%2Fwww.tokyvideo.com%2Fes%2Fserie%2Flos-mejores-conciertos-de-la-historia",
+      "url": "",
+      "url-href": "https://www.tokyvideo.com/es/serie/los-mejores-conciertos-de-la-historia",
+      "domain": "tokyvideo.com  ·"
+    },
+    {
+      "web-scraper-order": "1590396643-8",
+      "web-scraper-start-url": "https://app.raindrop.io/#/collection/11135533",
+      "title": "The joy of sets",
+      "description": null,
+      "cover-src": "https://stella.raindrop.io/imager/thumb.jpg?url=https%3A%2F%2Fm.files.bbci.co.uk%2Fmodules%2Fbbc-morph-baseplate-page%2F9.17.0%2Fbranding%2Farchive%2Fimages%2Fmeta-image.jpg&width=100",
+      "url": "",
+      "url-href": "https://www.bbc.co.uk/archive/empty_sets_collection/zfvy382",
+      "domain": "bbc.co.uk  ·"
+    }
+  ]
+}
