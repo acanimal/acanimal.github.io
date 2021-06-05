@@ -26,7 +26,7 @@ Yes, this posts talks about my implementation of a <strong>cluster strategy that
 <p>In OpenLayers, when you want to render any feature within a map yo need to previously create a vector layer:</p>
 <pre class="prettyprint">var vector = new OpenLayers.Layer.Vector("Features");</pre>
 <p>Vector layers are one of the most complex and powerful kind of layers within the OpenLayers and because of this there is a great ecosystem of classes related with the vector layers:</p>
-<p>[caption id="" align="aligncenter" width="384"]<img alt="" src="./images/978c1a0a" width="384" height="305" /> Approximated conceptual model[/caption]</p>
+<p>[caption id="" align="aligncenter" width="384"]<img alt="" src="./images/978c1a0a.png" width="384" height="305" /> Approximated conceptual model[/caption]</p>
 <h3>Features and Geometries</h3>
 <p>A vector layer is nothing more than a container for features, which are real world observations: a city, a river, a mountain peak, a country, a continent, ... all these are features. In addition, a feature can have a set of attributes like: population, length, height, etc.</p>
 <p style="text-align: center;"><img class=" aligncenter" alt="" src="./images/GeometryClasses.png" /></p>
