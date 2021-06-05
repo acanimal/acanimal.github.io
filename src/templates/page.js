@@ -1,17 +1,17 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import { MarkdownContent } from "../components/elements"
 
-export default ({ data }) => {
+export default function Page({ data }) {
   const post = data.markdownRemark
   const title = post.frontmatter.title;
   const subtitle = 'Who is a curious animal?'
 
   return (
     <Layout siteTitle={title} siteSubtitle={subtitle}>
-      <SEO
+      <Seo
         title={title}
         description={post.frontmatter.description || post.excerpt}
       />

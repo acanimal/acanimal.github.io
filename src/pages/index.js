@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "@emotion/styled"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import { Content, ImageLogo } from '../components/elements'
 import TwitterLogo from "../images/twitter-hand-drawn-logo.svg"
 import LinkedInLogo from "../images/linkedin-logo-hand-drawn-outline.svg"
@@ -44,7 +44,7 @@ const LinksContent = styled.div`
 const IndexPage = () => {
   return (
     <Layout page={"index"}>
-      <SEO title="Home" />
+      <Seo title="Home" />
       <Content>
         <LinksContent>
           <NavOutLink href="https://twitter.com/acanimal" target="_blank">

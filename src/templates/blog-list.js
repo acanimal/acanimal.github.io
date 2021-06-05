@@ -1,8 +1,8 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
-import { css } from "@emotion/core"
+import { css } from "@emotion/react"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import styled from "@emotion/styled"
 
 const ArticleDate = styled.h5`
@@ -53,7 +53,7 @@ export default class BlogList extends React.Component {
     const posts = this.props.data.allMarkdownRemark.edges
     return (
       <Layout>
-        <SEO title="Blog" />
+        <Seo title="Blog" />
 
         {posts
           // .filter(({ node }) => node.frontmatter.layout === 'post')

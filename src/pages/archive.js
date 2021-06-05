@@ -1,9 +1,9 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-import { css } from "@emotion/core"
+import { css } from "@emotion/react"
 import styled from "@emotion/styled"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import { Content } from '../components/elements'
 
 const MarkerHeader = styled.h4`
@@ -39,7 +39,7 @@ const ArchivePage = ({ data }) => {
 
   return (
     <Layout siteTitle={title} siteSubtitle={subtitle}>
-      <SEO title={title} />
+      <Seo title={title} />
       <Content>
         {Object.keys(years).reverse().map((year) => {
           const nodes = years[year]

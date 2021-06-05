@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 import styled from "@emotion/styled"
 import moment from "moment"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 
 const Item = styled.div`
   margin: 20px 0;
@@ -44,7 +44,7 @@ const Domain = styled.p`
   }
 `
 
-export default ({ data }) => {
+export default function DigestPost({ data }) {
   const { name, date, items} = data.digestJson
   const title = name ||`week ${moment(date).format('YYYY-WW')}`
   const subtitle = 'Whatever that catch my attention'
@@ -59,7 +59,7 @@ export default ({ data }) => {
 
   return (
     <Layout siteTitle={title} siteSubtitle={subtitle}>
-      <SEO
+      <Seo
         title={title}
         description={description}
       />
