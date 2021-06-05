@@ -1,0 +1,2 @@
+(self.webpackChunkacanimal_site=self.webpackChunkacanimal_site||[]).push([[565],{4755:function(t,e,a){"use strict";a.r(e),a.d(e,{default:function(){return u}});a(7294);var i=a(3406),n=a(3751),r=a(760),s=a(3431);function u(t){var e=t.data.markdownRemark,a=e.frontmatter.title;return(0,s.tZ)(i.Z,{siteTitle:a,siteSubtitle:"Who is a curious animal?"},(0,s.tZ)(n.Z,{title:a,description:e.frontmatter.description||e.excerpt}),(0,s.tZ)(r.SA,{dangerouslySetInnerHTML:{__html:e.html}}))}}}]);
+//# sourceMappingURL=component---src-templates-page-js-00fdd4a3d809e6f607e5.js.map
