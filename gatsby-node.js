@@ -7,20 +7,22 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 
   // Add extra fields to markdown nodes
   if (node.internal.type === `MarkdownRemark`) {
-    const filename = createFilePath({ node, getNode, basePath: `blog`})
+    const filename = createFilePath({ node, getNode, basePath: `blog` })
 
     // Blog files must have format name YYYY-MM-DD-title.md
-    if (node.frontmatter.layout === 'post') {
+    if (node.frontmatter.layout === "post") {
       const match = filename.match(/^\/([\d]{4}-[\d]{2}-[\d]{2})-{1}(.+)\/$/)
       if (match) {
         const [, date, title] = match
         if (!date || !title) {
-          console.error(`Invalid filename ${filename}. Change name to start with a valid date and title`)
+          console.error(
+            `Invalid filename ${filename}. Change name to start with a valid date and title`
+          )
         } else {
           createNodeField({
             node,
             name: `slug`,
-            value: `/blog/${slug(date, "/")}/${title}`
+            value: `/blog/${slug(date, "/")}/${title}`,
           })
         }
       }
@@ -28,17 +30,17 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
   }
 
   // Add extra fields to digest nodes
-  if (node.internal.type === 'DigestJson') {
+  if (node.internal.type === "DigestJson") {
     createNodeField({
       node,
       name: `slug`,
-      value: `/digest/${slug(node.date)}`
+      value: `/digest/${slug(node.date)}`,
     })
   }
 }
 
 exports.createPages = async ({ graphql, actions }) => {
-  const { createPage } = actions
+  const { createPage } = actions
   const blogListTemplate = path.resolve("./src/templates/blog-list.js")
   const blogPostTemplate = path.resolve(`src/templates/blog-post.js`)
   const pageTemplate = path.resolve(`src/templates/page.js`)
@@ -50,31 +52,33 @@ exports.createPages = async ({ graphql, actions }) => {
   // - blog posts
   await graphql(
     `
-    {
-      allMarkdownRemark {
-        edges {
-          node {
-            fields {
-              slug
-            }
-            frontmatter {
-              path
-              layout
+      {
+        allMarkdownRemark {
+          edges {
+            node {
+              fields {
+                slug
+              }
+              frontmatter {
+                path
+                layout
+              }
             }
           }
         }
       }
-    }
     `
-  ).then(result => {
-    if(result.errors) {
+  ).then((result) => {
+    if (result.errors) {
       return Promise.reject(result.errors)
     }
 
     const markdownItems = result.data.allMarkdownRemark.edges
 
     // Create blog-list pages
-    const posts = markdownItems.filter(item => item.node.frontmatter.layout === 'post')
+    const posts = markdownItems.filter(
+      (item) => item.node.frontmatter.layout === "post"
+    )
     const postsPerPage = 6
     const numPages = Math.ceil(posts.length / postsPerPage)
     Array.from({ length: numPages }).forEach((_, i) => {
@@ -92,12 +96,12 @@ exports.createPages = async ({ graphql, actions }) => {
 
     // Create pages and blog post pages
     markdownItems.forEach(({ node }) => {
-      if (node.frontmatter.layout === 'page') {  
+      if (node.frontmatter.layout === "page") {
         createPage({
           path: node.frontmatter.path,
           component: pageTemplate,
         })
-      } else if (node.frontmatter.layout === 'post') {
+      } else if (node.frontmatter.layout === "post") {
         createPage({
           path: node.fields.slug,
           component: blogPostTemplate,
@@ -106,7 +110,9 @@ exports.createPages = async ({ graphql, actions }) => {
           },
         })
       } else {
-        console.error('error: Invalid page type. The frontmatter.layout filed must be post or page')
+        console.error(
+          "error: Invalid page type. The frontmatter.layout filed must be post or page"
+        )
       }
     })
   })
@@ -114,24 +120,24 @@ exports.createPages = async ({ graphql, actions }) => {
   // Create pages for digests
   await graphql(
     `
-    {
-      allDigestJson {
-        edges {
-          node {
-            fields {
-              slug
+      {
+        allDigestJson {
+          edges {
+            node {
+              fields {
+                slug
+              }
             }
           }
         }
       }
-    }
     `
-  ).then(result => {
-    if(result.errors) {
+  ).then((result) => {
+    if (result.errors) {
       return Promise.reject(result.errors)
     }
 
-    result.data.allDigestJson.edges.forEach(({ node }) => {
+    result.data.allDigestJson.edges.forEach(({ node }) => {
       createPage({
         path: node.fields.slug,
         component: digestTemplate,

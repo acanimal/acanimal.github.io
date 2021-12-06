@@ -6,8 +6,9 @@ import { ImageLogo } from "../components/elements"
 import SubscribeLogo from "../images/rss-feed-hand-drawn-symbol.svg"
 
 const SiteHeader = styled.header`
-  background-color: #EEEEEE;
-  background: url("https://unsplash.it/1500/500?random&blur") no-repeat center center fixed;
+  background-color: #eeeeee;
+  background: url("https://unsplash.it/1500/500?random&blur") no-repeat center
+    center fixed;
   background-size: cover;
   height: 100%;
 `
@@ -15,13 +16,13 @@ const SiteHeader = styled.header`
 const SiteTitle = styled.h1`
   font-size: 2.5rem;
   margin-bottom: 0;
-  text-shadow: 1px 1px 1px #FFFFFF;
+  text-shadow: 1px 1px 1px #ffffff;
 `
 
 const SiteSubtitle = styled.h3`
   margin-top: 10px;
   color: #606060;
-  text-shadow: 1px 1px 1px #FFFFFF;
+  text-shadow: 1px 1px 1px #ffffff;
 `
 
 const HeaderContent = styled.div`
@@ -36,7 +37,7 @@ const NavLink = styled(Link)`
   text-decoration: none;
   display: inline-block;
   position: relative;
-  text-shadow: 1px 1px 1px #FFFFFF;
+  text-shadow: 1px 1px 1px #ffffff;
 
   ::after {
     content: "";
@@ -72,12 +73,14 @@ const Header = ({ siteTitle, siteSubtitle }) => (
     <HeaderContent>
       <HomeLink to="/">Home</HomeLink>
       <NavLink to="/blog">Blog</NavLink>
-      <NavLink to="/digest">Digest</NavLink>
+      {/* <NavLink to="/digest">Digest</NavLink> */}
       <NavLink to="/books">Books</NavLink>
       <NavLink to="/projects">Projects</NavLink>
       <NavLink to="/archive">Archive</NavLink>
       <NavLink to="/about">About</NavLink>
-      <SubscriptionLink href="/rss.xml"><ImageLogo alt="logo" src={SubscribeLogo} /></SubscriptionLink>
+      <SubscriptionLink href="/rss.xml">
+        <ImageLogo alt="logo" src={SubscribeLogo} />
+      </SubscriptionLink>
     </HeaderContent>
 
     <HeaderContent>
@@ -93,8 +96,8 @@ Header.propTypes = {
 }
 
 Header.defaultProps = {
-  siteTitle: '',
-  siteSubtitle: '',
+  siteTitle: "",
+  siteSubtitle: "",
 }
 
 export default Header

@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `A Curious Animal`,
     subtitle: `Born to be curious, born to be animal!`,
-    description: `technology, gis, javascript, web, mapping, openlayers, leaflet, jquery, acuriousanimal, acanimal`,
+    description: `acuriousanimal, acanimal, tech, techie, technology, javascript, typescript, gis, web, mapping, openlayers, leaflet, jquery`,
     author: `@acanimal`,
     siteUrl: `https://www.acuriousanimal.com`,
   },
@@ -10,23 +10,23 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-catch-links`,
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: "gatsby-source-filesystem",
       options: {
-        name: 'blog',
+        name: "blog",
         path: `${__dirname}/blog/`,
       },
     },
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: "gatsby-source-filesystem",
       options: {
-        name: 'images',
+        name: "images",
         path: `${__dirname}/src/images/`,
       },
     },
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: "gatsby-source-filesystem",
       options: {
-        name: 'images',
+        name: "images",
         path: `${__dirname}/blog/images/`,
       },
     },
@@ -38,9 +38,9 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: "gatsby-source-filesystem",
       options: {
-        name: 'digest',
+        name: "digest",
         path: `${__dirname}/digest/`,
       },
     },
@@ -57,15 +57,15 @@ module.exports = {
           {
             resolve: `gatsby-remark-prismjs`,
             options: {
-              aliases:{sh: "bash", js:"javascript"},
+              aliases: { sh: "bash", js: "javascript" },
               showLineNumbers: true,
-            }
+            },
           },
           {
-            resolve: 'gatsby-remark-images',
+            resolve: "gatsby-remark-images",
             options: {
-              linkImagesToOriginal: false
-            }
+              linkImagesToOriginal: false,
+            },
           },
         ],
       },
@@ -85,7 +85,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
-        trackingIds: [ "G-JX5B3BYWHW" ],
+        trackingIds: ["G-JX5B3BYWHW"],
       },
     },
     `gatsby-plugin-sitemap`,
@@ -107,7 +107,7 @@ module.exports = {
         feeds: [
           {
             serialize: ({ query: { site, allMarkdownRemark } }) => {
-              return allMarkdownRemark.edges.map(edge => {
+              return allMarkdownRemark.edges.map((edge) => {
                 return Object.assign({}, edge.node.frontmatter, {
                   description: edge.node.excerpt,
                   date: edge.node.frontmatter.date,

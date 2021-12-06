@@ -2,10 +2,11 @@ import React from "react"
 import styled from "@emotion/styled"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import { Content, ImageLogo } from '../components/elements'
+import { Content, ImageLogo } from "../components/elements"
 import TwitterLogo from "../images/twitter-hand-drawn-logo.svg"
 import LinkedInLogo from "../images/linkedin-logo-hand-drawn-outline.svg"
 import GithubLogo from "../images/octocat-hand-drawn-logo-outline.svg"
+import RevueSubscription from "../components/RevueSubscription"
 
 const NavOutLink = styled.a`
   color: black;
@@ -13,7 +14,7 @@ const NavOutLink = styled.a`
   text-decoration: none;
   display: inline-block;
   position: relative;
-  text-shadow: 1px 1px 1px #FFFFFF;
+  text-shadow: 1px 1px 1px #ffffff;
 
   ::after {
     content: "";
@@ -46,6 +47,8 @@ const IndexPage = () => {
     <Layout page={"index"}>
       <Seo title="Home" />
       <Content>
+        <RevueSubscription />
+
         <LinksContent>
           <NavOutLink href="https://twitter.com/acanimal" target="_blank">
             <ImageLogo alt="logo" src={TwitterLogo} /> @acanimal
@@ -53,7 +56,10 @@ const IndexPage = () => {
           <NavOutLink href="https://github.com/acanimal" target="_blank">
             <ImageLogo alt="logo" src={GithubLogo} /> GitHub
           </NavOutLink>
-          <NavOutLink href="https://www.linkedin.com/in/acanimal" target="_blank">
+          <NavOutLink
+            href="https://www.linkedin.com/in/acanimal"
+            target="_blank"
+          >
             <ImageLogo alt="logo" src={LinkedInLogo} /> LinkedIn
           </NavOutLink>
         </LinksContent>
