@@ -24,7 +24,7 @@
     "gatsby-transformer-remark": "4.3.0",
     "gatsby-transformer-sharp": "3.6.0",
     "gh-pages": "3.2.0",
-    "moment": "2.29.1",
+    "moment": "2.29.2",
     "prism-themes": "1.7.0",
     "prismjs": "1.23.0",
     "prop-types": "15.7.2",
