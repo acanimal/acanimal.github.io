@@ -21,7 +21,7 @@
     "gatsby-remark-reading-time": "1.1.0",
     "gatsby-source-filesystem": "3.6.0",
     "gatsby-transformer-json": "3.6.0",
-    "gatsby-transformer-remark": "4.3.0",
+    "gatsby-transformer-remark": "5.25.1",
     "gatsby-transformer-sharp": "3.6.0",
     "gh-pages": "3.2.0",
     "moment": "2.29.1",
