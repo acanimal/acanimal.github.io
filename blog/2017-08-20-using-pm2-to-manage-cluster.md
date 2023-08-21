@@ -23,10 +23,10 @@ In this post we present [PM2](http://pm2.keymetrics.io) tool. although it is a g
 ---
 More on this series:
 
-1. [Understanding the NodeJS cluster module](/2017/08/12/understanding-the-nodejs-cluster-module)
-2. [Using cluster module with HTTP servers](/2017/08/18/using-cluster-module-with-http-servers)
+1. [Understanding the NodeJS cluster module](/blog/20170812/understanding-the-nodejs-cluster-module)
+2. [Using cluster module with HTTP servers](/blog/20170818/using-cluster-module-with-http-servers)
 3. **Using PM2 to manage a NodeJS cluster**
-4. [Graceful shutdown NodeJS HTTP server when using PM2](/2017/08/27/graceful-shutdown-node-processes)
+4. [Graceful shutdown NodeJS HTTP server when using PM2](/blog/20170827/graceful-shutdown-node-processes)
 
 ## Introducing PM2
 
