@@ -22,10 +22,10 @@ In the previous post [Understanding the NodeJS cluster module]({{ site.baseurl }
 ---
 More on this series:
 
-1. [Understanding the NodeJS cluster module](/2017/08/12/understanding-the-nodejs-cluster-module)
+1. [Understanding the NodeJS cluster module](/blog/20170812/understanding-the-nodejs-cluster-module)
 2. **Using cluster module with HTTP servers**
-3. [Using PM2 to manage a NodeJS cluster](/2017/08/20/using-pm2-to-manage-cluster)
-4. [Graceful shutdown NodeJS HTTP server when using PM2](/2017/08/27/graceful-shutdown-node-processes)
+3. [Using PM2 to manage a NodeJS cluster](/blog/20170820/using-pm2-to-manage-cluster)
+4. [Graceful shutdown NodeJS HTTP server when using PM2](/blog/20170827/graceful-shutdown-node-processes)
 
 ## Using cluster module with HTTP servers
 

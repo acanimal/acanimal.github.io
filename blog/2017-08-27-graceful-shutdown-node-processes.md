@@ -19,9 +19,9 @@ So you have created a NodeJS server that receives tons of requests and you are r
 ---
 More on this series:
 
-1. [Understanding the NodeJS cluster module](/2017/08/12/understanding-the-nodejs-cluster-module)
-2. [Using cluster module with HTTP servers](/2017/08/18/using-cluster-module-with-http-servers)
-3. [Using PM2 to manage a NodeJS cluster](/2017/08/20/using-pm2-to-manage-cluster)
+1. [Understanding the NodeJS cluster module](/blog/20170812/understanding-the-nodejs-cluster-module)
+2. [Using cluster module with HTTP servers](/blog/20170818/using-cluster-module-with-http-servers)
+3. [Using PM2 to manage a NodeJS cluster](/blog/20170820/using-pm2-to-manage-cluster)
 4. **Graceful shutdown NodeJS HTTP server when using PM2**
 
 ## Starting a HTTP server
