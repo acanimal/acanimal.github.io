@@ -3,34 +3,22 @@ layout: ../layouts/AboutLayout.astro
 title: "About"
 ---
 
-AstroPaper is a minimal, responsive and SEO-friendly Astro blog theme. I designed and crafted this based on [my personal blog](https://satnaing.dev/blog).
+A Curious Animal is a blog maintained by [Antonio Santiago](http://acuriousanimal.com/), a citizen of the world living at Barcelona (Spain).
 
-This theme is aimed to be accessible out of the box. Light and dark mode are supported by
-default and additional color schemes can also be configured.
+Antonio is a Software Engineer as profession and hobby, who has been working for years as employee and as freelance building information systems and web applications.
 
-This theme is self-documented \_ which means articles/posts in this theme can also be considered as documentations. So, see the documentation for more info.
+![antonio_b&w](@assets/images/antonio_bw-150x150.png)
 
-<div>
-  <img src="/assets/dev.svg" class="sm:w-1/2 mx-auto" alt="coding dev illustration">
-</div>
+He is a firm believer of agile methodologies (and much more about common sense). There is no ring to rule them all, every place needs to forge its own master ring.
 
-## Tech Stack
+He is mainly experienced in the Java and JavaScript ecosystems (Spring, Hibernate, JPA, NodeJS, Express, React, Redux, ...) but also has some knowledge about other programming languages in addition to devops.
 
-This theme is written in vanilla JavaScript (+ TypeScript for type checking) and a little bit of ReactJS for some interactions. TailwindCSS is used for styling; and Markdown is used for blog contents.
+This is what he says:
 
-## Features
+> I'm a passionate programmer and a acceptable guitar player
 
-Here are certain features of this site.
+and this is what job mates says:
 
-- fully responsive and accessible
-- SEO-friendly
-- light & dark mode
-- fuzzy search
-- super fast performance
-- draft posts
-- pagination
-- sitemap & rss feed
-- highly customizable
+> He's incredibly motivated and an awesome developer but as guitar player he must improve a lot his skills.
 
-If you like this theme, you can star/contribute to the [repo](https://github.com/satnaing/astro-paper).  
-Or you can even give any feedback via my [email](mailto:contact@satnaing.dev).
+You can know a bit more of him following the social links at the bottom.
