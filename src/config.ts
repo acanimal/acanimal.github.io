@@ -17,6 +17,7 @@ export const SITE: Site = {
   //   text: "Suggest Changes",
   //   appendFilePath: true,
   // },
+  ahrefWebAnalytics: "tk04qS6uv+jSZ+1bOCsq9g",
 };
 
 export const LOCALE = {
