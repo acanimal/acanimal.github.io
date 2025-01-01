@@ -14,12 +14,27 @@ import LinkButton from "@components/LinkButton.astro";
       <h1>404</h1>
       <span aria-hidden="true">¯\_(ツ)_/¯</span>
       <p>Page Not Found</p>
+
       <LinkButton
         href="/"
         className="my-6 text-lg underline decoration-dashed underline-offset-8"
       >
         Go back home
       </LinkButton>
+
+      <p
+        class="rounded-lg border-2 border-yellow-400 bg-yellow-200 p-5 dark:bg-yellow-600"
+      >
+        <strong>Notice</strong>: If you are looking for the old content from my
+        blog, you can find the source code in the
+        <a
+          class="font-semibold italic"
+          href="https://github.com/acanimal/acanimal.github.io/tree/gatsby-deprecated/blog"
+          >repository</a
+        >. It has been a long time since my last post, and much of the content
+        is out of date, so I’m not sure if it’s worth migrating all the content
+        to my new blog. Feel free to contact me.
+      </p>
     </div>
   </main>
 
