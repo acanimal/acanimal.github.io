@@ -15,6 +15,7 @@ export interface Props {
   pubDatetime?: Date;
   modDatetime?: Date | null;
   scrollSmooth?: boolean;
+  ahrefWebAnalytics?: string;
 }
 
 const {
@@ -23,6 +24,7 @@ const {
   profile = SITE.profile,
   description = SITE.desc,
   ogImage = SITE.ogImage,
+  ahrefWebAnalytics = SITE.ahrefWebAnalytics,
   canonicalURL = new URL(Astro.url.pathname, Astro.site).href,
   pubDatetime,
   modDatetime,
@@ -100,6 +102,17 @@ const structuredData = {
     <meta property="twitter:title" content={title} />
     <meta property="twitter:description" content={description} />
     <meta property="twitter:image" content={socialImageURL} />
+
+    <!-- Ahref web analytics -->
+    {
+      ahrefWebAnalytics && (
+        <script
+          src="https://analytics.ahrefs.com/analytics.js"
+          data-key={ahrefWebAnalytics}
+          async
+        />
+      )
+    }
 
     <!-- Google JSON-LD Structured data -->
     <script

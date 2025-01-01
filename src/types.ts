@@ -17,6 +17,7 @@ export type Site = {
     text?: string;
     appendFilePath?: boolean;
   };
+  ahrefWebAnalytics?: string;
 };
 
 export type SocialObjects = {
