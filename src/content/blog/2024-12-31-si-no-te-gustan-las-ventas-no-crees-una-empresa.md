@@ -10,12 +10,11 @@ tags:
 
 ¡Vaya! Parece que Hunter Walk acaba de lanzar una bomba de sabiduría para todos los que sueñan con crear su propia empresa. En su artículo [If You Don’t Like Sales, Don’t Start a Company](https://hunterwalk.com/2024/12/30/if-you-dont-like-sales-dont-start-a-company/) (Si no te gustan las ventas, no inicies una empresa), nos recuerda que, como cofundador, estás siempre vendiendo. Y no, no es una broma.
 
-> Por si te lo preguntas, Hunter Walk es un señor que sabe más que tu y que yo de esto. Es cofundador y socio de Homebrew, un fondo de capital riesgo enfocado en \*early stages. Antes de Homebrew, lideró la gestión de productos de consumo en YouTube, trabajó en Google y Linden Lab. Posee una licenciatura en Historia y un MBA de la Universidad de Stanford.
+> Por si te lo preguntas, Hunter Walk es un señor que sabe más que tu y que yo de esto. Es cofundador y socio de Homebrew, un fondo de capital riesgo enfocado en _early stages_. Antes de Homebrew, lideró la gestión de productos de consumo en YouTube, trabajó en Google y Linden Lab. Posee una licenciatura en Historia y un MBA de la Universidad de Stanford.
 
 ### ¿Por qué es esto importante?
 
 Porque, aunque seas el genio detrás del código o el cerebro técnico de la operación, las ventas son el pan de cada día. Desde atraer clientes hasta convencer a inversores, pasando por seducir a nuevos miembros para tu equipo, las ventas están en el centro de todo. Y no, no puedes delegarlas todas a tu cofundador que es un vendedor nato.
-HUNTER WALK
 
 ### ¿No te gustan las ventas?
 
