@@ -4,6 +4,8 @@ pubDatetime: 2025-01-10T11:37:05Z
 description: bla bla bla
 tags:
   - personal
+  - salud
+draft: true
 ---
 
 - Objetivos: Establecer metas
