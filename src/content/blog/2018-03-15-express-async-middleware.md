@@ -17,7 +17,7 @@ In this post we will cover how we must use correctly async functions as express 
 
 `async/await` is an extremely useful notation. There are plenty of good articles explaining them and how to use it and, IMO, there is an extremely useful visual explanation in 7 secs: [Async/Await in JavaScript, 7 seconds](https://async-await.xyz/).
 
-Simply compare the syntax evolution from callbacks, passig through the use of promises until asyn/await (extracted from [Asynchronous JavaScript: From Callback Hell to Async and Await](https://www.toptal.com/javascript/asynchronous-javascript-async-await-tutorial)):
+Simply compare the syntax evolution from callbacks, passing through the use of promises until async/await (extracted from [Asynchronous JavaScript: From Callback Hell to Async and Await](https://www.toptal.com/javascript/asynchronous-javascript-async-await-tutorial)):
 
 ```javascript
 // Verifying a user using callbacks
@@ -89,7 +89,7 @@ const verifyUser = async function (username, password) {
 // and `database.logAccess` implementation based on promises
 ```
 
-As you can see the async/await notation is more clear, in the sense it visually looks like a sequential set of imperative sentences, but with the powerful of JS asynchronous programing.
+As you can see the async/await notation is more clear, in the sense it visually looks like a sequential set of imperative sentences, but with the powerful of JS asynchronous programming.
 
 ### Notes on async/await
 
@@ -121,7 +121,7 @@ async function run() {
 
 ## Middlewares
 
-Express is one of the most famous and used NodeJS frameworks. Among other things it adds the concept of middleware. Given a HTTP request (also the response) we can imagine a pipeline to traverse, where on each step a task is made: check request is authenticated, parse body and "inject" as an extra param in the request, check params are right, do some bussiness logic, etc.
+Express is one of the most famous and used NodeJS frameworks. Among other things it adds the concept of middleware. Given a HTTP request (also the response) we can imagine a pipeline to traverse, where on each step a task is made: check request is authenticated, parse body and "inject" as an extra param in the request, check params are right, do some business logic, etc.
 
 ![Express middlewares](@content/blog/images/express-middlewares.png)
 
@@ -152,7 +152,7 @@ app.get("/hello", async (req, res, next) => {
 });
 ```
 
-Because if for some reason the code inside the async funcion fails it will throw the error to the caller function (which is expressjs) and it will never be handled.
+Because if for some reason the code inside the async function fails it will throw the error to the caller function (which is expressjs) and it will never be handled.
 
 The right way would be as:
 
@@ -194,4 +194,4 @@ app.get(
 
 ## Conclusions
 
-My advice is: embrace `async/await`. It is very powerful notation one step beyong promises. Simply remember do not believe in magic and handle errors (the same way like with promises and callbacks) and remember to apply this too when working with expressjs.
+My advice is: embrace `async/await`. It is very powerful notation one step beyond promises. Simply remember do not believe in magic and handle errors (the same way like with promises and callbacks) and remember to apply this too when working with expressjs.
