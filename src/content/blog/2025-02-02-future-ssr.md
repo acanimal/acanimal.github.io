@@ -3,7 +3,7 @@ title: El futuro del Server Side Rendering y tendendicas para el 2025
 pubDatetime: 2025-02-02T09:56:00Z
 description: El mundo del desarrollo web no se detiene, y una de las áreas donde más cambios estamos viendo es el Server-Side Rendering (SSR). Si llevas tiempo en esto, recordarás cuando SSR era la única opción, luego vinieron los SPA (Single Page Applications) y ahora estamos en una especie de "todo junto" donde cada proyecto tiene su propio enfoque híbrido. En este post, voy a resumir y reaccionar al artículo "The Future of Server-Side Rendering, Trends for 2025", que analiza hacia dónde va esta tecnología y por qué deberíamos prestarle atención.
 tags:
-  - SSR
+  - ssr
   - resumen
 ---
 
