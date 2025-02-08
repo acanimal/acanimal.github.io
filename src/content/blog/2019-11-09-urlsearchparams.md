@@ -1,5 +1,5 @@
 ---
-title: Working with query params in JavaScript
+title: Working with query params in JavaScript with URLSearchParams
 pubDatetime: 2019-11-09T09:24:00Z
 description: No matter if you work with JavaScript at client or server side, at some point you'll need to work with urls and its query params. As example, I'm currently using [react-router](https://reacttraining.com/react-router/web) in my project, which is an great tool. I can define dynamic routes with path params and easily react-router returns me these params within the `match` variable and the rest of url information in the `location` variable, but how can I easily access to query params?
 tags:
