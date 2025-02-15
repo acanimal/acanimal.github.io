@@ -6,7 +6,6 @@ tags:
   - resumen
   - ai
   - prompt engineering
-draft: true
 ---
 
 "Prompt Engineering" se ha convertido en uno de los términos más comunes en el mundo de la inteligencia artificial, pero no todos están convencidos de que realmente merezca la etiqueta de "ingeniería".
