@@ -1,6 +1,6 @@
 ---
 title: Prompt Engineering, ¿ciencia, arte o el nuevo buzzword de moda?
-pubDatetime: 2025-02-15T09:34:00Z
+pubDatetime: 2025-02-15T09:15:00Z
 description: Prompt Engineering se ha convertido en uno de los términos más comunes en el mundo de la inteligencia artificial, pero no todos están convencidos de que realmente merezca la etiqueta de "ingeniería". En su artículo [On Prompt Engineering](https://blog.buschnick.net/2025/01/on-prompt-engineering.html), su autor BuschnicK analiza críticamente este concepto y plantea argumentos sólidos sobre por qué no se ajusta a los principios de la ingeniería de software como tal.
 tags:
   - resumen
