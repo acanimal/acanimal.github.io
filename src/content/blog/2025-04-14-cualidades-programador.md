@@ -1,6 +1,6 @@
 ---
 title: Las cualidades que realmente importan para ser un buen programador
-pubDatetime: 2025-03-14T09:34:00Z
+pubDatetime: 2025-04-14T09:34:00Z
 description: Si estás aprendiendo a programar o ya llevas un tiempo en esto, seguro te has preguntado "¿Qué necesito para ser un buen programador?". Y aunque saber varios lenguajes, frameworks y librerías está genial, lo cierto es que hay habilidades y cualidades más profundas que marcan la diferencia entre alguien que solo escribe código y alguien que realmente sobresale en el mundo del desarrollo. Este artículo no es una lista exhaustiva de requisitos necesarios que cumplir, sino una recopilación de lo que muchos desarrolladores con experiencia coinciden que es esencial para crecer y disfrutar de esta profesión.
 tags:
   - desarrollo
