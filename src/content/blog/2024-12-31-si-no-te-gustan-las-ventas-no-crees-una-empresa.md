@@ -5,6 +5,7 @@ description: En este artículo, Hunter Walk destaca que como cofundador siempre 
 tags:
   - ventas
   - emprendimiento
+  - entrepreneur
   - consejos de negocio
 ---
 
