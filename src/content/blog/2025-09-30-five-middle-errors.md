@@ -1,5 +1,5 @@
 ---
-title: Los 5 errores que detienen tu ascenso de middle a sernior
+title: Los 5 errores que detienen tu ascenso de middle a senior
 pubDatetime: 2025-09-30T09:41:00Z
 description: El camino de un desarrollador Mid a Senior no solo se trata de escribir mejor código. A menudo, el verdadero salto está en cambiar nuestra mentalidad y nuestras responsabilidades. El reciente video de Emilio Carrión, titulado "5 errores que impiden que llegues a Senior", es una guía esencial que destila la experiencia para identificar y corregir esos hábitos que nos mantienen estancados.
 tags:
