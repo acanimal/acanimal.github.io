@@ -41,6 +41,8 @@ A pesar de su gran éxito la plataforma desarrolló una cultura que muchos (y en
 
 Desde finales de 2022 StackOverflow ha experimentado una caída significativa en tráfico y participación debido al auge de herramientas como ChatGPT, GitHub Copilot y Claude.
 
+![StackOverflow declive](https://blog.pragmaticengineer.com/content/images/2025/05/image-6.png)
+
 Por el motivo que comentaba anteriormente, el ser humano es muy cómodo y lo que quiere es la inmediatez. Al igual que StackOverflow ahorraba tiempo frente a otras alternativas de su momento, la IA ahorra tiempo dándote la respuesta a tu duda conreta de forma inmediate y sin tener que esperar que alguien responda.
 
 La IA nunca te responderá de mala manera si tu duda ya ha sido preguntada por otro usuario ni, al contrario que en StackOverflow, se enfada si haces una pregunta concreta del etilo "_dime por qué falla mi línea 42_".
