@@ -1,6 +1,6 @@
 ---
 title: El drama de StackOverflow y la IA
-pubDatetime: 2026-01-22T19:45:00Z
+pubDatetime: 2026-01-22T18:45:00Z
 description: A estas alturas nadie duda que la irrupción de la IA es toda una revolución y, como toda revolución, tiene sus cosas buenas y sus cosas malas. En su momento StackOverflow fue una revolución. Lo que comenzó como un foro de preguntas y respuestas ha llegado a convertire en una fuenta de valor enorme.
 tags:
   - opinion
