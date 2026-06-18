@@ -79,4 +79,3 @@ Por un lado, en la bolsa los grandes players están jugando con unas expectativa
 Por otro lado tenemos a los cientos de empresas que “hacen algo con IA” recibiendo millones de inversión como el que tira pipas a las palomas. Ya os digo que el 90% de esas inversiones no se realizan después de un gran análisis o de aplicar sentido común.
 
 Así que aquí estamos de nuevo. Esperando que salte una chispa que haga arder el nuevo Hinderburg.
-
