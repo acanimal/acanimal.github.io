@@ -1,36 +1,37 @@
-import { SITE } from "@config";
+import config from "@/config";
 import { glob } from "astro/loaders";
 import { defineCollection } from "astro:content";
 import { z } from "astro/zod";
 
-const blog = defineCollection({
-  loader: glob({ pattern: "**/*.md", base: "./src/content/blog" }),
+export const BLOG_PATH = "src/content/posts";
+
+const posts = defineCollection({
+  loader: glob({ pattern: "**/[^_]*.{md,mdx}", base: `./${BLOG_PATH}` }),
   schema: ({ image }) =>
     z.object({
-      author: z.string().default(SITE.author),
+      author: z.string().default(config.site.author),
       pubDatetime: z.date(),
       modDatetime: z.date().optional().nullable(),
       title: z.string(),
       featured: z.boolean().optional(),
       draft: z.boolean().optional(),
       tags: z.array(z.string()).default(["others"]),
-      ogImage: image()
-        .refine(img => img.width >= 1200 && img.height >= 630, {
-          message: "OpenGraph image must be at least 1200 X 630 pixels!",
-        })
-        .or(z.string())
-        .optional(),
+      ogImage: image().or(z.string()).optional(),
       description: z.string(),
       canonicalURL: z.string().optional(),
-      editPost: z
-        .object({
-          disabled: z.boolean().optional(),
-          url: z.string().optional(),
-          text: z.string().optional(),
-          appendFilePath: z.boolean().optional(),
-        })
-        .optional(),
+      hideEditPost: z.boolean().optional(),
+      timezone: z.string().optional(),
     }),
 });
 
-export const collections = { blog };
+const pages = defineCollection({
+  loader: glob({ pattern: "**/[^_]*.{md,mdx}", base: "./src/content/pages" }),
+  schema: z.object({
+    title: z.string(),
+    description: z.string().optional(),
+    ogImage: z.string().optional(),
+    canonicalURL: z.string().optional(),
+  }),
+});
+
+export const collections = { posts, pages };

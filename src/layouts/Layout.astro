@@ -1,155 +1,133 @@
 ---
-import { LOCALE, SITE } from "@config";
-import "@styles/base.css";
+import { Font } from "astro:assets";
 import { ClientRouter } from "astro:transitions";
+import { resolveDefaultOgImagePath } from "@/utils/resolveDefaultOgImagePath";
+import config from "@/config";
+import { ahrefWebAnalyticsKey } from "@/astro-paper.config";
+import "@/styles/global.css";
 
-const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
-
-export interface Props {
+type Props = {
   title?: string;
-  author?: string;
-  profile?: string;
   description?: string;
   ogImage?: string;
   canonicalURL?: string;
-  pubDatetime?: Date;
-  modDatetime?: Date | null;
-  scrollSmooth?: boolean;
-  ahrefWebAnalytics?: string;
-}
+};
+
+const { site } = config;
 
 const {
-  title = SITE.title,
-  author = SITE.author,
-  profile = SITE.profile,
-  description = SITE.desc,
-  ogImage = SITE.ogImage,
-  ahrefWebAnalytics = SITE.ahrefWebAnalytics,
+  title = site.title,
+  description = site.description,
+  ogImage = resolveDefaultOgImagePath(config),
   canonicalURL = new URL(Astro.url.pathname, Astro.site).href,
-  pubDatetime,
-  modDatetime,
-  scrollSmooth = false,
 } = Astro.props;
 
-const socialImageURL = new URL(
-  ogImage ?? SITE.ogImage ?? "og.png",
-  Astro.url.origin
-).href;
-
-const structuredData = {
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  headline: `${title}`,
-  image: `${socialImageURL}`,
-  datePublished: `${pubDatetime?.toISOString()}`,
-  ...(modDatetime && { dateModified: modDatetime.toISOString() }),
-  author: [
-    {
-      "@type": "Person",
-      name: `${author}`,
-      url: `${profile}`,
-    },
-  ],
-};
+const socialImageURL = new URL(ogImage, Astro.site ?? Astro.url);
+const rssHref = "/rss.xml";
 ---
 
 <!doctype html>
 <html
-  lang=`${LOCALE.lang ?? "en"}`
-  class={`${scrollSmooth && "scroll-smooth"}`}
+  dir={site.dir ?? "ltr"}
+  lang={site.lang}
+  class="overflow-y-scroll scroll-smooth"
 >
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="canonical" href={canonicalURL} />
     <meta name="generator" content={Astro.generator} />
 
-    <!-- General Meta Tags -->
+    <!-- Font -->
+    <Font
+      cssVariable="--font-ibm-plex-mono"
+      preload={[{ subset: "latin", weight: 400, style: "normal" }]}
+    />
+
+    <!-- Primary meta -->
     <title>{title}</title>
     <meta name="title" content={title} />
     <meta name="description" content={description} />
-    <meta name="author" content={author} />
+    <meta name="author" content={site.author} />
     <link rel="sitemap" href="/sitemap-index.xml" />
 
-    <!-- Open Graph / Facebook -->
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={site.title} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonicalURL} />
     <meta property="og:image" content={socialImageURL} />
 
-    <!-- Article Published/Modified time -->
-    {
-      pubDatetime && (
-        <meta
-          property="article:published_time"
-          content={pubDatetime.toISOString()}
-        />
-      )
-    }
-    {
-      modDatetime && (
-        <meta
-          property="article:modified_time"
-          content={modDatetime.toISOString()}
-        />
-      )
-    }
-
-    <!-- Twitter -->
+    <!-- Twitter / X -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content={canonicalURL} />
     <meta property="twitter:title" content={title} />
     <meta property="twitter:description" content={description} />
     <meta property="twitter:image" content={socialImageURL} />
 
-    <!-- Ahref web analytics -->
+    <!-- RSS autodiscovery -->
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title={site.title}
+      href={new URL(rssHref, Astro.site)}
+    />
+
+    <!-- Ahrefs Web Analytics -->
     {
-      ahrefWebAnalytics && (
+      ahrefWebAnalyticsKey && (
         <script
           src="https://analytics.ahrefs.com/analytics.js"
-          data-key={ahrefWebAnalytics}
+          data-key={ahrefWebAnalyticsKey}
           async
         />
       )
     }
 
-    <!-- Google JSON-LD Structured data -->
-    <script
-      type="application/ld+json"
-      set:html={JSON.stringify(structuredData)}
-    />
-
-    <!-- Google Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap"
-      rel="preload"
-      as="style"
-      onload="this.onload=null; this.rel='stylesheet';"
-      crossorigin
-    />
-
+    <!-- Filled at runtime by theme.ts to match the current background colour -->
     <meta name="theme-color" content="" />
 
+    <!-- Extra head content injected by child layouts (e.g. JSON-LD, article meta) -->
+    <slot name="head" />
+
     {
-      // If PUBLIC_GOOGLE_SITE_VERIFICATION is set in the environment variable,
-      // include google-site-verification tag in the heading
-      // Learn more: https://support.google.com/webmasters/answer/9008080#meta_tag_verification&zippy=%2Chtml-tag
-      googleSiteVerification && (
+      site.googleVerification && (
         <meta
           name="google-site-verification"
-          content={googleSiteVerification}
+          content={site.googleVerification}
         />
       )
     }
 
-    <ClientRouter />
+    <!--
+      Inline FOUC-prevention script: sets data-theme on <html> before
+      the browser paints. Runs synchronously, no defer/async.
+    -->
+    <script is:inline>
+      (function () {
+        const stored = localStorage.getItem("theme");
+        const prefersDark = window.matchMedia(
+          "(prefers-color-scheme: dark)"
+        ).matches;
+        const theme = stored ?? (prefersDark ? "dark" : "light");
+        const root = document.firstElementChild;
+        root?.setAttribute("data-theme", theme);
+        root?.classList.toggle("dark", theme === "dark");
+        // Expose value so theme.ts can skip re-detection.
+        window.__theme = { value: theme };
+      })();
+    </script>
 
-    <script is:inline src="/toggle-theme.js" async></script>
+    <ClientRouter />
   </head>
-  <body>
+  <body
+    class="bg-background font-app text-foreground selection:bg-accent/75 selection:text-accent-foreground flex min-h-svh flex-col"
+  >
     <slot />
+    <script>
+      import "@/scripts/theme";
+    </script>
   </body>
 </html>

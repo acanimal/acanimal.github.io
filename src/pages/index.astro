@@ -1,47 +1,52 @@
 ---
 import { getCollection } from "astro:content";
-import Layout from "@layouts/Layout.astro";
-import Header from "@components/Header.astro";
-import Footer from "@components/Footer.astro";
-import LinkButton from "@components/LinkButton.astro";
-import Hr from "@components/Hr.astro";
-import Card from "@components/Card";
-import Socials from "@components/Socials.astro";
-import getSortedPosts from "@utils/getSortedPosts";
-import { SITE, SOCIALS } from "@config";
+import IconRss from "@/assets/icons/IconRss.svg";
+import IconArrowRight from "@/assets/icons/IconArrowRight.svg";
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+import Socials from "@/components/Socials.astro";
+import Card from "@/components/Card.astro";
+import LinkButton from "@/components/LinkButton.astro";
+import { getSortedPosts } from "@/utils/getSortedPosts";
+import config from "@/config";
 
-const posts = await getCollection("blog");
+const { socials, posts: postsConfig } = config;
 
+const posts = await getCollection("posts");
 const sortedPosts = getSortedPosts(posts);
 const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
 const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
-
-const socialCount = SOCIALS.filter(social => social.active).length;
 ---
 
 <Layout>
   <Header />
-  <main id="main-content">
-    <section id="hero">
-      <h1>Born to be curious<br />born to be animal</h1>
+  <main
+    id="main-content"
+    data-layout="index"
+    data-home-path="/"
+    class="app-layout my-1"
+  >
+    <section id="hero" class="border-border border-b pt-8 pb-6">
+      <h1 class="my-4 inline-block text-3xl font-bold sm:my-8 sm:text-5xl">
+        Born to be curious<br />born to be animal
+      </h1>
       <a
         target="_blank"
         href="/rss.xml"
-        class="rss-link"
-        aria-label="rss feed"
+        class="inline-block"
+        aria-label="RSS Feed"
         title="RSS Feed"
       >
-        <svg xmlns="http://www.w3.org/2000/svg" class="rss-icon"
-          ><path
-            d="M19 20.001C19 11.729 12.271 5 4 5v2c7.168 0 13 5.832 13 13.001h2z"
-          ></path><path
-            d="M12 20.001h2C14 14.486 9.514 10 4 10v2c4.411 0 8 3.589 8 8.001z"
-          ></path><circle cx="6" cy="18" r="2"></circle>
-        </svg>
+        <IconRss
+          width={20}
+          height={20}
+          class="stroke-accent scale-125 stroke-3"
+        />
         <span class="sr-only">RSS Feed</span>
       </a>
 
-      <p>
+      <p class="mt-2">
         Another blog? Yes, I know, the world didn't ask for another digital
         corner filled with unsolicited opinions. But here I am, sharing my
         thoughts on any topic that piques my interest. If you dare to read my
@@ -50,7 +55,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
       </p>
 
       <p
-        class="rounded-lg border-2 border-yellow-400 bg-yellow-200 p-5 dark:bg-yellow-600"
+        class="my-4 rounded-lg border-2 border-yellow-400 bg-yellow-200 p-5 dark:bg-yellow-600"
       >
         <strong>Notice</strong>: If you are looking for the old content from my
         blog, you can find the source code in the
@@ -59,113 +64,68 @@ const socialCount = SOCIALS.filter(social => social.active).length;
           href="https://github.com/acanimal/acanimal.github.io/tree/gatsby-deprecated/blog"
           >repository</a
         >. It has been a long time since my last post, and much of the content
-        is out of date, so I’m not sure if it’s worth migrating all the content
+        is out of date, so I'm not sure if it's worth migrating all the content
         to my new blog. Feel free to contact me.
       </p>
 
       {
-        // only display if at least one social link is enabled
-        socialCount > 0 && (
-          <div class="social-wrapper">
-            <div class="social-links">Social Links:</div>
+        socials.length > 0 && (
+          <div class="mt-4 flex max-sm:flex-col sm:items-center">
+            <div class="me-2 mb-1 whitespace-nowrap sm:mb-0">Social Links:</div>
             <Socials />
           </div>
         )
       }
     </section>
 
-    <Hr />
-
     {
       featuredPosts.length > 0 && (
-        <>
-          <section id="featured">
-            <h2>Featured</h2>
-            <ul>
-              {featuredPosts.map(({ data, id }) => (
-                <Card
-                  href={`/blog/${id}/`}
-                  frontmatter={data}
-                  secHeading={false}
-                />
-              ))}
-            </ul>
-          </section>
-          {recentPosts.length > 0 && <Hr />}
-        </>
-      )
-    }
-
-    {
-      recentPosts.length > 0 && (
-        <section id="recent-posts">
-          <h2>Recent Posts</h2>
+        <section
+          id="featured"
+          class:list={[
+            "pt-12 pb-6",
+            { "border-border border-b": recentPosts.length > 0 },
+          ]}
+        >
+          <h2 class="text-2xl font-semibold tracking-wide">Featured</h2>
           <ul>
-            {recentPosts.map(
-              ({ data, id }, index) =>
-                index < SITE.postPerIndex && (
-                  <Card
-                    href={`/blog/${id}/`}
-                    frontmatter={data}
-                    secHeading={false}
-                  />
-                )
-            )}
+            {featuredPosts.map(data => (
+              <Card variant="h3" {...data} />
+            ))}
           </ul>
         </section>
       )
     }
 
-    <div class="all-posts-btn-wrapper">
+    {
+      recentPosts.length > 0 && (
+        <section id="recent-posts" class="pt-12 pb-6">
+          <h2 class="text-2xl font-semibold tracking-wide">Recent Posts</h2>
+          <ul>
+            {recentPosts.slice(0, postsConfig.perIndex).map(data => (
+              <Card variant="h3" {...data} />
+            ))}
+          </ul>
+        </section>
+      )
+    }
+
+    <div class="my-8 text-center">
       <LinkButton href="/blog/">
         All Posts
-        <svg xmlns="http://www.w3.org/2000/svg"
-          ><path
-            d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"
-          ></path>
-        </svg>
+        <IconArrowRight class="inline-block" />
       </LinkButton>
     </div>
   </main>
-
   <Footer />
 </Layout>
 
-<style>
-  @reference "../styles/base.css";
-  /* ===== Hero Section ===== */
-  #hero {
-    @apply pb-6 pt-8;
-  }
-  #hero h1 {
-    @apply my-4 inline-block text-3xl font-bold sm:my-8 sm:text-5xl;
-  }
-  #hero .rss-link {
-    @apply mb-6;
-  }
-  #hero .rss-icon {
-    @apply mb-2 h-6 w-6 scale-110 fill-skin-accent sm:mb-3 sm:scale-125;
-  }
-  #hero p {
-    @apply my-2;
-  }
-  .social-wrapper {
-    @apply mt-4 flex flex-col sm:flex-row sm:items-center;
-  }
-  .social-links {
-    @apply mb-1 mr-2 whitespace-nowrap sm:mb-0;
-  }
-
-  /* ===== Featured & Recent Posts Sections ===== */
-  #featured,
-  #recent-posts {
-    @apply pb-6 pt-12;
-  }
-  #featured h2,
-  #recent-posts h2 {
-    @apply text-2xl font-semibold tracking-wide;
-  }
-  .all-posts-btn-wrapper {
-    @apply my-8 text-center;
-  }
-</style>
+<script>
+  document.addEventListener("astro:page-load", () => {
+    const indexLayout = (document.querySelector("#main-content") as HTMLElement)
+      ?.dataset;
+    if (indexLayout?.layout) {
+      sessionStorage.setItem("backUrl", indexLayout.homePath ?? "/");
+    }
+  });
+</script>

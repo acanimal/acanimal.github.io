@@ -1,39 +1,78 @@
-import { defineConfig } from "astro/config";
+import {
+  defineConfig,
+  envField,
+  fontProviders,
+  svgoOptimizer,
+} from "astro/config";
 import tailwindcss from "@tailwindcss/vite";
-import react from "@astrojs/react";
+import mdx from "@astrojs/mdx";
+import sitemap from "@astrojs/sitemap";
 import { unified } from "@astrojs/markdown-remark";
 import remarkToc from "remark-toc";
 import remarkCollapse from "remark-collapse";
-import sitemap from "@astrojs/sitemap";
-import { SITE } from "./src/config";
+import rehypeCallouts from "rehype-callouts";
+import {
+  transformerNotationDiff,
+  transformerNotationHighlight,
+  transformerNotationWordHighlight,
+} from "@shikijs/transformers";
+import { transformerFileName } from "./src/utils/transformers/fileName";
+import config from "./astro-paper.config";
 
 // https://astro.build/config
 export default defineConfig({
-  site: SITE.website,
-  integrations: [react(), sitemap()],
+  site: config.site.url,
+  integrations: [
+    mdx(),
+    sitemap({
+      filter: page =>
+        config.features?.showArchives !== false || !page.endsWith("/archives/"),
+    }),
+  ],
   markdown: {
     processor: unified({
       remarkPlugins: [
         remarkToc,
-        [
-          remarkCollapse,
-          {
-            test: "Table of contents",
-          },
-        ],
+        [remarkCollapse, { test: "Table of contents" }],
       ],
+      rehypePlugins: [rehypeCallouts],
     }),
     shikiConfig: {
-      // For more themes, visit https://shiki.style/themes
       themes: { light: "min-light", dark: "night-owl" },
       wrap: true,
+      transformers: [
+        transformerFileName({ style: "v2", hideDot: false }),
+        transformerNotationHighlight(),
+        transformerNotationWordHighlight(),
+        transformerNotationDiff({ matchAlgorithm: "v3" }),
+      ],
     },
   },
   vite: {
     plugins: [tailwindcss()],
-    optimizeDeps: {
-      exclude: ["@resvg/resvg-js"],
-    },
   },
   scopedStyleStrategy: "where",
+  fonts: [
+    {
+      name: "IBM Plex Mono",
+      cssVariable: "--font-ibm-plex-mono",
+      provider: fontProviders.google(),
+      fallbacks: ["monospace"],
+      weights: [400, 500, 600, 700],
+      styles: ["normal", "italic"],
+      formats: ["woff", "ttf"],
+    },
+  ],
+  env: {
+    schema: {
+      PUBLIC_GOOGLE_SITE_VERIFICATION: envField.string({
+        access: "public",
+        context: "client",
+        optional: true,
+      }),
+    },
+  },
+  experimental: {
+    svgOptimizer: svgoOptimizer(),
+  },
 });
