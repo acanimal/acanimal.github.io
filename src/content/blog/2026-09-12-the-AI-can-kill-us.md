@@ -1,7 +1,7 @@
 ---
 title: ¿De verdad la IA nos puede matar?
 pubDatetime: 2026-06-13T10:53:00Z
-description:
+description: Una reflexión sobre las declaraciones de un ex-ingeniero de Anthropic y si la IA realmente supone una amenaza existencial para la humanidad.
 tags:
   - Actualidad
   - IA

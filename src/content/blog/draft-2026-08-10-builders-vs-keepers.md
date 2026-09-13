@@ -1,7 +1,7 @@
 ---
 title: Builders vs Keepers — la guerra civil de la ingeniería de software
 pubDatetime: 2026-08-10T10:15:00Z
-description: En los últimos años ha surgido una división cada vez más profunda dentro de los equipos de ingeniería. No hablo de lenguajes, frameworks o religión de tabs vs espacios. Hablo de algo más fundamental: la guerra entre builders y keepers. Dos formas de ver el software que chocan constantemente y que, si no se gestionan bien, pueden dinamitar un equipo.
+description: "En los últimos años ha surgido una división cada vez más profunda dentro de los equipos de ingeniería. No hablo de lenguajes, frameworks o religión de tabs vs espacios. Hablo de algo más fundamental: la guerra entre builders y keepers. Dos formas de ver el software que chocan constantemente y que, si no se gestionan bien, pueden dinamitar un equipo."
 tags:
   - opinion
   - ingeniería
