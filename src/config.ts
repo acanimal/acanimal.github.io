@@ -1,156 +1,41 @@
-import type { Site, SocialObjects } from "./types";
+/**
+ * Internal resolved configuration used throughout the codebase.
+ *
+ * Prefer editing `astro-paper.config.ts` instead of this file. This module exists to
+ * apply defaults and expose a fully-resolved config shape (`ResolvedAstroPaperConfig`).
+ */
+import userConfig from "@/astro-paper.config";
+import type { ResolvedAstroPaperConfig } from "./types/config";
+import { PUBLIC_GOOGLE_SITE_VERIFICATION } from "astro:env/client";
 
-export const SITE: Site = {
-  website: "https://www.acuriousanimal.com/", // replace this with your deployed domain
-  author: "Antonio Santiago",
-  profile: "https://github.com/acanimal",
-  desc: "Yet another blog in the wall",
-  title: "🙈🙉🙊 A Curious Animal",
-  ogImage: "astropaper-og.jpg",
-  lightAndDarkMode: true,
-  postPerIndex: 4,
-  postPerPage: 4,
-  scheduledPostMargin: 15 * 60 * 1000, // 15 minutes
-  showArchives: true,
-  // editPost: {
-  //   url: "https://github.com/acanimal/edit/main/src/content/blog",
-  //   text: "Suggest Changes",
-  //   appendFilePath: true,
-  // },
-  ahrefWebAnalytics: "tk04qS6uv+jSZ+1bOCsq9g",
+const DEFAULT_OG_IMAGE = "default-og.jpg";
+
+const config: ResolvedAstroPaperConfig = {
+  site: {
+    ...userConfig.site,
+    ogImage: userConfig.site.ogImage ?? DEFAULT_OG_IMAGE,
+    lang: userConfig.site.lang ?? "en",
+    timezone: userConfig.site.timezone ?? "UTC",
+    dir: userConfig.site.dir ?? "ltr",
+    googleVerification:
+      userConfig.site.googleVerification || PUBLIC_GOOGLE_SITE_VERIFICATION,
+  },
+  posts: {
+    perPage: userConfig.posts?.perPage ?? 4,
+    perIndex: userConfig.posts?.perIndex ?? 4,
+    scheduledPostMargin:
+      userConfig.posts?.scheduledPostMargin ?? 15 * 60 * 1000,
+  },
+  features: {
+    lightAndDarkMode: userConfig.features?.lightAndDarkMode ?? true,
+    dynamicOgImage: userConfig.features?.dynamicOgImage ?? true,
+    showArchives: userConfig.features?.showArchives ?? true,
+    showBackButton: userConfig.features?.showBackButton ?? true,
+    editPost: userConfig.features?.editPost ?? { enabled: false },
+    search: userConfig.features?.search ?? "pagefind",
+  },
+  socials: userConfig.socials ?? [],
+  shareLinks: userConfig.shareLinks ?? [],
 };
 
-export const LOCALE = {
-  lang: "en", // html lang code. Set this empty and default will be "en"
-  langTag: ["en-EN"], // BCP 47 Language Tags. Set this empty [] to use the environment default
-} as const;
-
-export const LOGO_IMAGE = {
-  enable: false,
-  svg: true,
-  width: 216,
-  height: 46,
-};
-
-export const SOCIALS: SocialObjects = [
-  {
-    name: "LinkedIn",
-    href: "https://www.linkedin.com/in/acanimal",
-    linkTitle: `${SITE.title} on LinkedIn`,
-    active: true,
-  },
-  {
-    name: "Github",
-    href: "https://github.com/acanimal",
-    linkTitle: ` ${SITE.title} on Github`,
-    active: true,
-  },
-  {
-    name: "GitLab",
-    href: "https://gitlab.com/acanimal",
-    linkTitle: `${SITE.title} on GitLab`,
-    active: true,
-  },
-  // {
-  //   name: "Facebook",
-  //   href: "https://github.com/acanimal",
-  //   linkTitle: `${SITE.title} on Facebook`,
-  //   active: false,
-  // },
-  // {
-  //   name: "Instagram",
-  //   href: "https://www.instagram.com/acuriousanimal",
-  //   linkTitle: `${SITE.title} on Instagram`,
-  //   active: false,
-  // },
-  // {
-  //   name: "Mail",
-  //   href: "mailto:asantiagop+website@gmail.com",
-  //   linkTitle: `Send an email to ${SITE.title}`,
-  //   active: true,
-  // },
-  // {
-  //   name: "X",
-  //   href: "https://github.com/acanimal",
-  //   linkTitle: `${SITE.title} on X`,
-  //   active: false,
-  // },
-  // {
-  //   name: "Mastodon",
-  //   href: "https://github.com/acanimal",
-  //   linkTitle: `${SITE.title} on Mastodon`,
-  //   active: false,
-  // },
-  // {
-  //   name: "Twitch",
-  //   href: "https://github.com/acanimal",
-  //   linkTitle: `${SITE.title} on Twitch`,
-  //   active: false,
-  // },
-  // {
-  //   name: "YouTube",
-  //   href: "https://github.com/acanimal",
-  //   linkTitle: `${SITE.title} on YouTube`,
-  //   active: false,
-  // },
-  // {
-  //   name: "WhatsApp",
-  //   href: "https://github.com/acanimal",
-  //   linkTitle: `${SITE.title} on WhatsApp`,
-  //   active: false,
-  // },
-  // {
-  //   name: "Snapchat",
-  //   href: "https://github.com/acanimal",
-  //   linkTitle: `${SITE.title} on Snapchat`,
-  //   active: false,
-  // },
-  // {
-  //   name: "Pinterest",
-  //   href: "https://github.com/acanimal",
-  //   linkTitle: `${SITE.title} on Pinterest`,
-  //   active: false,
-  // },
-  // {
-  //   name: "TikTok",
-  //   href: "https://github.com/acanimal",
-  //   linkTitle: `${SITE.title} on TikTok`,
-  //   active: false,
-  // },
-  // {
-  //   name: "CodePen",
-  //   href: "https://github.com/acanimal",
-  //   linkTitle: `${SITE.title} on CodePen`,
-  //   active: false,
-  // },
-  // {
-  //   name: "Discord",
-  //   href: "https://github.com/acanimal",
-  //   linkTitle: `${SITE.title} on Discord`,
-  //   active: false,
-  // },
-  // {
-  //   name: "Reddit",
-  //   href: "https://github.com/acanimal",
-  //   linkTitle: `${SITE.title} on Reddit`,
-  //   active: false,
-  // },
-  // {
-  //   name: "Skype",
-  //   href: "https://github.com/acanimal",
-  //   linkTitle: `${SITE.title} on Skype`,
-  //   active: false,
-  // },
-  // {
-  //   name: "Steam",
-  //   href: "https://github.com/acanimal",
-  //   linkTitle: `${SITE.title} on Steam`,
-  //   active: false,
-  // },
-  // {
-  //   name: "Telegram",
-  //   href: "https://github.com/acanimal",
-  //   linkTitle: `${SITE.title} on Telegram`,
-  //   active: false,
-  // },
-];
+export default config;

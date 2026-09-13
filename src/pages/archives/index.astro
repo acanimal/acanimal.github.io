@@ -1,42 +1,34 @@
 ---
 import { getCollection } from "astro:content";
-import Card from "@components/Card";
-import Footer from "@components/Footer.astro";
-import Header from "@components/Header.astro";
-import { SITE } from "@config";
-import Layout from "@layouts/Layout.astro";
-import Main from "@layouts/Main.astro";
-import getPostsByGroupCondition from "@utils/getPostsByGroupCondition";
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Breadcrumb from "@/components/Breadcrumb.astro";
+import Main from "@/components/Main.astro";
+import Footer from "@/components/Footer.astro";
+import Card from "@/components/Card.astro";
+import { postFilter } from "@/utils/postFilter";
+import { getPostsByGroupCondition } from "./_utils/getPostsByGroupCondition";
+import config from "@/config";
 
 // Redirect to 404 page if `showArchives` config is false
-if (!SITE.showArchives) {
-  return Astro.redirect("/404");
+if (!config.features.showArchives) {
+  return Astro.rewrite("/404");
 }
 
-const posts = await getCollection("blog", ({ data }) => !data.draft);
-
-const MonthMap: Record<string, string> = {
-  "1": "January",
-  "2": "February",
-  "3": "March",
-  "4": "April",
-  "5": "May",
-  "6": "June",
-  "7": "July",
-  "8": "August",
-  "9": "September",
-  "10": "October",
-  "11": "November",
-  "12": "December",
-};
+const posts = await getCollection("posts");
+const filteredPosts = posts.filter(postFilter);
+const monthFormatter = new Intl.DateTimeFormat("en", { month: "long" });
 ---
 
-<Layout title={`Archives | ${SITE.title}`}>
-  <Header activeNav="archives" />
+<Layout title={`Archives | ${config.site.title}`}>
+  <Header />
+
+  <Breadcrumb />
+
   <Main pageTitle="Archives" pageDesc="All the articles I've archived.">
     {
       Object.entries(
-        getPostsByGroupCondition(posts, post =>
+        getPostsByGroupCondition(filteredPosts, post =>
           post.data.pubDatetime.getFullYear()
         )
       )
@@ -44,7 +36,7 @@ const MonthMap: Record<string, string> = {
         .map(([year, yearGroup]) => (
           <div>
             <span class="text-2xl font-bold">{year}</span>
-            <sup class="text-sm">{yearGroup.length}</sup>
+            <sup class="text-muted-foreground text-sm">{yearGroup.length}</sup>
             {Object.entries(
               getPostsByGroupCondition(
                 yearGroup,
@@ -55,13 +47,29 @@ const MonthMap: Record<string, string> = {
               .map(([month, monthGroup]) => (
                 <div class="flex flex-col sm:flex-row">
                   <div class="mt-6 min-w-36 text-lg sm:my-6">
-                    <span class="font-bold">{MonthMap[month]}</span>
-                    <sup class="text-xs">{monthGroup.length}</sup>
+                    <span class="font-bold">
+                      {monthFormatter.format(
+                        new Date(2000, Number(month) - 1, 1)
+                      )}
+                    </span>
+                    <sup class="text-muted-foreground text-xs">
+                      {monthGroup.length}
+                    </sup>
                   </div>
                   <ul>
-                    {monthGroup.map(({ data, slug }) => (
-                      <Card href={`/blog/${slug}`} frontmatter={data} />
-                    ))}
+                    {monthGroup
+                      .sort(
+                        (a, b) =>
+                          Math.floor(
+                            new Date(b.data.pubDatetime).getTime() / 1000
+                          ) -
+                          Math.floor(
+                            new Date(a.data.pubDatetime).getTime() / 1000
+                          )
+                      )
+                      .map(data => (
+                        <Card {...data} />
+                      ))}
                   </ul>
                 </div>
               ))}
