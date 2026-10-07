@@ -18,10 +18,12 @@ import {
 } from "@shikijs/transformers";
 import { transformerFileName } from "./src/utils/transformers/fileName";
 import config from "./astro-paper.config";
+import { legacyRedirects } from "./src/data/legacyRedirects";
 
 // https://astro.build/config
 export default defineConfig({
   site: config.site.url,
+  redirects: legacyRedirects,
   integrations: [
     mdx(),
     sitemap({
