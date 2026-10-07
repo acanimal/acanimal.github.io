@@ -10,7 +10,7 @@ tags:
 
 Si trabajas en un equipo de programación seguro que has sentido esta tensión entre dos tipos de profesionales. En cuanto te los describa te vas a sentir identificado con uno de ellos. Dependiendo en el tipo de empresa donde hayas trabajado puede predominar más uno u otro. No es lo mismo un equipo que mantiene un producto consolidado y estable que una startup buscando su market fit adaptandose a las necesidades a medida que avanza.
 
-Si, hoy voy a hablar de esa guerra silenciosa que existe en la ingeniería de software: los *builders* vs los *keepers*.
+Si, hoy voy a hablar de esa guerra silenciosa que existe en la ingeniería de software: los _builders_ vs los _keepers_.
 
 Por un lado están **los builders**. Esos ingenieros que se llevan el subidón de dopamina cuando ven a usuarios usando lo que han construido. Que no echan de menos escribir código a mano. Que prefieren darle al producto antes que leerse un artículo técnico. Los más extremos ya van por ahí predicando que el código ha muerto, que los LLMs lo harán todo y que la idea es lo único que importa.
 
@@ -22,7 +22,7 @@ El artículo de Anton Zaides en [Manager.dev](https://www.manager.dev/newsletter
 
 ## La historia que todos conocemos
 
-Zaides se convirtió en CTO de una startup con su amigo de la infancia como CEO. Primer mes genial. Segundo mes, discusiones. Su cofundador no entendía por qué era tan lento en un mundo con LLMs. Quería pushear features desde el móvil sin leer código *"Si tenemos un bug, que los agentes lo arreglen"*.
+Zaides se convirtió en CTO de una startup con su amigo de la infancia como CEO. Primer mes genial. Segundo mes, discusiones. Su cofundador no entendía por qué era tan lento en un mundo con LLMs. Quería pushear features desde el móvil sin leer código _"Si tenemos un bug, que los agentes lo arreglen"_.
 
 Zaides sentía que estaban construyendo un castillo de naipes que se derrumbaría en cuanto llegase un cliente real. Discusiones que se convirtieron en peleas. Siete meses después se separaron. Cero clientes de pago y un producto que apenas funcionaba.
 
