@@ -7,8 +7,8 @@ tags:
   - Opinion
 ---
 
-Esta newsletter es algo diferente a la habitual. Es más un "pensar en alto", que algo premeditado. Escribiendo la newsletter pasada (¿De verdad la IA nos va a matar?
-)[https://www.acuriousanimal.com/blog/2026-09-12-the-ai-can-kill-us/] llegó un punto donde comencé a "desvariar" hablando del futuro, la IA y la ciencia ficción, así que me frené y separé esas divagaciones para otra newsletter. Y aquí estamos.
+Esta newsletter es algo diferente a la habitual. Es más un "pensar en alto", que algo premeditado. Escribiendo la newsletter pasada [¿De verdad la IA nos va a matar?
+](https://www.acuriousanimal.com/blog/2026-09-12-the-ai-can-kill-us/) llegó un punto donde comencé a "desvariar" hablando del futuro, la IA y la ciencia ficción, así que me frené y separé esas divagaciones para otra newsletter. Y aquí estamos.
 
 ---
 
