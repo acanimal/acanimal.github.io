@@ -28,11 +28,11 @@ export default defineAstroPaperConfig({
     { name: "linkedin", url: "https://www.linkedin.com/in/acanimal" },
     { name: "github", url: "https://github.com/acanimal" },
     { name: "gitlab", url: "https://gitlab.com/acanimal" },
+    { name: "x", url: "https://x.com/acanimal" },
     // --- currently inactive, preserved for future re-enable ---
     // { name: "facebook", url: "https://github.com/acanimal" },
     // { name: "instagram", url: "https://www.instagram.com/acuriousanimal" },
     // { name: "mail", url: "mailto:asantiagop+website@gmail.com" },
-    // { name: "x", url: "https://github.com/acanimal" },
     // { name: "mastodon", url: "https://github.com/acanimal" },
     // { name: "twitch", url: "https://github.com/acanimal" },
     // { name: "youtube", url: "https://github.com/acanimal" },
