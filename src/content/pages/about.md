@@ -6,8 +6,6 @@ A Curious Animal is a blog maintained by [Antonio Santiago](http://acuriousanima
 
 Antonio is a Software Engineer as profession and hobby, who has been working for years as employee and as freelance building information systems and web applications.
 
-![antonio_b&w](@/assets/images/antonio_bw-150x150.png)
-
 He is a firm believer of agile methodologies (and much more about common sense). There is no ring to rule them all, every place needs to forge its own master ring.
 
 He is mainly experienced in the Java and JavaScript ecosystems (Spring, Hibernate, JPA, NodeJS, Express, React, Redux, ...) but also has some knowledge about other programming languages in addition to devops.
